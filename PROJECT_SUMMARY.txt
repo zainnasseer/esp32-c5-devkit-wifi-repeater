@@ -1,0 +1,65 @@
+Project summary (ESP-IDF WiFi repeater)
+
+Overview
+- Target: ESP32-C5 (ESP-IDF). Implements a Wi-Fi repeater using AP+STA mode with optional NAT (lwIP NAPT).
+- Primary features: STA uplink to a router, AP for local clients, NAT + DHCP/DNS configuration, DNS query logging proxy, web dashboard, and safe shutdown (deep sleep).
+
+Core flow (main/main.c)
+- Initializes NVS, esp_netif, default event loop, and Wi-Fi in AP+STA mode.
+- Configures STA and AP credentials via compile-time macros (STA_SSID/STA_PASS, AP_SSID/AP_PASS, AP_MAX_CONN).
+- Aligns AP channel to STA uplink channel on connect.
+- On IP_EVENT_STA_GOT_IP:
+  - Enables NAT on the AP interface if CONFIG_LWIP_IPV4_NAPT is set.
+  - Propagates upstream DNS into a local DNS proxy and advertises DNS to AP clients via DHCP.
+  - Restarts DHCP server with gateway and DNS options enabled.
+  - Starts a FreeRTOS bandwidth/telemetry task.
+- Disables Wi-Fi power save (WIFI_PS_NONE) for reliability.
+- Runs a GPIO0 button task with debounce for future power-on logic.
+
+Networking techniques
+- NAT (lwIP NAPT): ip_napt_enable on the AP interface. Optional static port mapping helper included.
+- DHCP server reconfiguration: stops DHCP, sets AP gateway + DNS, enables router (opt 3) and DNS (opt 6) offers, restarts DHCP, and logs read-back.
+- DNS proxy (main/dns_proxy.c): UDP socket server on port 53; forwards queries to upstream DNS, logs qname/qtype, and returns responses to the client.
+- DNS logging (main/dns_log.c): ring buffer of last 32 queries, protected by a FreeRTOS spinlock.
+- AP client list (main/ap_clients.c): uses esp_wifi_ap_get_sta_list and esp_wifi_ap_get_sta_list_with_ip to map MAC to IP.
+
+Web dashboard (main/web_server.c/h)
+- Uses esp_http_server and cJSON to serve:
+  - GET / : embedded HTML/CSS/JS dashboard (served from a string).
+  - GET /api/network : JSON with STA/AP status, IP info, signal strength, client  list, DNS logs, NAT status, and uptime/power estimate.
+  - GET /api/stats : JSON with detailed system monitoring (CPU, memory, network, WiFi, benchmarks).
+  - POST /api/shutdown : safe shutdown sequence that stops/deinits Wi-Fi and enters deep sleep.
+- Dashboard updates every ~2 seconds and renders RSSI quality, connected clients, and recent DNS activity.
+
+System monitoring and benchmarking (main/sys_monitor.c/h)
+- Comprehensive monitoring subsystem with periodic logging (every 5 seconds).
+- CPU usage: per-task and overall CPU percentage using FreeRTOS runtime stats.
+- Memory: free heap, total heap, minimum free ever, largest free block, usage percentage.
+- Network: TX/RX bytes and packets, throughput (bytes/sec), errors.
+- WiFi: TX/RX packets, dropped packets, STA RSSI, connection status, AP client count.
+- Benchmarking: DNS query and HTTP request latency tracking with automatic slow-query warnings.
+- API: sys_monitor_init(), sys_monitor_update(), sys_monitor_get_stats(), benchmark macros.
+- Logging: systematic ESP_LOG output every 5 seconds with all metrics.
+
+Key components and APIs
+- ESP-IDF subsystems: esp_wifi, esp_netif, esp_event, esp_http_server, esp_timer, nvs_flash, FreeRTOS.
+- lwIP: NAPT (if enabled), sockets for DNS proxy.
+- JSON: cJSON (declared in main/idf_component.yml).
+
+Files to reference
+- main/main.c: Wi-Fi setup, event handling, NAT/DHCP/DNS wiring, monitoring init, button task.
+- main/web_server.c/h: HTTP server + dashboard + JSON API + stats endpoint + safe shutdown.
+- main/dns_proxy.c/h: DNS proxy, parsing, forwarding, logging, benchmarking.
+- main/dns_log.c/h: DNS log ring buffer.
+- main/ap_clients.c/h: AP client MAC/IP mapping.
+- main/sys_monitor.c/h: System monitoring, CPU/memory/network stats, benchmarking utilities.
+- main/idf_component.yml: component dependency (cJSON).
+- MONITORING_GUIDE.md: Comprehensive guide for understanding and using monitoring features.
+
+Notes and constraints
+- NAT only works when CONFIG_LWIP_IPV4_NAPT is enabled in menuconfig.
+- AP/STA credentials are hardcoded in main.c (replace for production).
+- AP DHCP server advertises AP gateway (typically 192.168.4.1) and DNS (proxy or upstream).
+- The code is event-driven; most work happens in Wi-Fi/IP event handlers and FreeRTOS tasks.
+- Monitoring overhead is minimal (~1-2% CPU, ~8KB RAM).
+- FreeRTOS must be configured with configGENERATE_RUN_TIME_STATS for CPU monitoring.

@@ -1,0 +1,9 @@
+# Target configuration
+CONFIG_IDF_TARGET="esp32c5"
+
+# Custom partition table configuration
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# Enable LWIP statistics for network monitoring
+CONFIG_LWIP_STATS=y

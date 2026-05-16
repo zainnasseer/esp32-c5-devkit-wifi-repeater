@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Repeater Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 WiFi Repeater</h1>
+            <p>Real-time Network Dashboard</p>
+        </div>
+        
+        <div class="grid" id="dashboard">
+            <div class="card"><div class="loading">Loading...</div></div>
+        </div>
+        
+        <div class="button-row">
+            <button class="btn" onclick="openSettings()">⚙️ Network Settings</button>
+            <button class="btn btn-danger" onclick="showShutdownModal()">⏻ Safe Shutdown</button>
+        </div>
+        
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <h3>⚙️ Network Configuration</h3>
+                <div class="form-group">
+                    <label>Uplink (STA) SSID</label>
+                    <input type="text" id="sta_ssid" placeholder="Router SSID">
+                </div>
+                <div class="form-group">
+                    <label>Uplink (STA) Password</label>
+                    <input type="password" id="sta_pass" placeholder="Router Password">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label>Repeater (AP) SSID</label>
+                    <input type="text" id="ap_ssid" placeholder="Repeater SSID">
+                </div>
+                <div class="form-group">
+                    <label>Repeater (AP) Password</label>
+                    <input type="password" id="ap_pass" placeholder="Repeater Password (min 8 chars)">
+                </div>
+                <div class="form-group">
+                    <label>Max Clients</label>
+                    <input type="number" id="ap_max_conn" min="1" max="10" placeholder="4">
+                </div>
+                <div class="modal-buttons">
+                    <button class="btn-cancel" onclick="closeSettings()">Cancel</button>
+                    <button class="btn-confirm" onclick="saveSettings()">Save & Restart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="shutdownModal" class="modal">
+            <div class="modal-content">
+                <h3>⚠️ Confirm Shutdown</h3>
+                <p>This will safely disconnect the WiFi repeater and enter deep sleep mode.</p>
+                <p style="margin-top: 15px; color: #999; font-size: 0.9em;">The device will retain all settings and can be powered on again.</p>
+                <div class="modal-buttons">
+                    <button class="btn-cancel" onclick="closeShutdownModal()">Cancel</button>
+                    <button class="btn-confirm" onclick="confirmShutdown()">Shutdown</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="refresh-time">Updates every 2 seconds | Last update: <span id="lastUpdate">—</span></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
