@@ -4,6 +4,7 @@
 var dnsExpanded = false;
 var updateInterval = 2000;
 var statsData = null; // Store latest stats
+var dashboardAuthenticated = false; // Track if user has logged in this session
 
 // Utility Functions
 function formatRSSI(rssi) {
@@ -327,8 +328,70 @@ function confirmShutdown() {
     });
 }
 
+// Login Modal Functions
+function openLoginModal() {
+    document.getElementById('loginError').style.display = 'none';
+    document.getElementById('login_user').value = '';
+    document.getElementById('login_pass').value = '';
+    document.getElementById('loginModal').style.display = 'block';
+    // Auto-focus username field
+    setTimeout(function() { document.getElementById('login_user').focus(); }, 100);
+}
+
+function closeLoginModal() {
+    document.getElementById('loginModal').style.display = 'none';
+}
+
+function submitLogin() {
+    var username = document.getElementById('login_user').value.trim();
+    var password = document.getElementById('login_pass').value;
+
+    if (!username || !password) {
+        document.getElementById('loginError').style.display = 'block';
+        document.getElementById('loginError').textContent = '❌ Please enter both username and password.';
+        return;
+    }
+
+    var btn = document.getElementById('loginSubmitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Verifying...';
+
+    fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: username, password: password })
+    })
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+        btn.disabled = false;
+        btn.textContent = 'Login';
+        if (data.ok) {
+            dashboardAuthenticated = true;
+            closeLoginModal();
+            openSettingsPanel();
+        } else {
+            document.getElementById('loginError').style.display = 'block';
+            document.getElementById('loginError').textContent = '❌ Invalid username or password.';
+        }
+    })
+    .catch(function(err) {
+        btn.disabled = false;
+        btn.textContent = 'Login';
+        document.getElementById('loginError').style.display = 'block';
+        document.getElementById('loginError').textContent = '❌ Connection error. Try again.';
+    });
+}
+
 // Settings Functions
 function openSettings() {
+    if (!dashboardAuthenticated) {
+        openLoginModal();
+        return;
+    }
+    openSettingsPanel();
+}
+
+function openSettingsPanel() {
     document.getElementById('settingsModal').style.display = 'block';
     
     // Load current settings
@@ -338,6 +401,17 @@ function openSettings() {
         document.getElementById('ap_ssid').value = data.ap_ssid || '';
         document.getElementById('ap_pass').value = ''; // Don't show password
         document.getElementById('ap_max_conn').value = data.ap_max_conn || 4;
+
+        // Populate SSID history datalist
+        var datalist = document.getElementById('ssid_history_list');
+        if (datalist && data.ssid_history && data.ssid_history.length) {
+            datalist.innerHTML = '';
+            for (var i = 0; i < data.ssid_history.length; i++) {
+                var option = document.createElement('option');
+                option.value = data.ssid_history[i];
+                datalist.appendChild(option);
+            }
+        }
     }, function(err) {
         alert('Failed to load settings: ' + err.message);
     });
@@ -430,6 +504,7 @@ window.onclick = function(event) {
     var modal = document.getElementById('shutdownModal');
     var settingsModal = document.getElementById('settingsModal');
     var resetModal = document.getElementById('resetModal');
+    var loginModal = document.getElementById('loginModal');
     if (event.target === modal) {
         closeShutdownModal();
     }
@@ -439,7 +514,26 @@ window.onclick = function(event) {
     if (event.target === resetModal) {
         closeResetModal();
     }
+    if (event.target === loginModal) {
+        closeLoginModal();
+    }
 };
+
+// Allow Enter key to submit login
+document.addEventListener('DOMContentLoaded', function() {
+    var loginPass = document.getElementById('login_pass');
+    if (loginPass) {
+        loginPass.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { submitLogin(); }
+        });
+    }
+    var loginUser = document.getElementById('login_user');
+    if (loginUser) {
+        loginUser.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') { document.getElementById('login_pass').focus(); }
+        });
+    }
+});
 
 // Initialize
 fetchData();

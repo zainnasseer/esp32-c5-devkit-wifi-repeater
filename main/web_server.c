@@ -537,31 +537,42 @@ static esp_err_t api_config_get_handler(httpd_req_t *req) {
         // If load fails, try getting defaults
         wifi_config_get_default(&config);
     }
-    
+
     cJSON *root = cJSON_CreateObject();
     if (root == NULL) {
         httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "JSON alloc failed");
         return ESP_FAIL;
     }
-    
+
     cJSON_AddStringToObject(root, "sta_ssid", config.sta_ssid);
     // Do not send passwords for security, or send masked
-    cJSON_AddStringToObject(root, "sta_pass", ""); 
+    cJSON_AddStringToObject(root, "sta_pass", "");
     cJSON_AddStringToObject(root, "ap_ssid", config.ap_ssid);
     cJSON_AddStringToObject(root, "ap_pass", ""); // Masked
     cJSON_AddNumberToObject(root, "ap_max_conn", config.ap_max_connections);
-    
+
+    // Append SSID history
+    ssid_history_t history;
+    wifi_config_load_ssid_history(&history);
+    cJSON *ssid_list = cJSON_CreateArray();
+    if (ssid_list != NULL) {
+        for (uint8_t i = 0; i < history.count; i++) {
+            cJSON_AddItemToArray(ssid_list, cJSON_CreateString(history.ssids[i]));
+        }
+        cJSON_AddItemToObject(root, "ssid_history", ssid_list);
+    }
+
     char *json_str = cJSON_PrintUnformatted(root);
     if (json_str == NULL) {
         cJSON_Delete(root);
         httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "JSON render failed");
         return ESP_FAIL;
     }
-    
+
     httpd_resp_set_hdr(req, "Cache-Control", "no-store");
     httpd_resp_set_type(req, "application/json");
     httpd_resp_send(req, json_str, strlen(json_str));
-    
+
     free(json_str);
     cJSON_Delete(root);
     return ESP_OK;
@@ -635,7 +646,10 @@ static esp_err_t api_config_post_handler(httpd_req_t *req) {
         httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Failed to save to NVS");
         return ESP_FAIL;
     }
-    
+
+    // Update SSID history with the newly configured STA SSID
+    wifi_config_add_ssid_to_history(config.sta_ssid);
+
     httpd_resp_send(req, "{\"status\":\"ok\"}", -1);
     return ESP_OK;
 }
@@ -664,6 +678,61 @@ static esp_err_t api_config_reset_handler(httpd_req_t *req) {
 
     vTaskDelay(pdMS_TO_TICKS(500));
     esp_restart();
+    return ESP_OK;
+}
+
+/**
+ * @brief POST /api/auth  — verify dashboard credentials
+ *
+ * Body: {"username": "...", "password": "..."}
+ * Returns: {"ok": true} or HTTP 401
+ */
+static esp_err_t api_auth_handler(httpd_req_t *req) {
+    if (req->method != HTTP_POST) {
+        httpd_resp_send_err(req, HTTPD_405_METHOD_NOT_ALLOWED, "POST required");
+        return ESP_FAIL;
+    }
+
+    char buf[256] = {0};
+    int remaining = req->content_len;
+    if (remaining <= 0 || remaining >= (int)sizeof(buf)) {
+        httpd_resp_send_err(req, HTTPD_400_BAD_REQUEST, "Invalid body");
+        return ESP_FAIL;
+    }
+
+    int ret = httpd_req_recv(req, buf, remaining);
+    if (ret <= 0) {
+        return ESP_FAIL;
+    }
+    buf[ret] = '\0';
+
+    cJSON *json = cJSON_Parse(buf);
+    if (json == NULL) {
+        httpd_resp_send_err(req, HTTPD_400_BAD_REQUEST, "Invalid JSON");
+        return ESP_FAIL;
+    }
+
+    cJSON *user_item = cJSON_GetObjectItem(json, "username");
+    cJSON *pass_item = cJSON_GetObjectItem(json, "password");
+
+    if (!cJSON_IsString(user_item) || !cJSON_IsString(pass_item)) {
+        cJSON_Delete(json);
+        httpd_resp_send_err(req, HTTPD_400_BAD_REQUEST, "Missing credentials");
+        return ESP_FAIL;
+    }
+
+    bool ok = wifi_config_verify_auth(user_item->valuestring, pass_item->valuestring);
+    cJSON_Delete(json);
+
+    if (!ok) {
+        httpd_resp_set_status(req, "401 Unauthorized");
+        httpd_resp_set_type(req, "application/json");
+        httpd_resp_send(req, "{\"ok\":false,\"error\":\"Invalid credentials\"}", -1);
+        return ESP_OK;
+    }
+
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, "{\"ok\":true}", -1);
     return ESP_OK;
 }
 
@@ -753,6 +822,13 @@ static const httpd_uri_t api_config_reset = {
     .user_ctx  = NULL,
 };
 
+static const httpd_uri_t api_auth = {
+    .uri       = "/api/auth",
+    .method    = HTTP_POST,
+    .handler   = api_auth_handler,
+    .user_ctx  = NULL,
+};
+
 esp_err_t web_server_init(void) {
     if (server != NULL) {
         ESP_LOGW(TAG, "Server already running");
@@ -782,6 +858,7 @@ esp_err_t web_server_init(void) {
         httpd_register_uri_handler(server, &api_config_post);
         httpd_register_uri_handler(server, &api_config_reset);
         httpd_register_uri_handler(server, &api_restart);
+        httpd_register_uri_handler(server, &api_auth);
         ESP_LOGI(TAG, "Web server started. Access at http://192.168.4.1");
         return ESP_OK;
     }

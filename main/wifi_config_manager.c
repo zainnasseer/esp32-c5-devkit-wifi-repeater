@@ -8,6 +8,7 @@
 #include "nvs.h"
 #include "esp_log.h"
 #include <string.h>
+#include <stdbool.h>
 
 static const char *TAG = "wifi_config";
 
@@ -18,13 +19,22 @@ static const char *TAG = "wifi_config";
 #define NVS_KEY_AP_SSID      "ap_ssid"
 #define NVS_KEY_AP_PASS      "ap_pass"
 #define NVS_KEY_AP_MAX_CONN  "ap_max_conn"
+// Dashboard auth keys
+#define NVS_KEY_DASH_USER    "dash_user"
+#define NVS_KEY_DASH_PASS    "dash_pass"
+// SSID history: store count + each entry by index
+#define NVS_KEY_HIST_COUNT   "hist_count"
+#define NVS_KEY_HIST_SSID_FMT "hist_ssid_%d" // up to 5, formatted at runtime
 
 // Default configuration
-#define DEFAULT_STA_SSID       "Kite Roastery"
-#define DEFAULT_STA_PASS       "Kite2025"
+#define DEFAULT_STA_SSID       "Router1"
+#define DEFAULT_STA_PASS       "11223344"
 #define DEFAULT_AP_SSID        "Zains_ESP_Repeater"
 #define DEFAULT_AP_PASS        "12345678"
 #define DEFAULT_AP_MAX_CONN    4
+// Default dashboard credentials
+#define DEFAULT_DASH_USER      "admin"
+#define DEFAULT_DASH_PASS      "12345678"
 
 esp_err_t wifi_config_init(void)
 {
@@ -389,4 +399,172 @@ esp_err_t wifi_config_reset_to_defaults(void)
     ESP_LOGI(TAG, "WiFi config reset to defaults: STA='%s', AP='%s'",
              defaults.sta_ssid, defaults.ap_ssid);
     return ESP_OK;
+}
+
+/* ─── Dashboard Auth ───────────────────────────────────────────────────────── */
+
+esp_err_t wifi_config_load_auth(dashboard_auth_t *auth)
+{
+    if (auth == NULL) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    // Fill with compile-time defaults first
+    memset(auth, 0, sizeof(dashboard_auth_t));
+    strncpy(auth->username, DEFAULT_DASH_USER, WIFI_CFG_MAX_USERNAME_LEN);
+    strncpy(auth->password, DEFAULT_DASH_PASS, WIFI_CFG_MAX_DASH_PASS_LEN);
+
+    nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open(NVS_NAMESPACE, NVS_READONLY, &nvs_handle);
+    if (err != ESP_OK) {
+        // Namespace not created yet — defaults are fine
+        return ESP_OK;
+    }
+
+    size_t required_size;
+
+    required_size = WIFI_CFG_MAX_USERNAME_LEN + 1;
+    nvs_get_str(nvs_handle, NVS_KEY_DASH_USER, auth->username, &required_size);
+
+    required_size = WIFI_CFG_MAX_DASH_PASS_LEN + 1;
+    nvs_get_str(nvs_handle, NVS_KEY_DASH_PASS, auth->password, &required_size);
+
+    nvs_close(nvs_handle);
+    return ESP_OK;
+}
+
+esp_err_t wifi_config_save_auth(const dashboard_auth_t *auth)
+{
+    if (auth == NULL) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &nvs_handle);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to open NVS for auth save: %s", esp_err_to_name(err));
+        return err;
+    }
+
+    err = nvs_set_str(nvs_handle, NVS_KEY_DASH_USER, auth->username);
+    if (err != ESP_OK) goto save_auth_done;
+
+    err = nvs_set_str(nvs_handle, NVS_KEY_DASH_PASS, auth->password);
+    if (err != ESP_OK) goto save_auth_done;
+
+    err = nvs_commit(nvs_handle);
+
+save_auth_done:
+    nvs_close(nvs_handle);
+    if (err == ESP_OK) {
+        ESP_LOGI(TAG, "Dashboard auth saved to NVS");
+    } else {
+        ESP_LOGE(TAG, "Failed to save auth: %s", esp_err_to_name(err));
+    }
+    return err;
+}
+
+bool wifi_config_verify_auth(const char *username, const char *password)
+{
+    if (username == NULL || password == NULL) {
+        return false;
+    }
+
+    dashboard_auth_t auth;
+    if (wifi_config_load_auth(&auth) != ESP_OK) {
+        return false;
+    }
+
+    return (strcmp(auth.username, username) == 0) &&
+           (strcmp(auth.password, password) == 0);
+}
+
+/* ─── SSID History ─────────────────────────────────────────────────────────── */
+
+esp_err_t wifi_config_load_ssid_history(ssid_history_t *history)
+{
+    if (history == NULL) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    memset(history, 0, sizeof(ssid_history_t));
+
+    nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open(NVS_NAMESPACE, NVS_READONLY, &nvs_handle);
+    if (err != ESP_OK) {
+        return ESP_OK; // No history yet
+    }
+
+    uint8_t count = 0;
+    err = nvs_get_u8(nvs_handle, NVS_KEY_HIST_COUNT, &count);
+    if (err != ESP_OK || count > WIFI_CFG_MAX_SSID_HISTORY) {
+        count = 0;
+    }
+    history->count = count;
+
+    char key[16];
+    for (uint8_t i = 0; i < count; i++) {
+        snprintf(key, sizeof(key), NVS_KEY_HIST_SSID_FMT, (int)i);
+        size_t required_size = WIFI_CFG_MAX_SSID_LEN + 1;
+        nvs_get_str(nvs_handle, key, history->ssids[i], &required_size);
+    }
+
+    nvs_close(nvs_handle);
+    return ESP_OK;
+}
+
+esp_err_t wifi_config_add_ssid_to_history(const char *ssid)
+{
+    if (ssid == NULL || strlen(ssid) == 0) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    ssid_history_t history;
+    wifi_config_load_ssid_history(&history);
+
+    // Deduplicate: remove existing occurrence of this SSID
+    uint8_t new_count = 0;
+    char temp[WIFI_CFG_MAX_SSID_HISTORY][WIFI_CFG_MAX_SSID_LEN + 1];
+    for (uint8_t i = 0; i < history.count; i++) {
+        if (strcmp(history.ssids[i], ssid) != 0) {
+            strncpy(temp[new_count], history.ssids[i], WIFI_CFG_MAX_SSID_LEN);
+            temp[new_count][WIFI_CFG_MAX_SSID_LEN] = '\0';
+            new_count++;
+        }
+    }
+
+    // Shift entries down to make room at [0] for the newest
+    int max_old = (new_count < WIFI_CFG_MAX_SSID_HISTORY - 1)
+                  ? new_count
+                  : WIFI_CFG_MAX_SSID_HISTORY - 1;
+    for (int i = max_old - 1; i >= 0; i--) {
+        strncpy(history.ssids[i + 1], temp[i], WIFI_CFG_MAX_SSID_LEN);
+        history.ssids[i + 1][WIFI_CFG_MAX_SSID_LEN] = '\0';
+    }
+    strncpy(history.ssids[0], ssid, WIFI_CFG_MAX_SSID_LEN);
+    history.ssids[0][WIFI_CFG_MAX_SSID_LEN] = '\0';
+    history.count = (uint8_t)(max_old + 1);
+
+    // Persist
+    nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &nvs_handle);
+    if (err != ESP_OK) {
+        return err;
+    }
+
+    err = nvs_set_u8(nvs_handle, NVS_KEY_HIST_COUNT, history.count);
+    if (err != ESP_OK) goto hist_done;
+
+    char key[16];
+    for (uint8_t i = 0; i < history.count; i++) {
+        snprintf(key, sizeof(key), NVS_KEY_HIST_SSID_FMT, (int)i);
+        err = nvs_set_str(nvs_handle, key, history.ssids[i]);
+        if (err != ESP_OK) goto hist_done;
+    }
+
+    err = nvs_commit(nvs_handle);
+    ESP_LOGI(TAG, "SSID history updated (%d entries)", history.count);
+
+hist_done:
+    nvs_close(nvs_handle);
+    return err;
 }

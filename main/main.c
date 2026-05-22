@@ -433,6 +433,30 @@ static void wifi_init_repeater(void)
     // Keep radio fully awake to reduce latency and improve NAT reliability
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
 
+    // ── Throughput optimizations ────────────────────────────────────────────
+    // Use HT40 (40 MHz) bandwidth on both interfaces for ~double PHY rate
+    // (e.g. 150 Mbps instead of 72 Mbps on 802.11n MCS7).
+    // Falls back gracefully if the uplink AP doesn't support HT40.
+    esp_err_t bw_err;
+    bw_err = esp_wifi_set_bandwidth(WIFI_IF_STA, WIFI_BW_HT40);
+    if (bw_err != ESP_OK) {
+        ESP_LOGW(TAG, "STA HT40 not available, using HT20 (%s)", esp_err_to_name(bw_err));
+    } else {
+        ESP_LOGI(TAG, "STA bandwidth: HT40");
+    }
+    bw_err = esp_wifi_set_bandwidth(WIFI_IF_AP, WIFI_BW_HT40);
+    if (bw_err != ESP_OK) {
+        ESP_LOGW(TAG, "AP HT40 not available, using HT20 (%s)", esp_err_to_name(bw_err));
+    } else {
+        ESP_LOGI(TAG, "AP bandwidth: HT40");
+    }
+
+    // Set maximum TX power for best link budget / throughput
+    // ESP32-C5 supports up to 84 (21 dBm) in units of 0.25 dBm
+    esp_wifi_set_max_tx_power(84);
+    ESP_LOGI(TAG, "TX power set to maximum (21 dBm)");
+    // ───────────────────────────────────────────────────────────────────────
+
     ESP_LOGI(TAG, "Wi-Fi AP SSID: %s, password: %s",
              wifi_cfg.ap_ssid, wifi_cfg.ap_password);
     ESP_LOGI(TAG, "Connecting STA to SSID: %s", wifi_cfg.sta_ssid);

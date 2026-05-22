@@ -11,6 +11,7 @@
 
 #include "esp_err.h"
 #include <stdint.h>
+#include <stdbool.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -20,18 +21,41 @@ extern "C" {
 #define WIFI_CFG_MAX_SSID_LEN       32
 #define WIFI_CFG_MAX_PASSWORD_LEN   64
 
+// Maximum number of previously-used STA SSIDs to remember
+#define WIFI_CFG_MAX_SSID_HISTORY   5
+
+// Maximum lengths for dashboard auth credentials
+#define WIFI_CFG_MAX_USERNAME_LEN   32
+#define WIFI_CFG_MAX_DASH_PASS_LEN  64
+
 /**
  * @brief WiFi configuration structure
  * 
  * Contains credentials for both Station (STA) and Access Point (AP) modes
  */
 typedef struct {
-    char sta_ssid[WIFI_CFG_MAX_SSID_LEN + 1];       // Station SSID (uplink router)
-    char sta_password[WIFI_CFG_MAX_PASSWORD_LEN + 1]; // Station password
-    char ap_ssid[WIFI_CFG_MAX_SSID_LEN + 1];        // Access Point SSID
-    char ap_password[WIFI_CFG_MAX_PASSWORD_LEN + 1];  // Access Point password
-    uint8_t ap_max_connections;                      // Max AP connections
+    char sta_ssid[WIFI_CFG_MAX_SSID_LEN + 1];          // Station SSID (uplink router)
+    char sta_password[WIFI_CFG_MAX_PASSWORD_LEN + 1];  // Station password
+    char ap_ssid[WIFI_CFG_MAX_SSID_LEN + 1];           // Access Point SSID
+    char ap_password[WIFI_CFG_MAX_PASSWORD_LEN + 1];   // Access Point password
+    uint8_t ap_max_connections;                        // Max AP connections
 } repeater_config_t;
+
+/**
+ * @brief Dashboard authentication credentials
+ */
+typedef struct {
+    char username[WIFI_CFG_MAX_USERNAME_LEN + 1]; // Dashboard username
+    char password[WIFI_CFG_MAX_DASH_PASS_LEN + 1]; // Dashboard password
+} dashboard_auth_t;
+
+/**
+ * @brief Previously-used STA SSID history
+ */
+typedef struct {
+    char ssids[WIFI_CFG_MAX_SSID_HISTORY][WIFI_CFG_MAX_SSID_LEN + 1];
+    uint8_t count; // Number of valid entries
+} ssid_history_t;
 
 /**
  * @brief Initialize the WiFi configuration manager
@@ -110,6 +134,49 @@ esp_err_t wifi_config_sync_defaults(void);
  * @return ESP_OK on success, error code otherwise
  */
 esp_err_t wifi_config_reset_to_defaults(void);
+
+/**
+ * @brief Load dashboard authentication credentials from NVS
+ *
+ * Falls back to compile-time defaults if not stored.
+ *
+ * @param[out] auth Pointer to auth struct to fill
+ * @return ESP_OK on success
+ */
+esp_err_t wifi_config_load_auth(dashboard_auth_t *auth);
+
+/**
+ * @brief Save dashboard authentication credentials to NVS
+ *
+ * @param[in] auth Pointer to auth struct to save
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t wifi_config_save_auth(const dashboard_auth_t *auth);
+
+/**
+ * @brief Verify dashboard credentials against stored values
+ *
+ * @param[in] username Username to verify
+ * @param[in] password Password to verify
+ * @return true if credentials match, false otherwise
+ */
+bool wifi_config_verify_auth(const char *username, const char *password);
+
+/**
+ * @brief Load SSID history from NVS
+ *
+ * @param[out] history Pointer to history struct to fill
+ * @return ESP_OK on success
+ */
+esp_err_t wifi_config_load_ssid_history(ssid_history_t *history);
+
+/**
+ * @brief Add an SSID to the history (saves to NVS, deduplicates, newest first)
+ *
+ * @param[in] ssid SSID string to add
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t wifi_config_add_ssid_to_history(const char *ssid);
 
 #ifdef __cplusplus
 }
