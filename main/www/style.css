@@ -377,6 +377,42 @@ body {
     background: #777;
 }
 
+/* Amber "Reset to Defaults" button — sits between Cancel and Save */
+.btn-reset {
+    background: #f59e0b;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.btn-reset:hover {
+    background: #d97706;
+}
+
+/* Red variant for the destructive confirm button inside the reset modal */
+.btn-danger-confirm {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-danger-confirm:hover {
+    background: #b91c1c;
+}
+
+/* Widen settings modal to fit three buttons comfortably */
+#settingsModal .modal-content {
+    max-width: 480px;
+}
+
+#settingsModal .modal-buttons {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 /* Refresh Time */
 .refresh-time {
     text-align: center;

@@ -100,6 +100,17 @@ esp_err_t wifi_config_validate(const repeater_config_t *config);
  */
 esp_err_t wifi_config_sync_defaults(void);
 
+/**
+ * @brief Reset NVS config to hardcoded defaults
+ *
+ * Erases any NVS-stored credentials and writes the compile-time defaults back
+ * so the next boot (or live apply) uses the credentials baked into the firmware.
+ * This resolves conflicts between web-dashboard-saved values and the source code.
+ *
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t wifi_config_reset_to_defaults(void);
+
 #ifdef __cplusplus
 }
 #endif

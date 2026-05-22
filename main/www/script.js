@@ -398,16 +398,46 @@ function saveSettings() {
     });
 }
 
+// Reset to Defaults Functions
+function showResetModal() {
+    document.getElementById('settingsModal').style.display = 'none';
+    document.getElementById('resetModal').style.display = 'block';
+}
+
+function closeResetModal() {
+    document.getElementById('resetModal').style.display = 'none';
+    document.getElementById('settingsModal').style.display = 'block';
+}
+
+function confirmReset() {
+    document.getElementById('resetModal').style.display = 'none';
+    fetch('/api/config/reset', { method: 'POST' })
+        .then(function(response) {
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            return response.json();
+        })
+        .then(function(data) {
+            alert('Defaults restored. Device is restarting...\nReconnect to the repeater AP after ~10 seconds.');
+            setTimeout(function() { location.reload(); }, 12000);
+        })
+        .catch(function(err) {
+            alert('Error resetting to defaults: ' + err.message);
+        });
+}
+
 // Modal click-outside-to-close
 window.onclick = function(event) {
     var modal = document.getElementById('shutdownModal');
     var settingsModal = document.getElementById('settingsModal');
+    var resetModal = document.getElementById('resetModal');
     if (event.target === modal) {
-        closeSettings(); // close both just in case
         closeShutdownModal();
     }
     if (event.target === settingsModal) {
         closeSettings();
+    }
+    if (event.target === resetModal) {
+        closeResetModal();
     }
 };
 

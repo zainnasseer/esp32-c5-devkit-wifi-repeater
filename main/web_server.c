@@ -641,6 +641,33 @@ static esp_err_t api_config_post_handler(httpd_req_t *req) {
 }
 
 /**
+ * Handler for POST /api/config/reset
+ * Erases NVS credentials saved by the web dashboard and writes the
+ * compile-time defaults back, then restarts so they take effect.
+ */
+static esp_err_t api_config_reset_handler(httpd_req_t *req) {
+    if (req->method != HTTP_POST) {
+        httpd_resp_send_err(req, HTTPD_405_METHOD_NOT_ALLOWED, "POST method required");
+        return ESP_FAIL;
+    }
+
+    esp_err_t err = wifi_config_reset_to_defaults();
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to reset config to defaults: %s", esp_err_to_name(err));
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Reset failed");
+        return ESP_FAIL;
+    }
+
+    ESP_LOGI(TAG, "Config reset to defaults via web request. Restarting...");
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, "{\"status\":\"reset_ok\",\"message\":\"Defaults restored. Restarting...\"}", -1);
+
+    vTaskDelay(pdMS_TO_TICKS(500));
+    esp_restart();
+    return ESP_OK;
+}
+
+/**
  * Handler for system restart
  */
 static esp_err_t restart_handler(httpd_req_t *req) {
@@ -719,6 +746,13 @@ static const httpd_uri_t api_restart = {
     .user_ctx  = NULL,
 };
 
+static const httpd_uri_t api_config_reset = {
+    .uri       = "/api/config/reset",
+    .method    = HTTP_POST,
+    .handler   = api_config_reset_handler,
+    .user_ctx  = NULL,
+};
+
 esp_err_t web_server_init(void) {
     if (server != NULL) {
         ESP_LOGW(TAG, "Server already running");
@@ -746,6 +780,7 @@ esp_err_t web_server_init(void) {
         httpd_register_uri_handler(server, &api_shutdown);
         httpd_register_uri_handler(server, &api_config_get);
         httpd_register_uri_handler(server, &api_config_post);
+        httpd_register_uri_handler(server, &api_config_reset);
         httpd_register_uri_handler(server, &api_restart);
         ESP_LOGI(TAG, "Web server started. Access at http://192.168.4.1");
         return ESP_OK;

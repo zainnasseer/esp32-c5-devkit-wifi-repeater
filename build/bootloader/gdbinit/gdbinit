@@ -1,0 +1,2 @@
+source /Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/gdbinit/symbols
+source /Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/gdbinit/connect

@@ -20,8 +20,8 @@ static const char *TAG = "wifi_config";
 #define NVS_KEY_AP_MAX_CONN  "ap_max_conn"
 
 // Default configuration
-#define DEFAULT_STA_SSID       "SiP TEMPER WiFi"
-#define DEFAULT_STA_PASS       "101001000"
+#define DEFAULT_STA_SSID       "Kite Roastery"
+#define DEFAULT_STA_PASS       "Kite2025"
 #define DEFAULT_AP_SSID        "Zains_ESP_Repeater"
 #define DEFAULT_AP_PASS        "12345678"
 #define DEFAULT_AP_MAX_CONN    4
@@ -362,5 +362,31 @@ esp_err_t wifi_config_sync_defaults(void)
         }
     }
     
+    return ESP_OK;
+}
+
+esp_err_t wifi_config_reset_to_defaults(void)
+{
+    ESP_LOGI(TAG, "Resetting WiFi config to hardcoded defaults...");
+
+    // Step 1: Erase whatever is in NVS
+    esp_err_t err = wifi_config_erase();
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to erase NVS config: %s", esp_err_to_name(err));
+        return err;
+    }
+
+    // Step 2: Write the compile-time defaults back to NVS
+    repeater_config_t defaults;
+    wifi_config_get_default(&defaults);
+
+    err = wifi_config_save(&defaults);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to write defaults to NVS: %s", esp_err_to_name(err));
+        return err;
+    }
+
+    ESP_LOGI(TAG, "WiFi config reset to defaults: STA='%s', AP='%s'",
+             defaults.sta_ssid, defaults.ap_ssid);
     return ESP_OK;
 }
