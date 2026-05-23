@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Darwin-25.4.0")
+set(CMAKE_HOST_SYSTEM "Darwin-25.5.0")
 set(CMAKE_HOST_SYSTEM_NAME "Darwin")
-set(CMAKE_HOST_SYSTEM_VERSION "25.4.0")
+set(CMAKE_HOST_SYSTEM_VERSION "25.5.0")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "arm64")
 
 include("/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/toolchain-esp32c5.cmake")

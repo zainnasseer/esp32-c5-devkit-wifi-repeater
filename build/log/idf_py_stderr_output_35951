@@ -1,4 +1,6 @@
 Command: cmake -G Ninja -B /Users/zainnasseer/development/esp/wifi_repeater/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/Users/zainnasseer/.espressif/python_env/idf6.1_py3.14_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /Users/zainnasseer/development/esp/wifi_repeater
+info: Default value for LWIP_IP_FORWARD in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
 Configuration Report               
  ───────────────────────────────── 
    Parser Version: 1               

@@ -8,6 +8,17 @@ CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
 # Enable LWIP statistics for network monitoring
 CONFIG_LWIP_STATS=y
 
+# ── NAT / NAPT ───────────────────────────────────────────────
+# IPv4 Network Address and Port Translation — core repeater feature.
+# Without this, AP clients can't route traffic through the STA uplink.
+CONFIG_LWIP_IPV4_NAPT=y
+
+# ── FreeRTOS CPU runtime statistics ─────────────────────────
+# Enables per-task CPU usage tracking shown in the dashboard.
+# Uses esp_timer as the high-resolution clock source (no extra HW needed).
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y
+CONFIG_FREERTOS_RUN_TIME_STATS_USING_ESP_TIMER=y
+
 # ═══════════════════════════════════════════════════════════
 #  THROUGHPUT OPTIMIZATIONS
 # ═══════════════════════════════════════════════════════════
@@ -55,3 +66,85 @@ CONFIG_LWIP_UDP_RECVMBOX_SIZE=16
 # this is far too conservative. Lower it to reduce stalls after
 # a single dropped packet.
 CONFIG_LWIP_TCP_RTO_TIME=500
+
+# ═══════════════════════════════════════════════════════════
+#  FLASH SIZE REDUCTION — disable unused components
+# ═══════════════════════════════════════════════════════════
+
+# ── IEEE 802.15.4 / OpenThread ──────────────────────────────
+# This is a Thread/Zigbee radio stack — not used in a WiFi repeater.
+# Disabling saves ~20 KB of flash.
+CONFIG_IEEE802154_ENABLED=n
+CONFIG_OPENTHREAD_ENABLED=n
+
+# ── Bluetooth ───────────────────────────────────────────────
+# Not used in this project. Already off by default but be explicit.
+CONFIG_BT_ENABLED=n
+
+# ── WPA Enterprise / EAP ────────────────────────────────────
+# We connect to a personal (WPA2-PSK) network, not an enterprise
+# network. Disabling EAP/PEAP/TTLS/TLS removes ~15 KB from
+# wpa_supplicant.
+CONFIG_ESP_WIFI_EAP_TLS1_3=n
+
+# ── WPS (WiFi Protected Setup) ──────────────────────────────
+# Push-button/PIN setup — not used.
+CONFIG_ESP_WIFI_WPS_STRICT=n
+
+# ── WPA3 SAE ────────────────────────────────────────────────
+# We force WPA2-PSK (WIFI_AUTH_WPA2_PSK) and set pmf required=false.
+# WPA3 SAE support in wpa_supplicant adds code we don't need.
+CONFIG_ESP_WIFI_ENABLE_WPA3_SAE=n
+CONFIG_ESP_WIFI_ENABLE_WPA3_OWE_STA=n
+
+# ── mbedTLS — trim to bare minimum ──────────────────────────
+# We only serve plain HTTP (no TLS). The full mbedTLS stack with
+# X.509 cert bundle is the second-largest flash consumer (~80 KB).
+# We cannot disable MBEDTLS_TLS_ENABLED entirely because the key
+# exchange cipher-suite Kconfig flags (which wpa_supplicant enables)
+# fail check_config.h when TLS is off. Instead, disable only the
+# high-level features that are genuinely unused:
+#  - Certificate bundle (saves the 130 KB CA bundle)
+#  - X.509 CRL/CSR parsing (leaves CRT for wpa_supplicant SAE/EAP)
+#  - PEM encode/write (we never write certs)
+#  - Self-test and verbose error strings
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=n
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=n
+CONFIG_MBEDTLS_X509_CRL_PARSE_C=n
+CONFIG_MBEDTLS_X509_CSR_PARSE_C=n
+CONFIG_MBEDTLS_PEM_WRITE_C=n
+CONFIG_MBEDTLS_SELF_TEST=n
+CONFIG_MBEDTLS_ERROR_STRINGS=n
+
+# ── esp-tls / HTTPS ─────────────────────────────────────────
+# No HTTPS server or client in this project.
+CONFIG_ESP_TLS_SKIP_SERVER_CERT_VERIFY=n
+
+# ── HTTPS OTA ───────────────────────────────────────────────
+# Over-the-air update via HTTPS — not implemented.
+CONFIG_ESP_HTTPS_OTA_DECRYPT_CB=n
+
+# ── lwIP IPv6 ───────────────────────────────────────────────
+# This is a pure IPv4 NAT repeater. IPv6 adds ~15 KB and is
+# unused. Disabling also reduces RAM usage.
+CONFIG_LWIP_IPV6=n
+
+# ── lwIP PPP ────────────────────────────────────────────────
+# Point-to-Point Protocol — unused in WiFi repeater.
+CONFIG_LWIP_PPP_SUPPORT=n
+
+# ── lwIP SLIP ───────────────────────────────────────────────
+# Serial Line IP — unused.
+CONFIG_LWIP_SLIP_SUPPORT=n
+
+# ── SNTP ────────────────────────────────────────────────────
+# Network time sync — not used in this project.
+CONFIG_LWIP_SNTP_STARTUP_DELAY=n
+
+# ── NetBIOS ─────────────────────────────────────────────────
+# Windows name resolution broadcasts — not needed.
+CONFIG_LWIP_NETBIOS_ENABLE_NAME=n
+
+# ── Ping ────────────────────────────────────────────────────
+# The lwIP ping socket app — not used by our code.
+CONFIG_LWIP_ICMP=y

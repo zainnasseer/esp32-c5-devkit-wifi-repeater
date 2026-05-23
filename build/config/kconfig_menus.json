@@ -28760,10 +28760,7 @@
                                 "help": "The number of 802.15.4 receive buffers",
                                 "id": "IEEE802154_RX_BUFFER_SIZE",
                                 "name": "IEEE802154_RX_BUFFER_SIZE",
-                                "range": [
-                                    2,
-                                    100
-                                ],
+                                "range": null,
                                 "title": "The number of 802.15.4 receive buffers",
                                 "type": "int"
                             },
@@ -28833,10 +28830,7 @@
                                 "help": "set the CCA threshold, in dBm",
                                 "id": "IEEE802154_CCA_THRESHOLD",
                                 "name": "IEEE802154_CCA_THRESHOLD",
-                                "range": [
-                                    -120,
-                                    0
-                                ],
+                                "range": null,
                                 "title": "CCA detection threshold",
                                 "type": "int"
                             },
@@ -28846,10 +28840,7 @@
                                 "help": "set the pending table size",
                                 "id": "IEEE802154_PENDING_TABLE_SIZE",
                                 "name": "IEEE802154_PENDING_TABLE_SIZE",
-                                "range": [
-                                    1,
-                                    100
-                                ],
+                                "range": null,
                                 "title": "Pending table size",
                                 "type": "int"
                             },
@@ -29838,10 +29829,7 @@
                         "help": "Set the number of duplicate address detection attempts.",
                         "id": "LWIP_IPV6_DUP_DETECT_ATTEMPTS",
                         "name": "LWIP_IPV6_DUP_DETECT_ATTEMPTS",
-                        "range": [
-                            0,
-                            7
-                        ],
+                        "range": null,
                         "title": "Number of duplicate address detection attempts",
                         "type": "int"
                     },
@@ -30711,10 +30699,7 @@
                         "help": "Config max number of IPv6 packets to queue during MAC resolution.",
                         "id": "LWIP_IPV6_MEMP_NUM_ND6_QUEUE",
                         "name": "LWIP_IPV6_MEMP_NUM_ND6_QUEUE",
-                        "range": [
-                            3,
-                            20
-                        ],
+                        "range": null,
                         "title": "Max number of IPv6 packets to queue during MAC resolution",
                         "type": "int"
                     },
@@ -30724,10 +30709,7 @@
                         "help": "Config max number of entries in IPv6 neighbor cache",
                         "id": "LWIP_IPV6_ND6_NUM_NEIGHBORS",
                         "name": "LWIP_IPV6_ND6_NUM_NEIGHBORS",
-                        "range": [
-                            3,
-                            10
-                        ],
+                        "range": null,
                         "title": "Max number of entries in IPv6 neighbor cache",
                         "type": "int"
                     },
@@ -31073,10 +31055,7 @@
                                         "help": "RFC 4330 recommends a startup delay before sending the initial request.\nLWIP calculates this delay to a random number of milliseconds between 0 and this value.",
                                         "id": "LWIP_SNTP_MAXIMUM_STARTUP_DELAY",
                                         "name": "LWIP_SNTP_MAXIMUM_STARTUP_DELAY",
-                                        "range": [
-                                            100,
-                                            300000
-                                        ],
+                                        "range": null,
                                         "title": "Maximum startup delay (ms)",
                                         "type": "int"
                                     }

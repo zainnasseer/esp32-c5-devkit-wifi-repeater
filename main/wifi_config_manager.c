@@ -28,7 +28,7 @@ static const char *TAG = "wifi_config";
 
 // Default configuration
 #define DEFAULT_STA_SSID       "Router1"
-#define DEFAULT_STA_PASS       "11223344"
+#define DEFAULT_STA_PASS       "12345678"
 #define DEFAULT_AP_SSID        "Zains_ESP_Repeater"
 #define DEFAULT_AP_PASS        "12345678"
 #define DEFAULT_AP_MAX_CONN    4

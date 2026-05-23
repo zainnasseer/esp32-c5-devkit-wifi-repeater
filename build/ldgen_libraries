@@ -23,7 +23,6 @@
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/spi_flash/libspi_flash.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_hal_mspi/libesp_hal_mspi.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/bootloader_support/libbootloader_support.a
-/Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/mbedtls/libmbedtls.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_security/libesp_security.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/efuse/libefuse.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_partition/libesp_partition.a
@@ -50,8 +49,6 @@
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_hal_rmt/libesp_hal_rmt.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_hal_parlio/libesp_hal_parlio.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_gdbstub/libesp_gdbstub.a
-/Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_coex/libesp_coex.a
-/Users/zainnasseer/development/esp/esp-idf/components/esp_coex/lib/esp32c5/libcoexist.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_adc/libesp_adc.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_http_client/libesp_http_client.a
@@ -62,11 +59,11 @@
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_http_server/libesp_http_server.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/nvs_flash/libnvs_flash.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
-/Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/mbedtls/libmbedtls.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_wifi/libesp_wifi.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_phy/libesp_phy.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_netif/libesp_netif.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
+/Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_coex/libesp_coex.a
 /Users/zainnasseer/development/esp/esp-idf/components/esp_wifi/lib/esp32c5/libcore.a
 /Users/zainnasseer/development/esp/esp-idf/components/esp_wifi/lib/esp32c5/libespnow.a
 /Users/zainnasseer/development/esp/esp-idf/components/esp_wifi/lib/esp32c5/libmesh.a
@@ -175,7 +172,6 @@
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/fatfs/libfatfs.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/wear_levelling/libwear_levelling.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
-/Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/ieee802154/libieee802154.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/rt/librt.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/spiffs/libspiffs.a
 /Users/zainnasseer/development/esp/wifi_repeater/build/esp-idf/espressif__cjson/libespressif__cjson.a

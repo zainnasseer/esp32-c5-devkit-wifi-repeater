@@ -47,8 +47,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -99,8 +98,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -154,8 +152,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -206,8 +203,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -225,7 +221,7 @@ events:
       - "CMakeLists.txt:71 (project)"
     message: |
       The target system is: Generic -  - 
-      The host system is: Darwin - 25.4.0 - arm64
+      The host system is: Darwin - 25.5.0 - arm64
   -
     kind: "find-v1"
     backtrace:
@@ -272,8 +268,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -344,8 +339,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -400,8 +394,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -439,8 +432,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -504,8 +496,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -594,8 +585,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -628,8 +618,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -685,8 +674,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -719,8 +707,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -776,8 +763,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -810,8 +796,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -867,8 +852,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -901,8 +885,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -958,8 +941,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -992,8 +974,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1049,8 +1030,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1083,8 +1063,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1140,8 +1119,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1174,8 +1152,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1231,8 +1208,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1265,8 +1241,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1322,8 +1297,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1354,8 +1328,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-dlltool"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-dlltool"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-dlltool"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-dlltool"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-dlltool"
+      - "/pkg/env/global/bin/riscv32-esp-elf-dlltool"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-dlltool"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-dlltool"
       - "/usr/local/share/dotnet/riscv32-esp-elf-dlltool"
@@ -1385,8 +1358,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dlltool"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
-      - "/opt/pkg/env/active/bin/dlltool"
-      - "/opt/pmk/env/global/bin/dlltool"
+      - "/pkg/env/global/bin/dlltool"
       - "/Library/Apple/usr/bin/dlltool"
       - "/Applications/VMware Fusion.app/Contents/Public/dlltool"
       - "/usr/local/share/dotnet/dlltool"
@@ -1419,8 +1391,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1476,8 +1447,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1510,8 +1480,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1567,8 +1536,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1599,8 +1567,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-tapi"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-tapi"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-tapi"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-tapi"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-tapi"
+      - "/pkg/env/global/bin/riscv32-esp-elf-tapi"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-tapi"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-tapi"
       - "/usr/local/share/dotnet/riscv32-esp-elf-tapi"
@@ -1630,8 +1597,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
-      - "/opt/pkg/env/active/bin/tapi"
-      - "/opt/pmk/env/global/bin/tapi"
+      - "/pkg/env/global/bin/tapi"
       - "/Library/Apple/usr/bin/tapi"
       - "/Applications/VMware Fusion.app/Contents/Public/tapi"
       - "/usr/local/share/dotnet/tapi"
@@ -1664,8 +1630,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1723,8 +1688,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1755,8 +1719,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar-15.2"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar-15.2"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar-15.2"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar-15.2"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar-15.2"
@@ -1786,8 +1749,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar-15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar-15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar-15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar-15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar-15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar-15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar-15"
@@ -1817,8 +1779,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar15"
@@ -1851,8 +1812,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -1910,8 +1870,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -1942,8 +1901,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib-15.2"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib-15.2"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib-15.2"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib-15.2"
@@ -1973,8 +1931,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib-15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib-15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib-15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib-15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib-15"
@@ -2004,8 +1961,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib15"
@@ -2038,8 +1994,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2094,8 +2049,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -2133,8 +2087,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2198,8 +2151,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2290,8 +2242,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -2322,8 +2273,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar-15.2"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar-15.2"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar-15.2"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar-15.2"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar-15.2"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar-15.2"
@@ -2353,8 +2303,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar-15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar-15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar-15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar-15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar-15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar-15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar-15"
@@ -2384,8 +2333,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar15"
@@ -2418,8 +2366,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2477,8 +2424,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -2509,8 +2455,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib-15.2"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib-15.2"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib-15.2"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib-15.2"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib-15.2"
@@ -2540,8 +2485,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib-15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib-15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib-15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib-15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib-15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib-15"
@@ -2571,8 +2515,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib15"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib15"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib15"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib15"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib15"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib15"
@@ -2605,8 +2548,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2661,8 +2603,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -2700,8 +2641,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2773,8 +2713,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -2805,8 +2744,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar-"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar-"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar-"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar-"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar-"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar-"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar-"
@@ -2836,8 +2774,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ar-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ar-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ar-"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ar-"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ar-"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ar-"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ar-"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ar-"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ar-"
@@ -2870,8 +2807,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -2929,8 +2865,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pkg/env/active/bin/"
-      - "/opt/pmk/env/global/bin/"
+      - "/pkg/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/Applications/VMware Fusion.app/Contents/Public/"
       - "/usr/local/share/dotnet/"
@@ -2961,8 +2896,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib-"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib-"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib-"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib-"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib-"
@@ -2992,8 +2926,7 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/riscv32-esp-elf-gcc-ranlib-"
-      - "/opt/pkg/env/active/bin/riscv32-esp-elf-gcc-ranlib-"
-      - "/opt/pmk/env/global/bin/riscv32-esp-elf-gcc-ranlib-"
+      - "/pkg/env/global/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Library/Apple/usr/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Applications/VMware Fusion.app/Contents/Public/riscv32-esp-elf-gcc-ranlib-"
       - "/usr/local/share/dotnet/riscv32-esp-elf-gcc-ranlib-"
@@ -3026,8 +2959,7 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pkg/env/active/bin"
-        - "/opt/pmk/env/global/bin"
+        - "/pkg/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/Applications/VMware Fusion.app/Contents/Public"
         - "/usr/local/share/dotnet"
@@ -3047,8 +2979,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-g9pK1z"
-      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-g9pK1z"
+      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5P1Izt"
+      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5P1Izt"
     cmakeVariables:
       CMAKE_C_FLAGS: "@\"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags\""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -3058,10 +2990,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-g9pK1z'
+        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5P1Izt'
         
-        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_32fc7
-        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_1ba3f
+        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
         Target: riscv32-esp-elf
@@ -3069,8 +3001,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_32fc7.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_32fc7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccseQbBS.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_1ba3f.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1ba3f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccWptqZs.s
         GNU C23 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)
         	compiled by GNU C version Debian Clang 19.1.7 (3+b1), GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -3087,13 +3019,13 @@ events:
          /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include
         End of search list.
         Compiler executable checksum: 4e569ecbeb1a08d8f08e5ce5c5e81e24
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_32fc7.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccseQbBS.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_1ba3f.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccWptqZs.s
         GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj -o cmTC_32fc7   && :
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj -o cmTC_1ba3f   && :
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
         COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper
@@ -3104,8 +3036,8 @@ events:
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32fc7' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_32fc7.'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cczlYRBS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_32fc7 /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cch3mQlE -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ba3f' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_1ba3f.'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccXGVh0q.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_1ba3f /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc5hbQV6 -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-closer.o): in function `_close_r':
         /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/closer.c:47:(.text._close_r+0x14): warning: _close is not implemented and will always fail
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-lseekr.o): in function `_lseek_r':
@@ -3116,7 +3048,7 @@ events:
         /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/writer.c:49:(.text._write_r+0x18): warning: _write is not implemented and will always fail
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-fclose.o): in function `fclose':
         /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125:(.text.fclose+0x6): warning: __getreent is not implemented and will always fail
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32fc7' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_32fc7.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ba3f' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_1ba3f.'
         
       exitCode: 0
   -
@@ -3151,10 +3083,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-g9pK1z']
+        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5P1Izt']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_32fc7]
-        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_1ba3f]
+        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
         ignore line: [Target: riscv32-esp-elf]
@@ -3162,8 +3094,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_32fc7.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_32fc7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccseQbBS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_1ba3f.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1ba3f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccWptqZs.s]
         ignore line: [GNU C23 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 19.1.7 (3+b1)  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3180,13 +3112,13 @@ events:
         ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 4e569ecbeb1a08d8f08e5ce5c5e81e24]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_32fc7.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccseQbBS.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_1ba3f.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccWptqZs.s]
         ignore line: [GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_32fc7.dir/CMakeCCompilerABI.c.obj -o cmTC_32fc7   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_1ba3f.dir/CMakeCCompilerABI.c.obj -o cmTC_1ba3f   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper]
@@ -3197,13 +3129,13 @@ events:
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32fc7' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_32fc7.']
-        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cczlYRBS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_32fc7 /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cch3mQlE -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ba3f' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_1ba3f.']
+        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccXGVh0q.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_1ba3f /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc5hbQV6 -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o]
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cczlYRBS.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccXGVh0q.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3213,7 +3145,7 @@ events:
           arg [-melf32lriscv] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_32fc7] ==> ignore
+          arg [cmTC_1ba3f] ==> ignore
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o] ==> obj [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o]
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o] ==> obj [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0]
@@ -3221,7 +3153,7 @@ events:
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib]
-          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cch3mQlE] ==> ignore
+          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc5hbQV6] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -3238,7 +3170,7 @@ events:
         ignore line: [/builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/writer.c:49:(.text._write_r+0x18): warning: _write is not implemented and will always fail]
         ignore line: [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-fclose.o): in function `fclose':]
         ignore line: [/builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125:(.text.fclose+0x6): warning: __getreent is not implemented and will always fail]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32fc7' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_32fc7.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ba3f' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_1ba3f.']
         ignore line: []
         ignore line: []
         collapse obj [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o] ==> [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/lib/crt0.o]
@@ -3265,8 +3197,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-7dyGpL"
-      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-7dyGpL"
+      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-eLhKfr"
+      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-eLhKfr"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "@\"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags\""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -3277,10 +3209,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-7dyGpL'
+        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-eLhKfr'
         
-        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_9d5f8
-        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_5ec0c
+        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++
         Target: riscv32-esp-elf
@@ -3288,8 +3220,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_9d5f8.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9d5f8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccJ0ZjRm.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_5ec0c.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5ec0c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvKteek.s
         GNU C++17 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)
         	compiled by GNU C version Debian Clang 19.1.7 (3+b1), GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -3312,13 +3244,13 @@ events:
          /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include
         End of search list.
         Compiler executable checksum: 53a6e7fabb3d6cc8335cad4314766ea4
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_9d5f8.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccJ0ZjRm.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_5ec0c.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvKteek.s
         GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_9d5f8   && :
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_5ec0c   && :
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++
         COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper
@@ -3329,8 +3261,8 @@ events:
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9d5f8' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_9d5f8.'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccdJCAwo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_9d5f8 /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccOEYTLe -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ec0c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_5ec0c.'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccfMbAOB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_5ec0c /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccNIz0WA -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-closer.o): in function `_close_r':
         /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/closer.c:47:(.text._close_r+0x14): warning: _close is not implemented and will always fail
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-lseekr.o): in function `_lseek_r':
@@ -3341,7 +3273,7 @@ events:
         /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/writer.c:49:(.text._write_r+0x18): warning: _write is not implemented and will always fail
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-fclose.o): in function `fclose':
         /builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125:(.text.fclose+0x6): warning: __getreent is not implemented and will always fail
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9d5f8' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_9d5f8.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ec0c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_5ec0c.'
         
       exitCode: 0
   -
@@ -3382,10 +3314,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-7dyGpL']
+        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-eLhKfr']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_9d5f8]
-        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_5ec0c]
+        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
         ignore line: [Target: riscv32-esp-elf]
@@ -3393,8 +3325,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_9d5f8.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9d5f8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccJ0ZjRm.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_5ec0c.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib . -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_5ec0c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -mabi=ilp32 -misa-spec=20191213 -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvKteek.s]
         ignore line: [GNU C++17 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 19.1.7 (3+b1)  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3417,13 +3349,13 @@ events:
         ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 53a6e7fabb3d6cc8335cad4314766ea4]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_9d5f8.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccJ0ZjRm.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_5ec0c.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc -march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvKteek.s]
         ignore line: [GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_9d5f8.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_9d5f8   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_5ec0c.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_5ec0c   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper]
@@ -3434,13 +3366,13 @@ events:
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9d5f8' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_9d5f8.']
-        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccdJCAwo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_9d5f8 /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccOEYTLe -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ec0c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_5ec0c.']
+        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccfMbAOB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_5ec0c /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccNIz0WA -lgcc -lc -lnosys -lc -lgcc /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtend.o]
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccdJCAwo.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccfMbAOB.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3450,7 +3382,7 @@ events:
           arg [-melf32lriscv] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_9d5f8] ==> ignore
+          arg [cmTC_5ec0c] ==> ignore
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o] ==> obj [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o]
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o] ==> obj [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/crtbegin.o]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0]
@@ -3458,7 +3390,7 @@ events:
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib]
-          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccOEYTLe] ==> ignore
+          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccNIz0WA] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -3475,7 +3407,7 @@ events:
         ignore line: [/builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/writer.c:49:(.text._write_r+0x18): warning: _write is not implemented and will always fail]
         ignore line: [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/libc.a(libc_a-fclose.o): in function `fclose':]
         ignore line: [/builds/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125:(.text.fclose+0x6): warning: __getreent is not implemented and will always fail]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9d5f8' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_9d5f8.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ec0c' '-march=rv32imafdc_zicsr_zifencei_zaamo_zalrsc' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imafdc_zicsr_zifencei_zmmul_zaamo_zalrsc_zca_zcd_zcf' '-dumpdir' 'cmTC_5ec0c.']
         ignore line: []
         ignore line: []
         collapse obj [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/crt0.o] ==> [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/lib/crt0.o]
@@ -3504,8 +3436,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jyV1F8"
-      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jyV1F8"
+      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-ec7WMD"
+      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-ec7WMD"
     cmakeVariables:
       CMAKE_C_FLAGS: "@\"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags\""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -3515,10 +3447,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jyV1F8'
+        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-ec7WMD'
         
-        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_f00ae
-        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_629ad
+        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
         Target: riscv32-esp-elf
@@ -3526,8 +3458,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f00ae.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f00ae.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrkZXY6.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_629ad.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_629ad.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvGrekc.s
         GNU C23 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)
         	compiled by GNU C version Debian Clang 19.1.7 (3+b1), GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -3544,13 +3476,13 @@ events:
          /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include
         End of search list.
         Compiler executable checksum: 4e569ecbeb1a08d8f08e5ce5c5e81e24
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f00ae.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrkZXY6.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_629ad.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvGrekc.s
         GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj -o cmTC_f00ae   && :
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj -o cmTC_629ad   && :
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
         COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper
@@ -3561,10 +3493,10 @@ events:
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f00ae' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f00ae.'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc0oSenO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_f00ae -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccHTCKbR -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_629ad' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_629ad.'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccx9Yehk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_629ad -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccoaayMe -lgcc -lc -lnosys -lc -lgcc
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 000100b4
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f00ae' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f00ae.'
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_629ad' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_629ad.'
         
       exitCode: 0
   -
@@ -3603,10 +3535,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jyV1F8']
+        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-ec7WMD']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_f00ae]
-        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_629ad]
+        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags"    -v -o CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
         ignore line: [Target: riscv32-esp-elf]
@@ -3614,8 +3546,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f00ae.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f00ae.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrkZXY6.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_629ad.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_629ad.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvGrekc.s]
         ignore line: [GNU C23 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 19.1.7 (3+b1)  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3632,13 +3564,13 @@ events:
         ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 4e569ecbeb1a08d8f08e5ce5c5e81e24]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f00ae.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrkZXY6.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_629ad.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccvGrekc.s]
         ignore line: [GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_f00ae.dir/CMakeCCompilerABI.c.obj -o cmTC_f00ae   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_629ad.dir/CMakeCCompilerABI.c.obj -o cmTC_629ad   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper]
@@ -3649,13 +3581,13 @@ events:
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f00ae' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f00ae.']
-        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc0oSenO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_f00ae -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccHTCKbR -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_629ad' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_629ad.']
+        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccx9Yehk.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_629ad -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccoaayMe -lgcc -lc -lnosys -lc -lgcc]
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc0oSenO.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccx9Yehk.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3665,7 +3597,7 @@ events:
           arg [-melf32lriscv] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f00ae] ==> ignore
+          arg [cmTC_629ad] ==> ignore
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
@@ -3674,7 +3606,7 @@ events:
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib]
-          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccHTCKbR] ==> ignore
+          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccoaayMe] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -3682,7 +3614,7 @@ events:
           arg [-lgcc] ==> lib [gcc]
         ignore line: [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 000100b4]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f00ae' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f00ae.']
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_629ad' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_629ad.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
@@ -3711,8 +3643,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YnOWE9"
-      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YnOWE9"
+      source: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-L4zuYW"
+      binary: "/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-L4zuYW"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "@\"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags\""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -3723,10 +3655,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YnOWE9'
+        Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-L4zuYW'
         
-        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_f8925
-        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_0ea34
+        [1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++
         Target: riscv32-esp-elf
@@ -3734,8 +3666,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f8925.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f8925.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc8tybpd.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_0ea34.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0ea34.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrFO5MQ.s
         GNU C++17 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)
         	compiled by GNU C version Debian Clang 19.1.7 (3+b1), GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -3758,13 +3690,13 @@ events:
          /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include
         End of search list.
         Compiler executable checksum: 53a6e7fabb3d6cc8335cad4314766ea4
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f8925.dir/'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc8tybpd.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_0ea34.dir/'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrFO5MQ.s
         GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f8925   && :
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0ea34   && :
         Using built-in specs.
         COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++
         COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper
@@ -3775,10 +3707,10 @@ events:
         gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) 
         COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f8925' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f8925.'
-         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccUiiGwu.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_f8925 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccNK1Uzp -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_0ea34' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_0ea34.'
+         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc7slOZE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_0ea34 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccPdBtWJ -lgcc -lc -lnosys -lc -lgcc
         /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 000100b4
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f8925' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f8925.'
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_0ea34' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_0ea34.'
         
       exitCode: 0
   -
@@ -3823,10 +3755,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-YnOWE9']
+        ignore line: [Change Dir: '/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-L4zuYW']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_f8925]
-        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_0ea34]
+        ignore line: [[1/2] /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++   @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags"    -v -o CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
         ignore line: [Target: riscv32-esp-elf]
@@ -3834,8 +3766,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f8925.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f8925.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc8tybpd.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_0ea34.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -iprefix /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/ -isysroot /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0ea34.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -mtune=esp-base -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -version -o /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrFO5MQ.s]
         ignore line: [GNU C++17 (crosstool-NG esp-15.2.0_20250929) version 15.2.0 (riscv32-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 19.1.7 (3+b1)  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3858,13 +3790,13 @@ events:
         ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 53a6e7fabb3d6cc8335cad4314766ea4]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f8925.dir/']
-        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc8tybpd.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_0ea34.dir/']
+        ignore line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei_zaamo_zalrsc -march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccrFO5MQ.s]
         ignore line: [GNU assembler version 2.45 (riscv32-esp-elf) using BFD version (crosstool-NG esp-15.2.0_20250929) 2.45]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_f8925.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f8925   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-v' '-o' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/cxxflags" @"/Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/toolchain/ldflags" -v CMakeFiles/cmTC_0ea34.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0ea34   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper]
@@ -3875,13 +3807,13 @@ events:
         ignore line: [gcc version 15.2.0 (crosstool-NG esp-15.2.0_20250929) ]
         ignore line: [COMPILER_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f8925' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f8925.']
-        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccUiiGwu.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_f8925 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccNK1Uzp -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_0ea34' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_0ea34.']
+        link line: [ /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2 -plugin /Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so -plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc7slOZE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_0ea34 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0 -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib @/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccPdBtWJ -lgcc -lc -lnosys -lc -lgcc]
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/15.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccUiiGwu.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//cc7slOZE.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3891,7 +3823,7 @@ events:
           arg [-melf32lriscv] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f8925] ==> ignore
+          arg [cmTC_0ea34] ==> ignore
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]
@@ -3900,7 +3832,7 @@ events:
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/lib]
           arg [-L/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib] ==> dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib]
-          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccNK1Uzp] ==> ignore
+          arg [@/var/folders/0t/gw4854px2sz3377fttjpql_80000gn/T//ccPdBtWJ] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -3908,7 +3840,7 @@ events:
           arg [-lgcc] ==> lib [gcc]
         ignore line: [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 000100b4]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_f8925' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_f8925.']
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei_zaamo_zalrsc' '-mtune=esp-base' '-nostartfiles' '-v' '-o' 'cmTC_0ea34' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei_zmmul_zaamo_zalrsc_zca' '-dumpdir' 'cmTC_0ea34.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32] ==> [/Users/zainnasseer/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/15.2.0/rv32imac_zicsr_zifencei_zaamo_zalrsc/ilp32]

@@ -384,8 +384,9 @@ static void wifi_init_repeater(void)
         .sta = {
             .ssid = "",
             .password = "",
-            // Require at least WPA2; WPA3 disabled to avoid AP compatibility issues
-            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
+            // Accept WPA or WPA2 — some routers advertise mixed mode. Using
+            // WIFI_AUTH_WPA2_PSK as threshold would reject WPA-only beacons.
+            .threshold.authmode = WIFI_AUTH_WPA_WPA2_PSK,
             .pmf_cfg = {
                 .capable = true,
                 .required = false, // keep PMF optional to avoid association refusals
@@ -434,21 +435,26 @@ static void wifi_init_repeater(void)
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
 
     // ── Throughput optimizations ────────────────────────────────────────────
-    // Use HT40 (40 MHz) bandwidth on both interfaces for ~double PHY rate
-    // (e.g. 150 Mbps instead of 72 Mbps on 802.11n MCS7).
-    // Falls back gracefully if the uplink AP doesn't support HT40.
+    // ESP32-C5 is a dual-band chip that boots in WIFI_BAND_MODE_AUTO
+    // (2.4 GHz + 5 GHz). The single-band esp_wifi_set_bandwidth() rejects
+    // AUTO band mode with ESP_ERR_NOT_SUPPORTED. Use esp_wifi_set_bandwidths()
+    // instead, which accepts per-band bandwidth via wifi_bandwidths_t.
+    wifi_bandwidths_t bw_cfg = {
+        .ghz_2g = WIFI_BW_HT40,  // 40 MHz on 2.4 GHz
+        .ghz_5g = WIFI_BW_HT40,  // 40 MHz on 5 GHz (80 MHz not yet exposed)
+    };
     esp_err_t bw_err;
-    bw_err = esp_wifi_set_bandwidth(WIFI_IF_STA, WIFI_BW_HT40);
+    bw_err = esp_wifi_set_bandwidths(WIFI_IF_STA, &bw_cfg);
     if (bw_err != ESP_OK) {
-        ESP_LOGW(TAG, "STA HT40 not available, using HT20 (%s)", esp_err_to_name(bw_err));
+        ESP_LOGW(TAG, "STA HT40 not set, using default (%s)", esp_err_to_name(bw_err));
     } else {
-        ESP_LOGI(TAG, "STA bandwidth: HT40");
+        ESP_LOGI(TAG, "STA bandwidth: HT40 (2.4G) + HT40 (5G)");
     }
-    bw_err = esp_wifi_set_bandwidth(WIFI_IF_AP, WIFI_BW_HT40);
+    bw_err = esp_wifi_set_bandwidths(WIFI_IF_AP, &bw_cfg);
     if (bw_err != ESP_OK) {
-        ESP_LOGW(TAG, "AP HT40 not available, using HT20 (%s)", esp_err_to_name(bw_err));
+        ESP_LOGW(TAG, "AP HT40 not set, using default (%s)", esp_err_to_name(bw_err));
     } else {
-        ESP_LOGI(TAG, "AP bandwidth: HT40");
+        ESP_LOGI(TAG, "AP bandwidth: HT40 (2.4G) + HT40 (5G)");
     }
 
     // Set maximum TX power for best link budget / throughput
