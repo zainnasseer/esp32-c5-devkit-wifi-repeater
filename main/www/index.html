@@ -1,111 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WiFi Repeater Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>🌐 WiFi Repeater</h1>
-            <p>Real-time Network Dashboard</p>
-        </div>
-        
-        <div class="grid" id="dashboard">
-            <div class="card"><div class="loading">Loading...</div></div>
-        </div>
-        
-        <div class="button-row">
-            <button class="btn" onclick="openSettings()">⚙️ Network Settings</button>
-            <button class="btn btn-danger" onclick="showShutdownModal()">⏻ Safe Shutdown</button>
-        </div>
+      <div class="header">
+        <h1>🌐 WiFi Repeater</h1>
+        <p>Real-time Network Dashboard</p>
+      </div>
 
-        <!-- ── Login Modal ─────────────────────────────────────── -->
-        <div id="loginModal" class="modal">
-            <div class="modal-content login-modal-content">
-                <h3>🔐 Authentication Required</h3>
-                <p class="login-subtitle">Enter your dashboard credentials to access Network Settings.</p>
-                <div class="form-group">
-                    <label for="login_user">Username</label>
-                    <input type="text" id="login_user" placeholder="admin" autocomplete="username">
-                </div>
-                <div class="form-group">
-                    <label for="login_pass">Password</label>
-                    <input type="password" id="login_pass" placeholder="••••••••" autocomplete="current-password">
-                </div>
-                <div id="loginError" class="login-error" style="display:none;">❌ Invalid username or password.</div>
-                <div class="modal-buttons">
-                    <button class="btn-cancel" onclick="closeLoginModal()">Cancel</button>
-                    <button class="btn-confirm btn-login" id="loginSubmitBtn" onclick="submitLogin()">Login</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ── Settings Modal ──────────────────────────────────── -->
-        <div id="settingsModal" class="modal">
-            <div class="modal-content">
-                <h3>⚙️ Network Configuration</h3>
-                <div class="form-group">
-                    <label>Uplink (STA) SSID</label>
-                    <input type="text" id="sta_ssid" placeholder="Router SSID" list="ssid_history_list" autocomplete="off">
-                    <datalist id="ssid_history_list"></datalist>
-                </div>
-                <div class="form-group">
-                    <label>Uplink (STA) Password</label>
-                    <input type="password" id="sta_pass" placeholder="Router Password">
-                </div>
-                <hr>
-                <div class="form-group">
-                    <label>Repeater (AP) SSID</label>
-                    <input type="text" id="ap_ssid" placeholder="Repeater SSID">
-                </div>
-                <div class="form-group">
-                    <label>Repeater (AP) Password</label>
-                    <input type="password" id="ap_pass" placeholder="Repeater Password (min 8 chars)">
-                </div>
-                <div class="form-group">
-                    <label>Max Clients</label>
-                    <input type="number" id="ap_max_conn" min="1" max="10" placeholder="4">
-                </div>
-                <div class="modal-buttons">
-                    <button class="btn-cancel" onclick="closeSettings()">Cancel</button>
-                    <button class="btn-reset" onclick="showResetModal()">↩ Reset to Defaults</button>
-                    <button class="btn-confirm" onclick="saveSettings()">Save &amp; Restart</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- ── Shutdown Modal ──────────────────────────────────── -->
-        <div id="shutdownModal" class="modal">
-            <div class="modal-content">
-                <h3>⚠️ Confirm Shutdown</h3>
-                <p>This will safely disconnect the WiFi repeater and enter deep sleep mode.</p>
-                <p style="margin-top: 15px; color: #999; font-size: 0.9em;">The device will retain all settings and can be powered on again.</p>
-                <div class="modal-buttons">
-                    <button class="btn-cancel" onclick="closeShutdownModal()">Cancel</button>
-                    <button class="btn-confirm" onclick="confirmShutdown()">Shutdown</button>
-                </div>
-            </div>
-        </div>
+      <div class="grid" id="dashboard">
+        <div class="card"><div class="loading">Loading...</div></div>
+      </div>
 
-        <!-- ── Reset Modal ─────────────────────────────────────── -->
-        <div id="resetModal" class="modal">
-            <div class="modal-content">
-                <h3>↩ Reset to Firmware Defaults</h3>
-                <p>This will <strong>erase</strong> any credentials saved from the web dashboard and restore the credentials compiled into the firmware.</p>
-                <p style="margin-top:12px; color:#f87171; font-size:0.9em;">⚠️ The device will restart and connect using the hardcoded SSID &amp; password.</p>
-                <div class="modal-buttons">
-                    <button class="btn-cancel" onclick="closeResetModal()">Cancel</button>
-                    <button class="btn-confirm btn-danger-confirm" onclick="confirmReset()">Reset &amp; Restart</button>
-                </div>
-            </div>
+      <div class="button-row">
+        <button class="btn" onclick="openSettings()">
+          ⚙️ Network Settings
+        </button>
+        <button class="btn btn-danger" onclick="showShutdownModal()">
+          ⏻ Safe Shutdown
+        </button>
+      </div>
+
+      <!-- ── Login Modal ─────────────────────────────────────── -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content login-modal-content">
+          <h3>🔐 Authentication Required</h3>
+          <p class="login-subtitle">
+            Enter your dashboard credentials to access Network Settings.
+          </p>
+          <div class="form-group">
+            <label for="login_user">Username</label>
+            <input
+              type="text"
+              id="login_user"
+              placeholder="admin"
+              autocomplete="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="login_pass">Password</label>
+            <input
+              type="password"
+              id="login_pass"
+              placeholder="••••••••"
+              autocomplete="current-password"
+            />
+          </div>
+          <div id="loginError" class="login-error" style="display: none">
+            ❌ Invalid username or password.
+          </div>
+          <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeLoginModal()">
+              Cancel
+            </button>
+            <button
+              class="btn-confirm btn-login"
+              id="loginSubmitBtn"
+              onclick="submitLogin()"
+            >
+              Login
+            </button>
+          </div>
         </div>
-        
-        <div class="refresh-time">Updates every 2 seconds | Last update: <span id="lastUpdate">—</span></div>
+      </div>
+
+      <!-- ── Settings Modal ──────────────────────────────────── -->
+      <div id="settingsModal" class="modal">
+        <div class="modal-content">
+          <h3>⚙️ Network Configuration</h3>
+          <div class="form-group">
+            <label>Uplink (STA) SSID</label>
+            <div style="display:flex;gap:8px">
+              <input
+                type="text"
+                id="sta_ssid"
+                placeholder="Router SSID"
+                list="ssid_history_list"
+                autocomplete="off"
+                style="flex:1"
+              />
+              <button class="btn-scan" id="scanSettingsBtn" onclick="scanNetworksSettings()">
+                📡 Scan
+              </button>
+            </div>
+            <datalist id="ssid_history_list"></datalist>
+            <div id="scanResultsSettings"></div>
+          </div>
+          <div class="form-group">
+            <label>Uplink (STA) Password</label>
+            <input
+              type="password"
+              id="sta_pass"
+              placeholder="Router Password"
+            />
+          </div>
+          <hr />
+          <div class="form-group">
+            <label>Repeater (AP) SSID</label>
+            <input type="text" id="ap_ssid" placeholder="Repeater SSID" />
+          </div>
+          <div class="form-group">
+            <label>Repeater (AP) Password</label>
+            <input
+              type="password"
+              id="ap_pass"
+              placeholder="Repeater Password (min 8 chars)"
+            />
+          </div>
+          <div class="form-group">
+            <label>Max Clients</label>
+            <input
+              type="number"
+              id="ap_max_conn"
+              min="1"
+              max="10"
+              placeholder="4"
+            />
+          </div>
+          <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeSettings()">Cancel</button>
+            <button class="btn-reset" onclick="showResetModal()">
+              ↩ Reset to Defaults
+            </button>
+            <button class="btn-confirm" onclick="saveSettings()">
+              Save &amp; Restart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Shutdown Modal ──────────────────────────────────── -->
+      <div id="shutdownModal" class="modal">
+        <div class="modal-content">
+          <h3>⚠️ Confirm Shutdown</h3>
+          <p>
+            This will safely disconnect the WiFi repeater and enter deep sleep
+            mode.
+          </p>
+          <p style="margin-top: 15px; color: #999; font-size: 0.9em">
+            The device will retain all settings and can be powered on again.
+          </p>
+          <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeShutdownModal()">
+              Cancel
+            </button>
+            <button class="btn-confirm" onclick="confirmShutdown()">
+              Shutdown
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Reset Modal ─────────────────────────────────────── -->
+      <div id="resetModal" class="modal">
+        <div class="modal-content">
+          <h3>↩ Reset to Firmware Defaults</h3>
+          <p>
+            This will <strong>erase</strong> any credentials saved from the web
+            dashboard and restore the credentials compiled into the firmware.
+          </p>
+          <p style="margin-top: 12px; color: #f87171; font-size: 0.9em">
+            ⚠️ The device will restart and connect using the hardcoded SSID
+            &amp; password.
+          </p>
+          <div class="modal-buttons">
+            <button class="btn-cancel" onclick="closeResetModal()">
+              Cancel
+            </button>
+            <button
+              class="btn-confirm btn-danger-confirm"
+              onclick="confirmReset()"
+            >
+              Reset &amp; Restart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="refresh-time">
+        Updates every 3 seconds | Last update: <span id="lastUpdate">—</span>
+      </div>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

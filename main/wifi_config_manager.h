@@ -178,6 +178,27 @@ esp_err_t wifi_config_load_ssid_history(ssid_history_t *history);
  */
 esp_err_t wifi_config_add_ssid_to_history(const char *ssid);
 
+/**
+ * @brief Check if the device has been provisioned with real STA credentials
+ *
+ * Reads the "provisioned" flag from NVS. Returns false on first boot or
+ * after a factory reset (flag cleared by wifi_config_erase()).
+ *
+ * @return true if provisioned, false otherwise
+ */
+bool wifi_config_has_sta_credentials(void);
+
+/**
+ * @brief Explicitly set or clear the provisioned flag in NVS
+ *
+ * Called only by the /api/config POST handler after the user saves real
+ * STA credentials. Not called by wifi_config_save() itself.
+ *
+ * @param[in] provisioned true to mark as provisioned, false to clear
+ * @return ESP_OK on success, error code otherwise
+ */
+esp_err_t wifi_config_set_provisioned(bool provisioned);
+
 #ifdef __cplusplus
 }
 #endif

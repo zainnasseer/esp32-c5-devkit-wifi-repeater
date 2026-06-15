@@ -502,3 +502,40 @@ hr {
     padding-right: 30px;
 }
 
+/* ── Scan Button & Results in Settings Modal ──────────────── */
+.btn-scan {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.88em;
+    transition: opacity 0.2s;
+}
+.btn-scan:hover { opacity: 0.85; }
+.btn-scan:disabled { opacity: 0.5; cursor: wait; }
+
+.scan-results {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+.scan-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.88em;
+    transition: background 0.15s;
+}
+.scan-item:last-child { border-bottom: none; }
+.scan-item:hover { background: #f0f0ff; }
+.scan-item .scan-icon { margin-right: 8px; }
+.scan-item .scan-ssid { flex: 1; font-weight: 600; color: #333; }
+.scan-item .scan-meta { font-size: 0.78em; color: #888; }

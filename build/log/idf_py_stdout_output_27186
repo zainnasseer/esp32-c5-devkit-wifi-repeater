@@ -1,0 +1,2105 @@
+Command: /Users/zainnasseer/.espressif/python_env/idf6.1_py3.14_env/bin/python /Users/zainnasseer/development/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-110 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c5 --revision 100 --decode-panic backtrace /Users/zainnasseer/development/esp/wifi_repeater/build/wifi_repeater.elf /Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/bootloader.elf -m '/Users/zainnasseer/.espressif/python_env/idf6.1_py3.14_env/bin/python' '/Users/zainnasseer/development/esp/esp-idf/tools/idf.py'
+) app_init: ESP-IDF:          683ddf8a-dirty
+[0;32mI (324) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (328) efuse_init: Max chip rev:     At 408270C0 len 000354E0 (213 KiB): RAM[0m
+[0;32mI (347) heap_init: At 4085C5A0 len 00002F58 (11 KiB): RAM[0m
+[0;32mI (352) heap_init: At 500000A8 len 00003F40 (15 KiB): RTCRAM[0m
+[0;32mI (358) spi_flash: detected chip: �ESP-ROM:esp32c5-eco2-20250121[0m
+Build:Jan 21 2025
+rst:0x1 (POWERON),boot:0x18 (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x408556c0,len:0x16d4
+load:0x4084bba0,len:0xd8c
+load:0x4084e5a0,len:0x3290
+entry 0x4084bbaa
+[0;32mI (23) boot: ESP-IDF 683ddf8a-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun 16 2026 02:32:58[0m
+[0;32mI (24) boot: chip revision: v1.0[0m
+[0;32mI (25) boot: efuse block revision: v0.2[0m
+[0;32mI (28) boot.esp32c5: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c5: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c5: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot:  3 www              Unknown data     01 82 00110000 00040000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=420b0020 size=1fb30h (129840) map[0m
+[0;32mI (112) esp_image: segment 1: paddr=0002fb58 vaddr=40800000 size=004c0h (  1216) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=a3864h (669796) map[0m
+[0;32mI (231) esp_image: segment 3: paddr=000d388c vaddr=408004c0 size=154f4h ( 87284) load[0m
+[0;32mI (248) esp_image: segment 4: paddr=000e8d88 vaddr=40815a00 size=04084h ( 16516) load[0m
+[0;32mI (252) esp_image: segment 5: paddr=000ece14 vaddr=50000000 size=000a8h (   168) load[0m
+[0;32mI (258) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (258) boot: Disabling RNG early entropy source...[0m
+[0;32mI (273) MSPI Timing: Enter flash timing tuning[0m
+[0;32mI (275) cpu_start: Unicore app[0m
+[0;32mI (295) cpu_start: GPIO 12 and 11 are used as console UART I/O pins[0m
+[0;32mI (295) cpu_start: Pro cpu start user code[0m
+[0;32mI (295) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (297) app_init: Application information:[0m
+[0;32mI (301) app_init: Project name:     wifi_repeater[0m
+[0;32mI (305) app_init: App version:      d082ec1-dirty[0m
+[0;32mI (310) app_init: Compile time:     Jun 16 2026 02:32:49[0m
+[0;32mI (315) app_init: ELF file SHA256:  f75e08b26...[0m
+[0;32mI (319) app_init: ESP-IDF:          683ddf8a-dirty[0m
+[0;32mI (324) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (328) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (332) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (335) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (342) heap_init: At 408270C0 len 000354E0 (213 KiB): RAM[0m
+[0;32mI (347) heap_init: At 4085C5A0 len 00002F58 (11 KiB): RAM[0m
+[0;32mI (352) heap_init: At 500000A8 len 00003F40 (15 KiB): RTCRAM[0m
+[0;32mI (358) spi_flash: detected chip: generic[0m
+[0;32mI (361) spi_flash: flash io: dio[0m
+[0;33mW (364) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (376) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (382) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (419) wifi_repeater: NVS initialized[0m
+[0;32mI (419) wifi_config: WiFi configuration manager initialized[0m
+[0;32mI (419) wifi_repeater: Initializing system monitor...[0m
+[0;32mI (419) sys_monitor: Initializing system monitoring...[0m
+[0;32mI (419) sys_monitor: System monitoring task started[0m
+[0;32mI (429) sys_monitor: System monitoring initialized successfully[0m
+[0;32mI (429) wifi_repeater: Initializing netif and event loop...[0m
+[0;32mI (439) pp: pp rom version: 78a72e9d5[0m
+[0;32mI (439) net80211: net80211 rom version: 78a72e9d5[0m
+[0;32mI (459) wifi:wifi driver task: 4082e2bc, prio:23, stack:3584, core=0[0m
+[0;32mI (459) wifi:wifi firmware version: 62ce4c3[0m
+[0;32mI (459) wifi:wifi certification version: v7.0[0m
+[0;32mI (459) wifi:config NVS flash: enabled[0m
+[0;32mI (459) wifi:config nano formatting: disabled[0m
+[0;32mI (469) wifi:mac_version:HAL_MAC_ESP32AX_752MP_ECO2,ut_version:N, band mode:0x3[0m
+[0;32mI (469) wifi:Init data frame dynamic rx buffer num: 64[0m
+[0;32mI (479) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (479) wifi:Init management short buffer num: 32[0m
+[0;32mI (489) wifi:Init dynamic tx buffer num: 64[0m
+[0;32mI (489) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (499) wifi:Init static rx buffer size: 1700 (rxctrl:64, csi:512)[0m
+[0;32mI (499) wifi:Init static rx buffer num: 20[0m
+[0;32mI (509) wifi:Init dynamic rx buffer num: 64[0m
+[0;32mI (509) wifi_init: rx ba win: 32[0m
+[0;32mI (509) wifi_init: accept mbox: 6[0m
+[0;32mI (519) wifi_init: tcpip mbox: 64[0m
+[0;32mI (519) wifi_init: udp mbox: 16[0m
+[0;32mI (519) wifi_init: tcp mbox: 16[0m
+[0;32mI (519) wifi_init: tcp tx win: 57600[0m
+[0;32mI (529) wifi_init: tcp rx win: 57600[0m
+[0;32mI (529) wifi_init: tcp mss: 1440[0m
+[0;32mI (529) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (539) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (539) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (549) wifi_config: No stored configuration found, using defaults[0m
+[0;32mI (549) wifi_config: Loaded default configuration[0m
+[0;32mI (559) wifi_repeater: No WiFi config in NVS — first boot (provisioning)[0m
+[0;32mI (559) wifi_repeater: Starting Wi-Fi in AP+STA mode...[0m
+[0;32mI (569) phy_init: phy_version 107,8c534c84,Nov 17 2025,13:41:12[0m
+[0;33mW (1179) wifi:WDEV_RXCCK_DELAY:960[0m
+[0;33mW (1179) wifi:WDEV_RXOFDM_DELAY:261[0m
+[0;33mW (1179) wifi:WDEV_RX_11G_OFDM_DELAY:262[0m
+[0;33mW (1179) wifi:WDEV_TXCCK_DELAY:630[0m
+[0;33mW (1179) wifi:WDEV_TXOFDM_DELAY:94[0m
+[0;33mW (1179) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1189) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1199) wifi:WDEVBEAMFORMCONF:0x61d7120, HE_BF_RPT_RA_SET_OPT:1[0m
+[0;33mW (1209) wifi:WDEVVHTBEAMFORMCONF: 0x61d7120, WDEV_VHT_BEAMFORMEE_ENA: 1, WDEV_VHT_NG_SEL: 0[0m
+[0;33mW (1219) wifi:(agc)0x600a7128:0xd21f0c20, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f0, min.RRssi:0xc20(-62.00)[0m
+[0;33mW (1219) wifi:MODEM_SYSCON_WIFI_BB_CFG_REG(0x600a9c18):0x10003802[0m
+[0;33mW (1229) wifi:(phy)rate:0x0(  LP-1Mbps), pwr:20, txing:20[0m
+[0;33mW (1239) wifi:(phy)rate:0x1(  LP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1239) wifi:(phy)rate:0x2(LP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1249) wifi:(phy)rate:0x3( LP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1249) wifi:(phy)rate:0x5(  SP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1259) wifi:(phy)rate:0x6(SP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1259) wifi:(phy)rate:0x7( SP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1269) wifi:(phy)rate:0x8(    48Mbps), pwr:17, txing:17[0m
+[0;33mW (1269) wifi:(phy)rate:0x9(    24Mbps), pwr:19, txing:19[0m
+[0;33mW (1279) wifi:(phy)rate:0xa(    12Mbps), pwr:19, txing:19[0m
+[0;33mW (1279) wifi:(phy)rate:0xb(     6Mbps), pwr:19, txing:19[0m
+[0;33mW (1289) wifi:(phy)rate:0xc(    54Mbps), pwr:17, txing:17[0m
+[0;33mW (1289) wifi:(phy)rate:0xd(    36Mbps), pwr:19, txing:19[0m
+[0;33mW (1299) wifi:(phy)rate:0xe(    18Mbps), pwr:19, txing:19[0m
+[0;33mW (1299) wifi:(phy)rate:0xf(     9Mbps), pwr:19, txing:19[0m
+[0;33mW (1309) wifi:(phy)rate:0x10, mcs:0x0, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1319) wifi:(phy)rate:0x11, mcs:0x1, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1319) wifi:(phy)rate:0x12, mcs:0x2, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1329) wifi:(phy)rate:0x13, mcs:0x3, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1339) wifi:(phy)rate:0x14, mcs:0x4, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1349) wifi:(phy)rate:0x15, mcs:0x5, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1359) wifi:(phy)rate:0x16, mcs:0x6, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1369) wifi:(phy)rate:0x17, mcs:0x7, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1379) wifi:(phy)rate:0x18, mcs:0x8, pwr(bw20:19, bw40:16), txing:19, HE pwr(bw20:16), txing:16[0m
+[0;33mW (1379) wifi:(phy)rate:0x19, mcs:0x9, pwr(bw20:18, bw40:16), txing:18, HE pwr(bw20:15), txing:15[0m
+[0;33mW (1389) wifi:(hal)co_hosted_bss:0, max_indicator:0, bitmask:0xff, mBSSIDsEnable:0[0m
+[0;32mI (1399) wifi:11ax coex: WDEVAX_PTI0(0x040000a0), WDEVAX_PTI1(0x00007260).[0m
+
+[0;32mI (1409) wifi:mode : sta (3c:dc:75:81:38:14) + softAP (3c:dc:75:81:38:15)[0m
+[0;32mI (1409) wifi:enable tsf[0m
+[0;33mW (1419) wifi:(BB)enable busy check(0x18), disable idle check(0xaa)[0m
+[0;33mW (1419) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 2G phymode changed to 11N[0m
+[0;33mW (1429) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 5G phymode changed to 11N[0m
+[0;32mI (1439) wifi:Total power save buffer number: 32[0m
+[0;32mI (1439) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1449) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1449) wifi_repeater: STA started (provisioning mode — idle, not connecting)[0m
+[0;32mI (1459) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;33mW (1469) wifi_repeater: No STA credentials — starting in PROVISIONING (AP idle) mode[0m
+[0;32mI (1469) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;33mW (1479) wifi_repeater: STA HT40 not set, using default (ESP_ERR_INVALID_ARG)[0m
+[0;32mI (1489) wifi_repeater: AP bandwidth: HT40 (2.4G) + HT40 (5G)[0m
+[0;32mI (1489) wifi_repeater: TX power set to maximum (21 dBm)[0m
+[0;32mI (1499) wifi_repeater: Wi-Fi AP SSID: Zains_ESP_Repeater, password: 12345678[0m
+[0;32mI (1499) wifi_repeater: Connecting STA to SSID: Router1[0m
+[0;32mI (1509) wifi_repeater: Initializing web server...[0m
+[0;32mI (1509) web_server: Provisioning mode: ON[0m
+[0;32mI (1519) web_server: Initializing SPIFFS[0m
+[0;32mI (1529) web_server: SPIFFS: total: 233681, used: 52459[0m
+[0;32mI (1529) web_server: Web server started. Access at http://192.168.4.1[0m
+[0;32mI (1529) dns_proxy: Captive portal mode ENABLED (IP: 192.168.4.1)[0m
+[0;32mI (1539) dns_proxy: DNS proxy started on UDP/53[0m
+[0;32mI (1539) wifi_config: No stored configuration found, using defaults[0m
+[0;32mI (1549) wifi_config: Loaded default configuration[0m
+[0;32mI (1549) wifi_repeater: Provisioning: connect to AP 'Zains_ESP_Repeater' and open any URL[0m
+[0;33mW (3429) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (3429) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (3429) sys_monitor: CPU: Total usage: 37%[0m
+[0;32mI (3429) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (3429) sys_monitor:   Task 'sys_monitor': CPU=0%, Stack HWM=2468 bytes[0m
+[0;32mI (3439) sys_monitor:   Task 'IDLE': CPU=60%, Stack HWM=1296 bytes[0m
+[0;32mI (3449) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1792 bytes[0m
+[0;32mI (3449) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (3459) sys_monitor:   Task 'main': CPU=6%, Stack HWM=1240 bytes[0m
+[0;32mI (3459) sys_monitor: MEM: Free heap: 123348 bytes (20.0% used)[0m
+[0;32mI (3469) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122948 bytes[0m
+[0;32mI (3479) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (3489) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (3489) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (3499) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (3499) sys_monitor: Uptime: 3 seconds[0m
+[0;32mI (3509) sys_monitor: ===========================================[0m
+
+[0;33mW (6509) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (6509) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (6509) sys_monitor: CPU: Total usage: 19%[0m
+[0;32mI (6509) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (6509) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2384 bytes[0m
+[0;32mI (6519) sys_monitor:   Task 'IDLE': CPU=79%, Stack HWM=1296 bytes[0m
+[0;32mI (6529) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (6529) sys_monitor:   Task 'main': CPU=3%, Stack HWM=1240 bytes[0m
+[0;32mI (6539) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1792 bytes[0m
+[0;32mI (6539) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (6549) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122596 bytes[0m
+[0;32mI (6559) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (6569) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (6569) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (6579) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (6579) sys_monitor: Uptime: 6 seconds[0m
+[0;32mI (6589) sys_monitor: ===========================================[0m
+
+[0;33mW (9589) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (9589) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (9589) sys_monitor: CPU: Total usage: 13%[0m
+[0;32mI (9589) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (9589) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2384 bytes[0m
+[0;32mI (9599) sys_monitor:   Task 'main': CPU=2%, Stack HWM=1240 bytes[0m
+[0;32mI (9609) sys_monitor:   Task 'IDLE': CPU=85%, Stack HWM=1296 bytes[0m
+[0;32mI (9609) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (9619) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (9619) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (9629) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122596 bytes[0m
+[0;32mI (9639) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (9639) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (9649) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (9659) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (9659) sys_monitor: Uptime: 9 seconds[0m
+[0;32mI (9669) sys_monitor: ===========================================[0m
+
+[0;33mW (12669) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (12669) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (12669) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (12669) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (12669) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (12679) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (12689) sys_monitor:   Task 'IDLE': CPU=88%, Stack HWM=1296 bytes[0m
+[0;32mI (12689) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (12699) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (12699) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (12709) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122596 bytes[0m
+[0;32mI (12719) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (12729) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (12729) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (12739) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (12739) sys_monitor: Uptime: 12 seconds[0m
+[0;32mI (12749) sys_monitor: ===========================================[0m
+
+[0;33mW (15749) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (15749) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (15749) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (15749) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (15749) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (15759) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (15769) sys_monitor:   Task 'IDLE': CPU=89%, Stack HWM=1296 bytes[0m
+[0;32mI (15769) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (15779) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (15779) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (15789) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (15799) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (15809) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (15809) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (15819) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (15819) sys_monitor: Uptime: 15 seconds[0m
+[0;32mI (15829) sys_monitor: ===========================================[0m
+
+[0;33mW (18829) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (18829) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (18829) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (18829) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (18829) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (18839) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (18849) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1296 bytes[0m
+[0;32mI (18849) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (18859) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (18859) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (18869) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (18879) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (18889) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (18889) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (18899) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (18899) sys_monitor: Uptime: 18 seconds[0m
+[0;32mI (18909) sys_monitor: ===========================================[0m
+
+[0;33mW (21909) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (21909) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (21909) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (21909) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (21909) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (21919) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (21929) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1296 bytes[0m
+[0;32mI (21929) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (21939) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (21939) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (21949) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (21959) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (21969) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (21969) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (21979) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (21979) sys_monitor: Uptime: 21 seconds[0m
+[0;32mI (21989) sys_monitor: ===========================================[0m
+
+[0;33mW (24989) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (24989) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (24989) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (24989) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (24989) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (24999) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (25009) sys_monitor:   Task 'IDLE': CPU=92%, Stack HWM=1296 bytes[0m
+[0;32mI (25009) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (25019) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (25019) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (25029) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (25039) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (25049) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (25049) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (25059) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (25059) sys_monitor: Uptime: 24 seconds[0m
+[0;32mI (25069) sys_monitor: ===========================================[0m
+
+[0;33mW (28069) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (28069) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (28069) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (28069) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (28069) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (28079) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (28089) sys_monitor:   Task 'IDLE': CPU=93%, Stack HWM=1296 bytes[0m
+[0;32mI (28089) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (28099) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (28099) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (28109) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (28119) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (28129) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (28129) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (28139) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (28139) sys_monitor: Uptime: 27 seconds[0m
+[0;32mI (28149) sys_monitor: ===========================================[0m
+
+[0;33mW (31149) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (31149) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (31149) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (31149) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (31149) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (31159) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (31169) sys_monitor:   Task 'IDLE': CPU=93%, Stack HWM=1296 bytes[0m
+[0;32mI (31169) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (31179) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (31179) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (31189) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (31199) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (31209) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (31209) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (31219) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (31219) sys_monitor: Uptime: 30 seconds[0m
+[0;32mI (31229) sys_monitor: ===========================================[0m
+
+[0;33mW (34229) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (34229) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (34229) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (34229) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (34229) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (34239) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (34249) sys_monitor:   Task 'IDLE': CPU=93%, Stack HWM=1296 bytes[0m
+[0;32mI (34249) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (34259) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (34259) sys_monitor: MEM: Free heap: 122996 bytes (21.0% used)[0m
+[0;32mI (34269) sys_monitor: MEM: Largest free block: 106496 bytes, Min free ever: 122356 bytes[0m
+[0;32mI (34279) sys_monitor: NET: TX: 0 pkt, 0 bytes, 0 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (34289) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (34289) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 0[0m
+[0;32mI (34299) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (34299) sys_monitor: Uptime: 33 seconds[0m
+[0;32mI (34309) sys_monitor: ===========================================[0m
+
+[0;32mI (36519) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (36519) wifi:(trc)phytype:CBW20-SGI, snr:51, maxRate:144, highestRateIdx:0[0m
+[0;33mW (36519) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (36529) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:51, ampduState:wait operational[0m
+[0;32mI (36539) wifi:ifidx:1, rssi:-48, nf:-99, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (36549) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (36559) wifi:station: ba:ae:d9:88:75:72 join, AID=1, bgn, 20[0m
+[0;32mI (36669) wifi_repeater: Client ba:ae:d9:88:75:72 joined, AID=1[0m
+[0;33mW (36909) wifi:conn=0x408399b4 alloc softap rx ba index=0 ba index 8[0m
+[0;32mI (36909) wifi:<ba-add>extra, idx:0, ifx:1, tid:0, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:0, win:64), CONF:0xc0000001[0m
+[0;32mI (37219) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (37219) ap_clients: Client IP assigned: ba:ae:d9:88:75:72 -> 192.168.4.2[0m
+[0;33mW (37309) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (37309) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (37309) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (37309) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (37309) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (37319) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (37329) sys_monitor:   Task 'IDLE': CPU=93%, Stack HWM=1296 bytes[0m
+[0;32mI (37329) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (37339) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (37339) sys_monitor: MEM: Free heap: 119860 bytes (23.0% used)[0m
+[0;32mI (37349) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 115328 bytes[0m
+[0;32mI (37359) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 519 B/s | RX: 2 pkt, 1600 bytes, 519 B/s[0m
+[0;32mI (37369) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (37369) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (37379) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (37379) sys_monitor: Uptime: 36 seconds[0m
+[0;32mI (37389) sys_monitor: ===========================================[0m
+[0;32mI (37389) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+
+[0;32mI (37409) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (37409) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (37419) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (37499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (37549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (38069) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (40399) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (40399) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (40399) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (40399) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (40399) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;33mW (40399) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (40419) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (40419) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (40429) sys_monitor:   Task 'IDLE': CPU=93%, Stack HWM=1248 bytes[0m
+[0;32mI (40429) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (40439) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (40449) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (40449) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (40459) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 3365 B/s | RX: 25 pkt, 20000 bytes, 5954 B/s[0m
+[0;32mI (40469) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (40469) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (40479) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (40489) sys_monitor: Uptime: 39 seconds[0m
+[0;32mI (40489) sys_monitor: ===========================================[0m
+
+[0;33mW (40499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (40559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (41069) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (42549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (43449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (43449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (43449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (43499) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (43499) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (43499) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (43499) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (43499) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;33mW (43499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (43519) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;33mW (43519) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (43529) sys_monitor:   Task 'IDLE': CPU=94%, Stack HWM=1248 bytes[0m
+[0;32mI (43529) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (43539) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (43549) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (43549) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (43559) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 40 pkt, 32000 bytes, 3871 B/s[0m
+[0;32mI (43569) sys_monitor: NET: Errors - TX: 0, RX: 6[0m
+[0;32mI (43569) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (43579) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (43579) sys_monitor: Uptime: 43 seconds[0m
+[0;32mI (43589) sys_monitor: ===========================================[0m
+
+[0;33mW (44779) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (44829) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (45549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (45589) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (45849) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (46419) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (46419) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (46419) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (46509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (46529) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (46589) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (46589) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (46589) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (46589) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (46589) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (46599) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (46609) sys_monitor:   Task 'IDLE': CPU=1%, Stack HWM=1248 bytes[0m
+[0;32mI (46609) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (46619) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (46619) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (46629) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (46639) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 64 pkt, 51200 bytes, 6213 B/s[0m
+[0;32mI (46649) sys_monitor: NET: Errors - TX: 0, RX: 18[0m
+[0;32mI (46649) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (46659) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (46659) sys_monitor: Uptime: 46 seconds[0m
+[0;32mI (46669) sys_monitor: ===========================================[0m
+
+[0;33mW (47589) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (47879) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (48599) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (49669) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (49669) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (49669) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (49669) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (49669) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (49679) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (49689) sys_monitor:   Task 'IDLE': CPU=7%, Stack HWM=1248 bytes[0m
+[0;32mI (49689) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (49699) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (49699) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (49709) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (49719) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 73 pkt, 58400 bytes, 2337 B/s[0m
+[0;32mI (49729) sys_monitor: NET: Errors - TX: 0, RX: 24[0m
+[0;32mI (49729) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (49739) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (49739) sys_monitor: Uptime: 49 seconds[0m
+[0;32mI (49749) sys_monitor: ===========================================[0m
+
+[0;33mW (50479) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (50479) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (50549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (50909) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (52749) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (52749) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (52749) sys_monitor: CPU: Total usage: 4%[0m
+[0;32mI (52749) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (52749) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (52759) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (52769) sys_monitor:   Task 'IDLE': CPU=12%, Stack HWM=1248 bytes[0m
+[0;32mI (52769) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (52779) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (52779) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (52789) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (52799) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 79 pkt, 63200 bytes, 1558 B/s[0m
+[0;32mI (52809) sys_monitor: NET: Errors - TX: 0, RX: 26[0m
+[0;32mI (52809) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (52819) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (52819) sys_monitor: Uptime: 52 seconds[0m
+[0;32mI (52829) sys_monitor: ===========================================[0m
+
+[0;33mW (53119) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (53439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (53439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (53449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (53929) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (54669) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (55639) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (55829) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (55829) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (55829) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (55829) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (55829) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (55839) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (55849) sys_monitor:   Task 'IDLE': CPU=17%, Stack HWM=1248 bytes[0m
+[0;32mI (55849) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (55859) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (55859) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (55869) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (55879) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 88 pkt, 70400 bytes, 2337 B/s[0m
+[0;32mI (55889) sys_monitor: NET: Errors - TX: 0, RX: 28[0m
+[0;32mI (55889) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (55899) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (55899) sys_monitor: Uptime: 55 seconds[0m
+[0;32mI (55909) sys_monitor: ===========================================[0m
+
+[0;33mW (56159) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (56449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (56449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (56459) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (56899) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (57629) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (58649) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (58909) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (58909) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (58909) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (58909) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (58909) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (58919) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (58929) sys_monitor:   Task 'IDLE': CPU=21%, Stack HWM=1248 bytes[0m
+[0;32mI (58929) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (58939) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (58939) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (58949) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (58959) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 95 pkt, 76000 bytes, 1818 B/s[0m
+[0;32mI (58969) sys_monitor: NET: Errors - TX: 0, RX: 28[0m
+[0;32mI (58969) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (58979) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (58979) sys_monitor: Uptime: 58 seconds[0m
+[0;32mI (58989) sys_monitor: ===========================================[0m
+
+[0;33mW (59509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (59509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (60609) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (60629) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (60669) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (61989) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (61989) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (61989) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (61989) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (61989) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (61999) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (62009) sys_monitor:   Task 'IDLE': CPU=25%, Stack HWM=1248 bytes[0m
+[0;32mI (62009) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (62019) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (62019) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (62029) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 103892 bytes[0m
+[0;32mI (62039) sys_monitor: NET: TX: 15 pkt, 12000 bytes, 0 B/s | RX: 102 pkt, 81600 bytes, 1818 B/s[0m
+[0;32mI (62049) sys_monitor: NET: Errors - TX: 0, RX: 30[0m
+[0;32mI (62049) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (62059) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (62059) sys_monitor: Uptime: 61 seconds[0m
+[0;32mI (62069) sys_monitor: ===========================================[0m
+
+[0;33mW (63609) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (63629) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (63659) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (64539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (64539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65069) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (65069) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (65069) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (65069) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (65069) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (65079) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (65089) sys_monitor:   Task 'IDLE': CPU=28%, Stack HWM=1248 bytes[0m
+[0;32mI (65089) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (65099) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (65099) sys_monitor: MEM: Free heap: 119736 bytes (23.0% used)[0m
+[0;32mI (65109) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 102996 bytes[0m
+[0;32mI (65119) sys_monitor: NET: TX: 22 pkt, 17600 bytes, 1818 B/s | RX: 117 pkt, 93600 bytes, 3896 B/s[0m
+[0;32mI (65129) sys_monitor: NET: Errors - TX: 0, RX: 30[0m
+[0;32mI (65129) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (65139) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (65139) sys_monitor: Uptime: 64 seconds[0m
+[0;32mI (65149) sys_monitor: ===========================================[0m
+
+[0;33mW (65339) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65479) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65529) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65529) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65599) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65599) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65609) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65679) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65679) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65739) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65739) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (65829) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66439) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (66499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66609) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66619) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66649) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66769) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (66769) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67149) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67149) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (67509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68149) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (68149) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (68149) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (68149) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (68149) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (68159) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (68169) sys_monitor:   Task 'IDLE': CPU=31%, Stack HWM=1248 bytes[0m
+[0;33mW (68169) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68179) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68179) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (68189) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (68189) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (68199) sys_monitor: MEM: Free heap: 119320 bytes (23.0% used)[0m
+[0;32mI (68209) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 100524 bytes[0m
+[0;32mI (68209) sys_monitor: NET: TX: 43 pkt, 34400 bytes, 5454 B/s | RX: 172 pkt, 137600 bytes, 14285 B/s[0m
+[0;32mI (68219) sys_monitor: NET: Errors - TX: 0, RX: 31[0m
+[0;32mI (68229) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (68229) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (68239) sys_monitor: Uptime: 67 seconds[0m
+[0;32mI (68249) sys_monitor: ===========================================[0m
+
+[0;33mW (68349) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68569) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68609) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68789) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (68839) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (69479) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (69539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (69659) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (70199) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (70489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (70489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (70489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (70499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (70719) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71179) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71249) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (71249) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (71249) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (71249) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (71249) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (71259) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (71269) sys_monitor:   Task 'IDLE': CPU=34%, Stack HWM=1248 bytes[0m
+[0;32mI (71269) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (71279) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (71279) sys_monitor: MEM: Free heap: 119320 bytes (23.0% used)[0m
+[0;32mI (71289) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 100524 bytes[0m
+[0;32mI (71299) sys_monitor: NET: TX: 43 pkt, 34400 bytes, 0 B/s | RX: 192 pkt, 153600 bytes, 5161 B/s[0m
+[0;32mI (71309) sys_monitor: NET: Errors - TX: 0, RX: 33[0m
+[0;32mI (71309) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (71319) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (71319) sys_monitor: Uptime: 70 seconds[0m
+[0;32mI (71329) sys_monitor: ===========================================[0m
+
+[0;33mW (71449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71579) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (71779) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (72549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (72549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (72549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (72549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (73669) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (74329) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (74329) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (74329) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (74329) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (74329) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (74339) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (74349) sys_monitor:   Task 'IDLE': CPU=36%, Stack HWM=1248 bytes[0m
+[0;32mI (74349) sys_monitor:   Task 'httpd': CPU=0%, Stack HWM=4764 bytes[0m
+[0;32mI (74359) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1792 bytes[0m
+[0;32mI (74369) sys_monitor: MEM: Free heap: 117824 bytes (24.0% used)[0m
+[0;32mI (74369) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 100524 bytes[0m
+[0;32mI (74379) sys_monitor: NET: TX: 44 pkt, 35200 bytes, 259 B/s | RX: 206 pkt, 164800 bytes, 3636 B/s[0m
+[0;32mI (74389) sys_monitor: NET: Errors - TX: 0, RX: 35[0m
+[0;32mI (74389) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (74399) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (74399) sys_monitor: Uptime: 73 seconds[0m
+[0;32mI (74409) sys_monitor: ===========================================[0m
+
+[0;33mW (74789) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (75579) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (75579) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (75579) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (75599) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (75599) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (75709) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (76499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (76499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (76499) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (76509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (76509) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (77409) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (77409) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (77409) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (77409) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (77409) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (77419) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (77429) sys_monitor:   Task 'IDLE': CPU=39%, Stack HWM=1248 bytes[0m
+[0;32mI (77429) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (77439) sys_monitor:   Task 'httpd': CPU=0%, Stack HWM=4764 bytes[0m
+[0;32mI (77439) sys_monitor: MEM: Free heap: 117824 bytes (24.0% used)[0m
+[0;32mI (77449) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 100524 bytes[0m
+[0;32mI (77459) sys_monitor: NET: TX: 44 pkt, 35200 bytes, 0 B/s | RX: 220 pkt, 176000 bytes, 3636 B/s[0m
+[0;32mI (77469) sys_monitor: NET: Errors - TX: 0, RX: 37[0m
+[0;32mI (77469) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (77479) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (77479) sys_monitor: Uptime: 76 seconds[0m
+[0;32mI (77489) sys_monitor: ===========================================[0m
+
+[0;33mW (77679) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (77679) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (77679) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (78469) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (78489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (79259) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (80429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (80489) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (80489) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (80489) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (80489) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (80489) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (80499) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (80509) sys_monitor:   Task 'IDLE': CPU=41%, Stack HWM=1248 bytes[0m
+[0;32mI (80509) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (80519) sys_monitor:   Task 'httpd': CPU=0%, Stack HWM=4764 bytes[0m
+[0;32mI (80519) sys_monitor: MEM: Free heap: 117824 bytes (24.0% used)[0m
+[0;32mI (80529) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 100524 bytes[0m
+[0;32mI (80539) sys_monitor: NET: TX: 44 pkt, 35200 bytes, 0 B/s | RX: 234 pkt, 187200 bytes, 3636 B/s[0m
+[0;32mI (80549) sys_monitor: NET: Errors - TX: 0, RX: 44[0m
+[0;32mI (80549) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (80559) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (80559) sys_monitor: Uptime: 80 seconds[0m
+[0;32mI (80569) sys_monitor: ===========================================[0m
+
+[0;33mW (83229) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83569) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (83569) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (83569) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (83569) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (83579) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (83579) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (83589) sys_monitor:   Task 'IDLE': CPU=43%, Stack HWM=1248 bytes[0m
+[0;32mI (83599) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (83599) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (83609) sys_monitor: MEM: Free heap: 104908 bytes (32.0% used)[0m
+[0;32mI (83609) sys_monitor: MEM: Largest free block: 86016 bytes, Min free ever: 100524 bytes[0m
+[0;32mI (83619) sys_monitor: NET: TX: 45 pkt, 36000 bytes, 259 B/s | RX: 236 pkt, 188800 bytes, 518 B/s[0m
+[0;32mI (83629) sys_monitor: NET: Errors - TX: 0, RX: 45[0m
+[0;32mI (83639) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (83639) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (83649) sys_monitor: Uptime: 83 seconds[0m
+[0;32mI (83649) sys_monitor: ===========================================[0m
+
+[0;33mW (83809) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83809) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83809) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83809) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83819) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83819) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83829) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83839) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (83989) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (83989) wifi:<ba-del>idx:0, tid:0[0m
+[0;33mW (83989) wifi:conn=0x408399b4 alloc softap rx ba index=0 ba index 8[0m
+[0;32mI (83989) wifi:<ba-add>extra, idx:0, ifx:1, tid:0, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:352, win:64), CONF:0xc0000001[0m
+[0;33mW (84429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84529) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84589) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84639) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (84649) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85269) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85519) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85659) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (85659) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86229) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86359) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86369) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86529) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86629) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (86659) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (86659) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (86659) sys_monitor: CPU: Total usage: 3%[0m
+[0;33mW (86659) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (86669) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (86669) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (86679) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;33mW (86679) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (86689) sys_monitor:   Task 'IDLE': CPU=45%, Stack HWM=1248 bytes[0m
+[0;32mI (86689) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (86699) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (86709) sys_monitor: MEM: Free heap: 119164 bytes (23.0% used)[0m
+[0;32mI (86709) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 96920 bytes[0m
+[0;32mI (86719) sys_monitor: NET: TX: 47 pkt, 37600 bytes, 518 B/s | RX: 275 pkt, 220000 bytes, 10110 B/s[0m
+[0;32mI (86729) sys_monitor: NET: Errors - TX: 0, RX: 47[0m
+[0;32mI (86729) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (86739) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (86749) sys_monitor: Uptime: 86 seconds[0m
+[0;32mI (86749) sys_monitor: ===========================================[0m
+
+[0;33mW (86989) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87379) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87389) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87569) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87589) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87699) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (87799) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (88269) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (88529) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (88549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89569) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89569) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89589) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89689) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (89759) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (89759) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (89759) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (89759) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (89759) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (89769) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (89779) sys_monitor:   Task 'IDLE': CPU=47%, Stack HWM=1248 bytes[0m
+[0;32mI (89779) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (89789) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (89789) sys_monitor: MEM: Free heap: 119164 bytes (23.0% used)[0m
+[0;32mI (89799) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 96920 bytes[0m
+[0;32mI (89809) sys_monitor: NET: TX: 47 pkt, 37600 bytes, 0 B/s | RX: 300 pkt, 240000 bytes, 6451 B/s[0m
+[0;32mI (89819) sys_monitor: NET: Errors - TX: 0, RX: 48[0m
+[0;32mI (89819) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (89829) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (89829) sys_monitor: Uptime: 89 seconds[0m
+[0;32mI (89839) sys_monitor: ===========================================[0m
+
+[0;33mW (90579) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (90579) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (90589) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (90689) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (90759) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (90799) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (91539) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (91689) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92469) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92549) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92559) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92599) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92609) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92719) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (92839) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (92839) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (92839) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (92839) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (92839) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (92849) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (92859) sys_monitor:   Task 'IDLE': CPU=2%, Stack HWM=1248 bytes[0m
+[0;32mI (92859) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1792 bytes[0m
+[0;32mI (92869) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (92879) sys_monitor: MEM: Free heap: 119164 bytes (23.0% used)[0m
+[0;32mI (92879) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 96920 bytes[0m
+[0;32mI (92889) sys_monitor: NET: TX: 47 pkt, 37600 bytes, 0 B/s | RX: 316 pkt, 252800 bytes, 4155 B/s[0m
+[0;32mI (92899) sys_monitor: NET: Errors - TX: 0, RX: 50[0m
+[0;32mI (92899) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (92909) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (92909) sys_monitor: Uptime: 92 seconds[0m
+[0;32mI (92919) sys_monitor: ===========================================[0m
+
+[0;33mW (93489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (93689) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (93699) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (93709) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (93759) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (94739) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (94749) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (94749) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95089) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95089) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95419) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95429) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (95569) wifi_config: No stored configuration found, using defaults[0m
+[0;32mI (95569) wifi_config: Loaded default configuration[0m
+[0;32mI (95569) wifi_config: Loaded default configuration[0m
+[0;32mI (95579) wifi_config: WiFi configuration saved to NVS[0m
+[0;32mI (95579) wifi_config:   STA SSID: Forat[0m
+[0;32mI (95589) wifi_config:   AP SSID: Zains_ESP_Repeater[0m
+[0;32mI (95589) wifi_config: SSID history updated (1 entries)[0m
+[0;32mI (95599) wifi_config: Provisioned flag set to 1[0m
+[0;33mW (95619) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95729) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (95919) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (95919) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (95919) sys_monitor: CPU: Total usage: 3%[0m
+[0;32mI (95919) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (95919) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (95929) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (95939) sys_monitor:   Task 'IDLE': CPU=5%, Stack HWM=1248 bytes[0m
+[0;32mI (95939) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (95949) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (95949) sys_monitor: MEM: Free heap: 119096 bytes (23.0% used)[0m
+[0;32mI (95959) sys_monitor: MEM: Largest free block: 98304 bytes, Min free ever: 96920 bytes[0m
+[0;32mI (95969) sys_monitor: NET: TX: 50 pkt, 40000 bytes, 779 B/s | RX: 336 pkt, 268800 bytes, 5194 B/s[0m
+[0;32mI (95979) sys_monitor: NET: Errors - TX: 0, RX: 51[0m
+[0;32mI (95979) sys_monitor: WiFi: STA disconnected (RSSI: 0 dBm), AP clients: 1[0m
+[0;32mI (95989) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (95989) sys_monitor: Uptime: 95 seconds[0m
+[0;32mI (95999) sys_monitor: ===========================================[0m
+
+[0;33mW (96099) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (96099) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (96319) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (96439) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (96449) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;33mW (96489) dns_proxy: No upstream DNS configured; dropping query[0m
+[0;32mI (96599) web_server: Restarting device...[0m
+[0;33mW (96599) wifi:(itwt)itwt_stop_process![0m
+[0;32mI (96599) wifi:station: ba:ae:d9:88:75:72 leave, AID = 1, reason = 2, bss_flags is 691299, bss:0x408422d4[0m
+[0;32mI (96609) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (96609) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (96619) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (96629) wifi_repeater: Client ba:ae:d9:88:75:72 left, AID=1[0m
+[0;33mW (96629) httpd_txrx: httpd_sock_err: error in recv : 113[0m
+[0;32mI (96649) wifi:flush txq[0m
+[0;32mI (96649) wifi:stop sw txq[0m
+[0;32mI (96649) wifi:lmac stop hw txq[0m
+ESP-ROM:esp32c5-eco2-20250121
+Build:Jan 21 2025
+rst:0xc (SW_CPU),boot:0x18 (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4080c414
+SPI mode:DIO, clock div:1
+load:0x408556c0,len:0x16d4
+load:0x4084bba0,len:0xd8c
+load:0x4084e5a0,len:0x3290
+entry 0x4084bbaa
+[0;32mI (27) boot: ESP-IDF 683ddf8a-dirty 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time Jun 16 2026 02:32:58[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (29) boot: efuse block revision: v0.2[0m
+[0;32mI (32) boot.esp32c5: SPI Speed      : 80MHz[0m
+[0;32mI (36) boot.esp32c5: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c5: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot:  3 www              Unknown data     01 82 00110000 00040000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=420b0020 size=1fb30h (129840) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=0002fb58 vaddr=40800000 size=004c0h (  1216) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=a3864h (669796) map[0m
+[0;32mI (262) esp_image: segment 3: paddr=000d388c vaddr=408004c0 size=154f4h ( 87284) load[0m
+[0;32mI (284) esp_image: segment 4: paddr=000e8d88 vaddr=40815a00 size=04084h ( 16516) load[0m
+[0;32mI (290) esp_image: segment 5: paddr=000ece14 vaddr=50000000 size=000a8h (   168) load[0m
+[0;32mI (299) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (299) boot: Disabling RNG early entropy source...[0m
+[0;32mI (310) MSPI Timing: Enter flash timing tuning[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;32mI (320) cpu_start: GPIO 12 and 11 are used as console UART I/O pins[0m
+[0;32mI (320) cpu_start: Pro cpu start user code[0m
+[0;32mI (320) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (322) app_init: Application information:[0m
+[0;32mI (326) app_init: Project name:     wifi_repeater[0m
+[0;32mI (331) app_init: App version:      d082ec1-dirty[0m
+[0;32mI (335) app_init: Compile time:     Jun 16 2026 02:32:49[0m
+[0;32mI (340) app_init: ELF file SHA256:  f75e08b26...[0m
+[0;32mI (344) app_init: ESP-IDF:          683ddf8a-dirty[0m
+[0;32mI (349) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (353) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (357) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (361) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (367) heap_init: At 408270C0 len 000354E0 (213 KiB): RAM[0m
+[0;32mI (372) heap_init: At 4085C5A0 len 00002F58 (11 KiB): RAM[0m
+[0;32mI (377) heap_init: At 500000A8 len 00003F40 (15 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (386) spi_flash: flash io: dio[0m
+[0;33mW (389) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (402) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (408) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (415) main_task: Started on CPU0[0m
+[0;32mI (425) main_task: Calling app_main()[0m
+[0;32mI (445) wifi_repeater: NVS initialized[0m
+[0;32mI (445) wifi_config: WiFi configuration manager initialized[0m
+[0;32mI (445) wifi_repeater: Initializing system monitor...[0m
+[0;32mI (445) sys_monitor: Initializing system monitoring...[0m
+[0;32mI (445) sys_monitor: System monitoring task started[0m
+[0;32mI (455) sys_monitor: System monitoring initialized successfully[0m
+[0;32mI (455) wifi_repeater: Initializing netif and event loop...[0m
+[0;32mI (465) pp: pp rom version: 78a72e9d5[0m
+[0;32mI (465) net80211: net80211 rom version: 78a72e9d5[0m
+[0;32mI (485) wifi:wifi driver task: 4082e2dc, prio:23, stack:3584, core=0[0m
+[0;32mI (485) wifi:wifi firmware version: 62ce4c3[0m
+[0;32mI (485) wifi:wifi certification version: v7.0[0m
+[0;32mI (485) wifi:config NVS flash: enabled[0m
+[0;32mI (495) wifi:config nano formatting: disabled[0m
+[0;32mI (495) wifi:mac_version:HAL_MAC_ESP32AX_752MP_ECO2,ut_version:N, band mode:0x3[0m
+[0;32mI (505) wifi:Init data frame dynamic rx buffer num: 64[0m
+[0;32mI (505) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (515) wifi:Init management short buffer num: 32[0m
+[0;32mI (515) wifi:Init dynamic tx buffer num: 64[0m
+[0;32mI (515) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (525) wifi:Init static rx buffer size: 1700 (rxctrl:64, csi:512)[0m
+[0;32mI (525) wifi:Init static rx buffer num: 20[0m
+[0;32mI (535) wifi:Init dynamic rx buffer num: 64[0m
+[0;32mI (535) wifi_init: rx ba win: 32[0m
+[0;32mI (535) wifi_init: accept mbox: 6[0m
+[0;32mI (545) wifi_init: tcpip mbox: 64[0m
+[0;32mI (545) wifi_init: udp mbox: 16[0m
+[0;32mI (545) wifi_init: tcp mbox: 16[0m
+[0;32mI (555) wifi_init: tcp tx win: 57600[0m
+[0;32mI (555) wifi_init: tcp rx win: 57600[0m
+[0;32mI (555) wifi_init: tcp mss: 1440[0m
+[0;32mI (565) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (565) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (565) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (575) wifi_config: WiFi configuration loaded from NVS[0m
+[0;32mI (575) wifi_config:   STA SSID: Forat[0m
+[0;32mI (585) wifi_config:   AP SSID: Zains_ESP_Repeater[0m
+[0;32mI (585) wifi_config:   AP Max Connections: 4[0m
+[0;32mI (585) wifi_repeater: WiFi configuration loaded from NVS[0m
+[0;32mI (615) wifi_repeater: Starting Wi-Fi in AP+STA mode...[0m
+[0;32mI (615) phy_init: phy_version 107,8c534c84,Nov 17 2025,13:41:12[0m
+[0;33mW (1215) wifi:WDEV_RXCCK_DELAY:960[0m
+[0;33mW (1215) wifi:WDEV_RXOFDM_DELAY:257[0m
+[0;33mW (1215) wifi:WDEV_RX_11G_OFDM_DELAY:258[0m
+[0;33mW (1215) wifi:WDEV_TXCCK_DELAY:630[0m
+[0;33mW (1215) wifi:WDEV_TXOFDM_DELAY:94[0m
+[0;33mW (1225) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1225) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1235) wifi:WDEVBEAMFORMCONF:0x61d7120, HE_BF_RPT_RA_SET_OPT:1[0m
+[0;33mW (1245) wifi:WDEVVHTBEAMFORMCONF: 0x61d7120, WDEV_VHT_BEAMFORMEE_ENA: 1, WDEV_VHT_NG_SEL: 0[0m
+[0;33mW (1255) wifi:(agc)0x600a7128:0xd21f0c20, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f0, min.RRssi:0xc20(-62.00)[0m
+[0;33mW (1265) wifi:MODEM_SYSCON_WIFI_BB_CFG_REG(0x600a9c18):0x10003802[0m
+[0;33mW (1265) wifi:(phy)rate:0x0(  LP-1Mbps), pwr:20, txing:20[0m
+[0;33mW (1275) wifi:(phy)rate:0x1(  LP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1275) wifi:(phy)rate:0x2(LP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1285) wifi:(phy)rate:0x3( LP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1285) wifi:(phy)rate:0x5(  SP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1295) wifi:(phy)rate:0x6(SP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1295) wifi:(phy)rate:0x7( SP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1305) wifi:(phy)rate:0x8(    48Mbps), pwr:17, txing:17[0m
+[0;33mW (1305) wifi:(phy)rate:0x9(    24Mbps), pwr:19, txing:19[0m
+[0;33mW (1315) wifi:(phy)rate:0xa(    12Mbps), pwr:19, txing:19[0m
+[0;33mW (1315) wifi:(phy)rate:0xb(     6Mbps), pwr:19, txing:19[0m
+[0;33mW (1325) wifi:(phy)rate:0xc(    54Mbps), pwr:17, txing:17[0m
+[0;33mW (1325) wifi:(phy)rate:0xd(    36Mbps), pwr:19, txing:19[0m
+[0;33mW (1335) wifi:(phy)rate:0xe(    18Mbps), pwr:19, txing:19[0m
+[0;33mW (1335) wifi:(phy)rate:0xf(     9Mbps), pwr:19, txing:19[0m
+[0;33mW (1345) wifi:(phy)rate:0x10, mcs:0x0, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1355) wifi:(phy)rate:0x11, mcs:0x1, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1365) wifi:(phy)rate:0x12, mcs:0x2, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1365) wifi:(phy)rate:0x13, mcs:0x3, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1375) wifi:(phy)rate:0x14, mcs:0x4, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1385) wifi:(phy)rate:0x15, mcs:0x5, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1395) wifi:(phy)rate:0x16, mcs:0x6, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1405) wifi:(phy)rate:0x17, mcs:0x7, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1415) wifi:(phy)rate:0x18, mcs:0x8, pwr(bw20:19, bw40:16), txing:19, HE pwr(bw20:16), txing:16[0m
+[0;33mW (1425) wifi:(phy)rate:0x19, mcs:0x9, pwr(bw20:18, bw40:16), txing:18, HE pwr(bw20:15), txing:15[0m
+[0;33mW (1435) wifi:(hal)co_hosted_bss:0, max_indicator:0, bitmask:0xff, mBSSIDsEnable:0[0m
+[0;32mI (1435) wifi:11ax coex: WDEVAX_PTI0(0x040000a0), WDEVAX_PTI1(0x00007260).[0m
+
+[0;32mI (1445) wifi:mode : sta (3c:dc:75:81:38:14) + softAP (3c:dc:75:81:38:15)[0m
+[0;32mI (1455) wifi:enable tsf[0m
+[0;33mW (1455) wifi:(BB)enable busy check(0x18), disable idle check(0xaa)[0m
+[0;33mW (1455) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 2G phymode changed to 11N[0m
+[0;33mW (1465) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 5G phymode changed to 11N[0m
+[0;32mI (1475) wifi:Total power save buffer number: 32[0m
+[0;32mI (1475) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1485) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1485) wifi_repeater: STA started, connecting to router...[0m
+[0;32mI (1495) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1505) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;33mW (1505) wifi_repeater: STA HT40 not set, using default (ESP_ERR_INVALID_ARG)[0m
+[0;32mI (1515) wifi_repeater: AP bandwidth: HT40 (2.4G) + HT40 (5G)[0m
+[0;32mI (1515) wifi_repeater: TX power set to maximum (21 dBm)[0m
+[0;32mI (1525) wifi_repeater: Wi-Fi AP SSID: Zains_ESP_Repeater, password: 12345678[0m
+[0;32mI (1525) wifi_repeater: Connecting STA to SSID: Forat[0m
+[0;32mI (1535) wifi_repeater: Initializing web server...[0m
+[0;32mI (1535) web_server: Initializing SPIFFS[0m
+[0;32mI (1555) web_server: SPIFFS: total: 233681, used: 52459[0m
+[0;32mI (1555) web_server: Web server started. Access at http://192.168.4.1[0m
+[0;32mI (2255) wifi:ap channel adjust o:1,1 n:5,2[0m
+[0;32mI (2255) wifi:new:<5,0>, old:<1,1>, ap:<5,2>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2255) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x1[0m
+[0;32mI (2255) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2265) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2275) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (2275) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (2285) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2285) wifi:(trc)phytype:CBW20-SGI, snr:49, maxRate:144, highestRateIdx:0[0m
+[0;33mW (2295) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (2305) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (2315) wifi:ifidx:0, rssi:-48, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (2325) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (2345) wifi:connected with Forat, aid = 1, channel 5, BW20(NONE, 00), bssid = d8:0d:17:35:a6:76[0m
+[0;32mI (2345) wifi:security: WPA2-PSK, phy:bgn, rssi:-48, cipher(pairwise:0x3, group:0x1), pmf:0, [0m
+[0;32mI (2365) wifi:pm start, type: 0, twt_start:0[0m
+
+[0;32mI (2365) wifi:pm start, type:0, aid:0x1, trans-BSSID:d8:0d:17:35:a6:76, BSSID[5]:0x76, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (2365) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (2375) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (2385) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (2395) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (2415) wifi_repeater: STA connected, channel=5[0m
+[0;32mI (2415) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (2425) wifi:STA is scanning or connecting, or AP has connected with external STAs, cannot set channel[0m
+
+[0;32mI (2425) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (2435) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (2445) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3455) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (3455) sys_monitor: CPU: Total usage: 47%[0m
+[0;32mI (3455) sys_monitor: CPU: Active tasks: 10[0m
+[0;32mI (3455) sys_monitor:   Task 'sys_monitor': CPU=0%, Stack HWM=2468 bytes[0m
+[0;32mI (3465) sys_monitor:   Task 'IDLE': CPU=51%, Stack HWM=1296 bytes[0m
+[0;32mI (3465) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (3475) sys_monitor:   Task 'main': CPU=5%, Stack HWM=1240 bytes[0m
+[0;32mI (3475) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (3485) sys_monitor: MEM: Free heap: 130732 bytes (20.0% used)[0m
+[0;32mI (3495) sys_monitor: MEM: Largest free block: 110592 bytes, Min free ever: 128808 bytes[0m
+[0;32mI (3495) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 533 B/s | RX: 0 pkt, 0 bytes, 0 B/s[0m
+[0;32mI (3505) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (3505) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 0[0m
+[0;32mI (3515) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (3525) sys_monitor: Uptime: 3 seconds[0m
+[0;32mI (3525) sys_monitor: ===========================================[0m
+
+[0;33mW (5215) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x10076a6, TALO:0x35170dd8, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000001[0m
+[0;32mI (6225) esp_netif_handlers: sta ip: 192.168.2.153, mask: 255.255.255.0, gw: 192.168.2.1[0m
+[0;32mI (6225) wifi_repeater: STA got IP: 192.168.2.153[0m
+[0;32mI (6225) wifi_repeater: Netmask: 255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (6225) wifi_repeater: Configuring NAT and DNS for AP interface[0m
+[0;32mI (6235) wifi_repeater: Enabling NAT on AP IP: 192.168.4.1[0m
+[0;32mI (6235) wifi_repeater: NAT enabled on AP[0m
+[0;32mI (6245) wifi_repeater: Using upstream DNS server: 192.168.2.1[0m
+[0;32mI (6245) wifi_repeater: Configuring DHCP server to advertise gateway and DNS to AP clients[0m
+[0;32mI (6255) dns_proxy: DNS proxy started on UDP/53[0m
+[0;32mI (6355) wifi_repeater: Set AP gateway to: 192.168.4.1[0m
+[0;32mI (6355) wifi_repeater: Setting DNS offer to: 192.168.4.1[0m
+[0;32mI (6355) wifi_repeater: AP DNS (netif): 192.168.4.1[0m
+[0;32mI (6355) wifi_repeater: Set secondary DNS to: 192.168.4.1[0m
+[0;32mI (6355) wifi_repeater: Enable DHCP router offer (opt3): 0[0m
+[0;32mI (6365) wifi_repeater: Enable DHCP DNS offer (opt6): 0[0m
+[0;32mI (6415) wifi_repeater: DHCP server started with result: 0[0m
+[0;32mI (6535) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (6535) sys_monitor: CPU: Total usage: 25%[0m
+[0;32mI (6535) sys_monitor: CPU: Active tasks: 11[0m
+[0;32mI (6535) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2384 bytes[0m
+[0;32mI (6545) sys_monitor:   Task 'IDLE': CPU=72%, Stack HWM=1296 bytes[0m
+[0;32mI (6545) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (6555) sys_monitor:   Task 'sys_evt': CPU=1%, Stack HWM=868 bytes[0m
+[0;32mI (6555) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (6565) sys_monitor: MEM: Free heap: 104080 bytes (36.0% used)[0m
+[0;32mI (6575) sys_monitor: MEM: Largest free block: 86016 bytes, Min free ever: 102220 bytes[0m
+[0;32mI (6575) sys_monitor: NET: TX: 4 pkt, 3200 bytes, 519 B/s | RX: 5 pkt, 4000 bytes, 1298 B/s[0m
+[0;32mI (6585) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (6595) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 0[0m
+[0;32mI (6595) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (6605) sys_monitor: Uptime: 6 seconds[0m
+[0;32mI (6605) sys_monitor: ===========================================[0m
+[0;32mI (6615) wifi_repeater: DHCP opt3 (router) offer enabled: 1, router IP: 192.168.4.1[0m
+[0;32mI (6625) wifi_repeater: DHCP opt6 (DNS) offer enabled: 1, DNS: 192.168.4.1[0m
+[0;32mI (6625) wifi_repeater: DHCP configuration complete - GW: 192.168.4.1, DNS: 192.168.4.1[0m
+[0;32mI (6635) wifi_repeater: Started bandwidth monitoring task[0m
+[0;32mI (6645) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (6645) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (6655) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (6655) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+
+[0;32mI (9665) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (9665) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (9665) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (9665) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (9675) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (9685) sys_monitor: CPU: Total usage: 16%[0m
+[0;32mI (9685) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (9685) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2384 bytes[0m
+[0;32mI (9695) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (9705) sys_monitor:   Task 'IDLE': CPU=80%, Stack HWM=1296 bytes[0m
+[0;32mI (9705) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (9715) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (9715) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (9725) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (9735) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 508 B/s | RX: 15 pkt, 12000 bytes, 2544 B/s[0m
+[0;32mI (9735) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (9745) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 0[0m
+[0;32mI (9755) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (9755) sys_monitor: Uptime: 9 seconds[0m
+[0;32mI (9765) sys_monitor: ===========================================[0m
+
+[0;32mI (12675) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -49 dBm[0m
+[0;32mI (12675) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (12675) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (12675) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (12765) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (12765) sys_monitor: CPU: Total usage: 13%[0m
+[0;32mI (12765) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (12765) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (12775) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (12775) sys_monitor:   Task 'IDLE': CPU=84%, Stack HWM=1296 bytes[0m
+[0;32mI (12785) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (12785) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (12795) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (12805) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (12805) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 0 B/s | RX: 15 pkt, 12000 bytes, 0 B/s[0m
+[0;32mI (12815) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (12825) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 0[0m
+[0;32mI (12825) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (12835) sys_monitor: Uptime: 12 seconds[0m
+[0;32mI (12835) sys_monitor: ===========================================[0m
+
+[0;32mI (15685) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (15685) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (15685) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (15685) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (15845) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (15845) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (15845) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (15845) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (15855) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (15855) sys_monitor:   Task 'IDLE': CPU=86%, Stack HWM=1296 bytes[0m
+[0;32mI (15865) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (15865) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (15875) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (15885) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (15885) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 0 B/s | RX: 15 pkt, 12000 bytes, 0 B/s[0m
+[0;32mI (15895) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (15905) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 0[0m
+[0;32mI (15905) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (15915) sys_monitor: Uptime: 15 seconds[0m
+[0;32mI (15915) sys_monitor: ===========================================[0m
+
+[0;32mI (18695) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (18695) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (18695) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (18695) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (18925) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (18925) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (18925) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (18925) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (18935) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (18935) sys_monitor:   Task 'IDLE': CPU=88%, Stack HWM=1296 bytes[0m
+[0;32mI (18945) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (18945) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (18955) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (18965) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (18965) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 0 B/s | RX: 15 pkt, 12000 bytes, 0 B/s[0m
+[0;32mI (18975) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (18985) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 0[0m
+[0;32mI (18985) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (18995) sys_monitor: Uptime: 18 seconds[0m
+[0;32mI (18995) sys_monitor: ===========================================[0m
+
+[0;32mI (21705) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -49 dBm[0m
+[0;32mI (21705) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (21705) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (21705) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (22005) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (22005) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (22005) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (22005) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (22015) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (22015) sys_monitor:   Task 'IDLE': CPU=89%, Stack HWM=1296 bytes[0m
+[0;32mI (22025) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (22025) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (22035) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (22045) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (22045) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 0 B/s | RX: 16 pkt, 12800 bytes, 259 B/s[0m
+[0;32mI (22055) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (22065) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 0[0m
+[0;32mI (22065) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (22075) sys_monitor: Uptime: 21 seconds[0m
+[0;32mI (22075) sys_monitor: ===========================================[0m
+
+[0;32mI (24715) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (24715) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (24715) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (24715) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (25085) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (25085) sys_monitor: CPU: Total usage: 7%[0m
+[0;32mI (25085) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (25085) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (25095) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (25095) sys_monitor:   Task 'IDLE': CPU=90%, Stack HWM=1248 bytes[0m
+[0;32mI (25105) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (25105) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (25115) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (25125) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (25125) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 0 B/s | RX: 16 pkt, 12800 bytes, 0 B/s[0m
+[0;32mI (25135) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (25145) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 0[0m
+[0;32mI (25145) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (25155) sys_monitor: Uptime: 24 seconds[0m
+[0;32mI (25155) sys_monitor: ===========================================[0m
+
+[0;32mI (27725) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -49 dBm[0m
+[0;32mI (27725) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (27725) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (27725) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (28165) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (28165) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (28165) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (28165) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (28175) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (28175) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1248 bytes[0m
+[0;32mI (28185) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2872 bytes[0m
+[0;32mI (28185) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4084 bytes[0m
+[0;32mI (28195) sys_monitor: MEM: Free heap: 99516 bytes (39.0% used)[0m
+[0;32mI (28205) sys_monitor: MEM: Largest free block: 81920 bytes, Min free ever: 97196 bytes[0m
+[0;32mI (28205) sys_monitor: NET: TX: 6 pkt, 4800 bytes, 0 B/s | RX: 16 pkt, 12800 bytes, 0 B/s[0m
+[0;32mI (28215) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (28225) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 0[0m
+[0;32mI (28225) wifi:new:<5,0>, old:<5,0>, ap:<5,2>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (28235) wifi:(trc)phytype:CBW20-SGI, snr:48, maxRate:144, highestRateIdx:0[0m
+[0;33mW (28245) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (28245) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (28265) wifi:ifidx:1, rssi:-50, nf:-98, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (28275) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (28275) wifi:station: ba:ae:d9:88:75:72 join, AID=1, bgn, 20[0m
+[0;32mI (28285) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (28285) sys_monitor: Uptime: 27 seconds[0m
+[0;32mI (28295) sys_monitor: ===========================================[0m
+
+[0;32mI (28385) wifi_repeater: Client ba:ae:d9:88:75:72 joined, AID=1[0m
+[0;33mW (28545) wifi:conn=0x4083a0e8 alloc softap rx ba index=0 ba index 8[0m
+[0;32mI (28545) wifi:<ba-add>extra, idx:0, ifx:1, tid:0, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:0, win:64), CONF:0xc0000001[0m
+[0;32mI (28865) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (28865) ap_clients: Client IP assigned: ba:ae:d9:88:75:72 -> 192.168.4.2[0m
+[0;32mI (28975) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (28975) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (29055) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): connectivitycheck.gstatic.com (type 1)[0m
+[0;33mW (29055) sys_monitor: Slow DNS query detected: 771 ms[0m
+[0;32mI (29065) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (29155) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): epdg.epc.mnc005.mcc418.pub.3gppnetwork.org (type 1)[0m
+[0;32mI (29155) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): mtalk.google.com (type 1)[0m
+[0;32mI (29775) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): z-m-gateway.facebook.com (type 1)[0m
+[0;33mW (29775) sys_monitor: Slow DNS query detected: 615 ms[0m
+[0;32mI (29985) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (29985) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (29985) sys_monitor: Slow DNS query detected: 204 ms[0m
+[0;33mW (30095) wifi:<ba-add>idx:1, ifx:0, tid:1, TAHI:0x10076a6, TALO:0x35170dd8, (ssn:0, win:64, cur_ssn:0), CONF:0xc0001001[0m
+[0;32mI (30095) wifi:[ADDBA]TX addba request, tid:1, dialogtoken:5, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (30115) wifi:[ADDBA]RX addba response, status:0, tid:1/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (30735) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (30735) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (30735) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (30735) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (31295) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (31295) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (31295) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (31295) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (31305) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (31305) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1248 bytes[0m
+[0;32mI (31315) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (31315) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (31325) sys_monitor: MEM: Free heap: 95852 bytes (41.0% used)[0m
+[0;32mI (31335) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 76960 bytes[0m
+[0;32mI (31335) sys_monitor: NET: TX: 138 pkt, 110400 bytes, 33738 B/s | RX: 153 pkt, 122400 bytes, 35016 B/s[0m
+[0;32mI (31345) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (31355) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (31355) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (31365) sys_monitor: BENCH: DNS queries: 6, avg latency: 282731 us, max: 771050 us[0m
+[0;32mI (31375) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 5[0m
+[0;32mI (31375) sys_monitor: Uptime: 30 seconds[0m
+[0;32mI (31385) sys_monitor: ===========================================[0m
+
+[0;32mI (33745) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (33745) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (33745) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (33745) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (33965) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (33965) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (33965) sys_monitor: Slow DNS query detected: 984 ms[0m
+[0;32mI (34385) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (34385) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (34385) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (34385) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (34395) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (34395) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1248 bytes[0m
+[0;32mI (34405) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (34405) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (34415) sys_monitor: MEM: Free heap: 96176 bytes (41.0% used)[0m
+[0;32mI (34425) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 76960 bytes[0m
+[0;32mI (34425) sys_monitor: NET: TX: 168 pkt, 134400 bytes, 7766 B/s | RX: 192 pkt, 153600 bytes, 10097 B/s[0m
+[0;32mI (34435) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (34445) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (34445) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (34455) sys_monitor: BENCH: DNS queries: 7, avg latency: 383045 us, max: 984925 us[0m
+[0;32mI (34465) sys_monitor: BENCH: DNS usage - Cache HITS: 2, MISSES: 5[0m
+[0;32mI (34465) sys_monitor: Uptime: 33 seconds[0m
+[0;32mI (34475) sys_monitor: ===========================================[0m
+
+[0;32mI (35985) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.youtube.com (type 65)[0m
+[0;32mI (35995) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.youtube.com (type 1)[0m
+[0;32mI (36005) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): beacons.gcp.gvt2.com (type 65)[0m
+[0;32mI (36015) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): beacons.gcp.gvt2.com (type 1)[0m
+[0;32mI (36015) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 65)[0m
+[0;32mI (36025) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (36025) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;32mI (36335) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): jnn-pa.googleapis.com (type 65)[0m
+[0;33mW (36335) sys_monitor: Slow DNS query detected: 302 ms[0m
+[0;32mI (36335) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): jnn-pa.googleapis.com (type 1)[0m
+[0;32mI (36525) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients4.google.com (type 65)[0m
+[0;33mW (36525) sys_monitor: Slow DNS query detected: 176 ms[0m
+[0;32mI (36525) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients4.google.com (type 1)[0m
+[0;32mI (36755) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (36755) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (36755) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (36755) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (37005) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.gstatic.com (type 65)[0m
+[0;33mW (37005) sys_monitor: Slow DNS query detected: 473 ms[0m
+[0;32mI (37005) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.gstatic.com (type 1)[0m
+[0;32mI (37475) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (37475) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (37475) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (37475) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (37485) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (37485) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1248 bytes[0m
+[0;32mI (37495) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (37495) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (37505) sys_monitor: MEM: Free heap: 96176 bytes (41.0% used)[0m
+[0;32mI (37515) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 75912 bytes[0m
+[0;32mI (37515) sys_monitor: NET: TX: 396 pkt, 316800 bytes, 59029 B/s | RX: 420 pkt, 336000 bytes, 59029 B/s[0m
+[0;32mI (37525) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (37535) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (37535) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (37545) sys_monitor: BENCH: DNS queries: 19, avg latency: 197278 us, max: 984925 us[0m
+[0;32mI (37555) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 16[0m
+[0;32mI (37555) sys_monitor: Uptime: 37 seconds[0m
+[0;32mI (37565) sys_monitor: ===========================================[0m
+
+[0;32mI (39765) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (39765) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (39765) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (39765) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (40565) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (40565) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (40565) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (40565) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (40575) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (40575) sys_monitor:   Task 'IDLE': CPU=91%, Stack HWM=1248 bytes[0m
+[0;32mI (40585) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (40585) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (40595) sys_monitor: MEM: Free heap: 96176 bytes (41.0% used)[0m
+[0;32mI (40605) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 57164 bytes[0m
+[0;32mI (40605) sys_monitor: NET: TX: 590 pkt, 472000 bytes, 50226 B/s | RX: 615 pkt, 492000 bytes, 50485 B/s[0m
+[0;32mI (40615) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (40625) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (40625) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (40635) sys_monitor: BENCH: DNS queries: 19, avg latency: 197278 us, max: 984925 us[0m
+[0;32mI (40635) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 65)[0m
+[0;32mI (40655) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 17[0m
+[0;33mW (40655) sys_monitor: Slow DNS query detected: 636 ms[0m
+[0;32mI (40665) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 1)[0m
+[0;32mI (40675) sys_monitor: Uptime: 40 seconds[0m
+[0;32mI (40675) sys_monitor: ===========================================[0m
+
+[0;32mI (40865) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): lh3.googleusercontent.com (type 65)[0m
+[0;33mW (40865) sys_monitor: Slow DNS query detected: 176 ms[0m
+[0;32mI (40865) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): lh3.googleusercontent.com (type 1)[0m
+[0;32mI (40985) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.googleadservices.com (type 65)[0m
+[0;33mW (40985) sys_monitor: Slow DNS query detected: 112 ms[0m
+[0;32mI (40985) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.googleadservices.com (type 1)[0m
+[0;32mI (41245) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ogads-pa.clients6.google.com (type 65)[0m
+[0;33mW (41245) sys_monitor: Slow DNS query detected: 247 ms[0m
+[0;32mI (41245) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ogads-pa.clients6.google.com (type 1)[0m
+[0;32mI (41935) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.speedtest.net (type 65)[0m
+[0;33mW (41945) sys_monitor: Slow DNS query detected: 688 ms[0m
+[0;32mI (41945) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.speedtest.net (type 1)[0m
+[0;32mI (42285) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 65)[0m
+[0;33mW (42295) sys_monitor: Slow DNS query detected: 336 ms[0m
+[0;32mI (42295) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 1)[0m
+[0;32mI (42415) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): fast.com (type 65)[0m
+[0;33mW (42475) sys_monitor: Slow DNS query detected: 168 ms[0m
+[0;32mI (42475) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): fast.com (type 1)[0m
+[0;32mI (42475) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): cdn.ziffstatic.com (type 65)[0m
+[0;32mI (42545) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): cdn.ziffstatic.com (type 1)[0m
+[0;32mI (42545) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): securepubads.g.doubleclick.net (type 65)[0m
+[0;32mI (42555) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): securepubads.g.doubleclick.net (type 1)[0m
+[0;32mI (42565) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): b.cdnst.net (type 65)[0m
+[0;33mW (42735) sys_monitor: Slow DNS query detected: 163 ms[0m
+[0;32mI (42735) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): b.cdnst.net (type 1)[0m
+[0;32mI (42775) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -47 dBm[0m
+[0;32mI (42775) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (42775) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (42775) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (42825) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.googleoptimize.com (type 65)[0m
+[0;32mI (42995) wifi:[ADDBA]TX addba request, tid:1, dialogtoken:6, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (42995) wifi:[ADDBA]RX addba response, status:0, tid:1/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (43005) sys_monitor: Slow DNS query detected: 184 ms[0m
+[0;32mI (43005) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.googleoptimize.com (type 1)[0m
+[0;32mI (43025) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): cdn.ampproject.org (type 65)[0m
+[0;32mI (43035) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): cdn.ampproject.org (type 1)[0m
+[0;32mI (43105) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ichnaea-web.netflix.com (type 65)[0m
+[0;33mW (43495) sys_monitor: Slow DNS query detected: 454 ms[0m
+[0;32mI (43495) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ichnaea-web.netflix.com (type 1)[0m
+[0;33mW (43625) sys_monitor: Slow DNS query detected: 126 ms[0m
+[0;32mI (43625) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): api.fast.com (type 65)[0m
+[0;32mI (43685) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (43685) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (43685) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (43685) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (43695) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (43695) sys_monitor:   Task 'IDLE': CPU=90%, Stack HWM=1248 bytes[0m
+[0;32mI (43705) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2664 bytes[0m
+[0;32mI (43705) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (43715) sys_monitor: MEM: Free heap: 86468 bytes (47.0% used)[0m
+[0;32mI (43725) sys_monitor: MEM: Largest free block: 63488 bytes, Min free ever: 8608 bytes[0m
+[0;32mI (43725) sys_monitor: NET: TX: 3108 pkt, 2486400 bytes, 645624 B/s | RX: 3141 pkt, 2512800 bytes, 647676 B/s[0m
+[0;32mI (43735) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (43745) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 1[0m
+[0;32mI (43745) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (43755) sys_monitor: BENCH: DNS queries: 45, avg latency: 163064 us, max: 984925 us[0m
+[0;32mI (43765) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 43[0m
+[0;32mI (43765) sys_monitor: Uptime: 43 seconds[0m
+[0;32mI (43775) sys_monitor: ===========================================[0m
+
+[0;33mW (43795) sys_monitor: Slow DNS query detected: 172 ms[0m
+[0;32mI (43795) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): api.fast.com (type 1)[0m
+[0;32mI (43805) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 65)[0m
+[0;32mI (43805) dns_proxy: DNS Cache HIT for content-autofill.googleapis.com[0m
+[0;32mI (43815) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 1)[0m
+[0;32mI (43825) dns_proxy: DNS Cache HIT for content-autofill.googleapis.com[0m
+[0;32mI (43825) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 65)[0m
+[0;32mI (43845) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 1)[0m
+[0;32mI (44355) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c002-ebl001-newroztelecom-isp.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (44405) sys_monitor: Slow DNS query detected: 558 ms[0m
+[0;32mI (44405) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c002-ebl001-newroztelecom-isp.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (45085) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c002-ank001-turkcell-isp.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (45095) sys_monitor: Slow DNS query detected: 675 ms[0m
+[0;32mI (45095) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c002-ank001-turkcell-isp.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (45385) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c003-saw001-turkcell-isp.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (45465) sys_monitor: Slow DNS query detected: 352 ms[0m
+[0;32mI (45465) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c003-saw001-turkcell-isp.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (45785) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (45785) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (45785) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (45785) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (46775) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (46775) sys_monitor: CPU: Total usage: 7%[0m
+[0;32mI (46775) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (46775) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (46785) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (46785) sys_monitor:   Task 'IDLE': CPU=89%, Stack HWM=1248 bytes[0m
+[0;32mI (46795) sys_monitor:   Task 'tcpip': CPU=1%, Stack HWM=2664 bytes[0m
+[0;32mI (46795) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (46805) sys_monitor: MEM: Free heap: 96052 bytes (41.0% used)[0m
+[0;32mI (46815) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 2412 bytes[0m
+[0;32mI (46815) sys_monitor: NET: TX: 5539 pkt, 4431200 bytes, 629401 B/s | RX: 5567 pkt, 4453600 bytes, 628106 B/s[0m
+[0;32mI (46825) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (46835) sys_monitor: WiFi: STA connected (RSSI: -51 dBm), AP clients: 1[0m
+[0;32mI (46835) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (46845) sys_monitor: BENCH: DNS queries: 57, avg latency: 161139 us, max: 984925 us[0m
+[0;32mI (46855) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 52[0m
+[0;32mI (46855) sys_monitor: Uptime: 46 seconds[0m
+[0;32mI (46865) sys_monitor: ===========================================[0m
+
+[0;32mI (47075) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): accounts.google.com (type 65)[0m
+[0;33mW (47085) sys_monitor: Slow DNS query detected: 613 ms[0m
+[0;32mI (47085) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): accounts.google.com (type 1)[0m
+[0;32mI (48795) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (48795) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (48795) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (48795) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (49865) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (49865) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (49865) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (49865) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (49875) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (49875) sys_monitor:   Task 'IDLE': CPU=1%, Stack HWM=1248 bytes[0m
+[0;32mI (49885) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (49885) sys_monitor:   Task 'tcpip': CPU=1%, Stack HWM=2664 bytes[0m
+[0;32mI (49895) sys_monitor: MEM: Free heap: 96052 bytes (41.0% used)[0m
+[0;32mI (49905) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 2412 bytes[0m
+[0;32mI (49905) sys_monitor: NET: TX: 8849 pkt, 7079200 bytes, 856958 B/s | RX: 8877 pkt, 7101600 bytes, 856958 B/s[0m
+[0;32mI (49915) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (49925) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (49925) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (49935) sys_monitor: BENCH: DNS queries: 59, avg latency: 166256 us, max: 984925 us[0m
+[0;32mI (49945) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 54[0m
+[0;32mI (49945) sys_monitor: Uptime: 49 seconds[0m
+[0;32mI (49955) sys_monitor: ===========================================[0m
+
+[0;32mI (51795) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c002-adb001-turkcell-isp.1.oca.nflxvideo.net (type 65)[0m
+[0;32mI (51805) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -51 dBm[0m
+[0;32mI (51805) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (51815) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (51815) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;33mW (51855) sys_monitor: Slow DNS query detected: 769 ms[0m
+[0;32mI (51855) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c002-adb001-turkcell-isp.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (51925) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c004-teq001-turkcell-isp.1.oca.nflxvideo.net (type 65)[0m
+[0;32mI (51935) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c004-teq001-turkcell-isp.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (52955) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (52955) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (52955) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (52955) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (52965) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (52965) sys_monitor:   Task 'IDLE': CPU=6%, Stack HWM=1248 bytes[0m
+[0;32mI (52975) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2664 bytes[0m
+[0;32mI (52975) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (52985) sys_monitor: MEM: Free heap: 95456 bytes (41.0% used)[0m
+[0;32mI (52995) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 2412 bytes[0m
+[0;32mI (52995) sys_monitor: NET: TX: 11180 pkt, 8944000 bytes, 603494 B/s | RX: 11209 pkt, 8967200 bytes, 603753 B/s[0m
+[0;32mI (53005) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (53015) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (53015) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (53025) sys_monitor: BENCH: DNS queries: 63, avg latency: 169248 us, max: 984925 us[0m
+[0;32mI (53035) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 58[0m
+[0;32mI (53035) sys_monitor: Uptime: 52 seconds[0m
+[0;32mI (53045) sys_monitor: ===========================================[0m
+
+[0;32mI (54825) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -49 dBm[0m
+[0;32mI (54825) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (54825) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (54825) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (56045) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (56045) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (56045) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (56045) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (56055) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (56055) sys_monitor:   Task 'IDLE': CPU=10%, Stack HWM=1248 bytes[0m
+[0;32mI (56065) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2664 bytes[0m
+[0;32mI (56065) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (56075) sys_monitor: MEM: Free heap: 96052 bytes (41.0% used)[0m
+[0;32mI (56085) sys_monitor: MEM: Largest free block: 77824 bytes, Min free ever: 2412 bytes[0m
+[0;32mI (56085) sys_monitor: NET: TX: 11549 pkt, 9239200 bytes, 95534 B/s | RX: 11578 pkt, 9262400 bytes, 95534 B/s[0m
+[0;32mI (56095) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (56105) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (56105) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (56115) sys_monitor: BENCH: DNS queries: 63, avg latency: 169248 us, max: 984925 us[0m
+[0;32mI (56125) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 58[0m
+[0;32mI (56125) sys_monitor: Uptime: 55 seconds[0m
+[0;32mI (56135) sys_monitor: ===========================================[0m
+
+[0;32mI (57835) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (57835) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (57835) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (57835) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (59135) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (59135) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (59135) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (59135) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (59145) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (59145) sys_monitor:   Task 'IDLE': CPU=14%, Stack HWM=1248 bytes[0m
+[0;32mI (59155) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2664 bytes[0m
+[0;32mI (59155) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (59165) sys_monitor: MEM: Free heap: 48028 bytes (70.0% used)[0m
+[0;32mI (59175) sys_monitor: MEM: Largest free block: 22528 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (59175) sys_monitor: NET: TX: 14516 pkt, 11612800 bytes, 767796 B/s | RX: 14545 pkt, 11636000 bytes, 767796 B/s[0m
+[0;32mI (59185) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (59195) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (59205) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (59205) sys_monitor: BENCH: DNS queries: 63, avg latency: 169248 us, max: 984925 us[0m
+[0;32mI (59215) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 58[0m
+[0;32mI (59225) sys_monitor: Uptime: 58 seconds[0m
+[0;32mI (59225) sys_monitor: ===========================================[0m
+
+[0;32mI (60845) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -51 dBm[0m
+[0;32mI (60845) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (60845) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (60855) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (62235) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (62235) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (62235) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (62235) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (62245) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (62245) sys_monitor:   Task 'IDLE': CPU=17%, Stack HWM=1248 bytes[0m
+[0;32mI (62255) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (62255) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (62265) sys_monitor: MEM: Free heap: 87772 bytes (46.0% used)[0m
+[0;32mI (62275) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (62285) sys_monitor: NET: TX: 17975 pkt, 14380000 bytes, 893035 B/s | RX: 18004 pkt, 14403200 bytes, 893035 B/s[0m
+[0;32mI (62285) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (62295) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (62295) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (62305) sys_monitor: BENCH: DNS queries: 63, avg latency: 169248 us, max: 984925 us[0m
+[0;32mI (62315) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 58[0m
+[0;32mI (62325) sys_monitor: Uptime: 61 seconds[0m
+[0;32mI (62325) sys_monitor: ===========================================[0m
+
+[0;32mI (63855) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (63855) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (63855) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (63855) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (65325) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (65325) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (65325) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (65325) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2384 bytes[0m
+[0;32mI (65335) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (65345) sys_monitor:   Task 'IDLE': CPU=19%, Stack HWM=1248 bytes[0m
+[0;32mI (65345) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (65355) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (65355) sys_monitor: MEM: Free heap: 71212 bytes (56.0% used)[0m
+[0;32mI (65365) sys_monitor: MEM: Largest free block: 45056 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (65375) sys_monitor: NET: TX: 22025 pkt, 17620000 bytes, 1047392 B/s | RX: 22063 pkt, 17650400 bytes, 1049720 B/s[0m
+[0;32mI (65385) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (65385) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 1[0m
+[0;32mI (65395) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (65395) sys_monitor: BENCH: DNS queries: 63, avg latency: 169248 us, max: 984925 us[0m
+[0;32mI (65405) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 58[0m
+[0;32mI (65415) sys_monitor: Uptime: 64 seconds[0m
+[0;32mI (65415) sys_monitor: ===========================================[0m
+
+[0;32mI (66865) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (66865) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (66865) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (66865) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (67955) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): discover-pa.googleapis.com (type 65)[0m
+[0;32mI (67965) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): discover-pa.googleapis.com (type 1)[0m
+[0;32mI (68425) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (68425) sys_monitor: CPU: Total usage: 12%[0m
+[0;32mI (68425) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (68425) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (68435) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (68435) sys_monitor:   Task 'IDLE': CPU=21%, Stack HWM=1248 bytes[0m
+[0;32mI (68445) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (68445) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (68455) sys_monitor: MEM: Free heap: 96052 bytes (41.0% used)[0m
+[0;32mI (68465) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (68465) sys_monitor: NET: TX: 25514 pkt, 20411200 bytes, 901400 B/s | RX: 25552 pkt, 20441600 bytes, 901400 B/s[0m
+[0;32mI (68475) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (68485) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (68485) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (68495) sys_monitor: BENCH: DNS queries: 65, avg latency: 164754 us, max: 984925 us[0m
+[0;32mI (68505) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 60[0m
+[0;32mI (68505) sys_monitor: Uptime: 67 seconds[0m
+[0;32mI (68515) sys_monitor: ===========================================[0m
+
+[0;32mI (69025) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): graph.facebook.com (type 1)[0m
+[0;32mI (69115) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): gateway.facebook.com (type 1)[0m
+[0;32mI (69205) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): chat-e2ee-mini.facebook.com (type 1)[0m
+[0;32mI (69845) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): scontent.fkik1-2.fna.fbcdn.net (type 1)[0m
+[0;33mW (69845) sys_monitor: Slow DNS query detected: 640 ms[0m
+[0;32mI (69875) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (69875) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (69875) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (69885) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (71515) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (71515) sys_monitor: CPU: Total usage: 12%[0m
+[0;32mI (71515) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (71515) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (71525) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (71525) sys_monitor:   Task 'IDLE': CPU=24%, Stack HWM=1248 bytes[0m
+[0;32mI (71535) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;33mW (71535) wifi:conn=0x4083a0e8 alloc softap rx ba index=1 ba index 8[0m
+[0;32mI (71545) wifi:<ba-add>extra, idx:1, ifx:1, tid:7, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:2, win:64), CONF:0xc0007021[0m
+[0;32mI (71555) wifi:[ADDBA]TX addba request, tid:6, dialogtoken:7, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (71565) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (71575) wifi:[ADDBA]RX addba response, status:0, tid:6/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (71585) sys_monitor: MEM: Free heap: 96052 bytes (41.0% used)[0m
+[0;32mI (71585) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (71595) sys_monitor: NET: TX: 26424 pkt, 21139200 bytes, 235598 B/s | RX: 26462 pkt, 21169600 bytes, 235598 B/s[0m
+[0;32mI (71605) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (71605) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (71615) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (71625) sys_monitor: BENCH: DNS queries: 69, avg latency: 167796 us, max: 984925 us[0m
+[0;32mI (71625) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 64[0m
+[0;32mI (71635) sys_monitor: Uptime: 71 seconds[0m
+[0;32mI (71635) sys_monitor: ===========================================[0m
+
+[0;32mI (72885) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (72885) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (72885) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (72885) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (74645) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (74645) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (74645) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (74645) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (74655) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (74655) sys_monitor:   Task 'IDLE': CPU=27%, Stack HWM=1248 bytes[0m
+[0;32mI (74665) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (74665) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (74675) sys_monitor: MEM: Free heap: 95740 bytes (41.0% used)[0m
+[0;32mI (74685) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (74685) sys_monitor: NET: TX: 26470 pkt, 21176000 bytes, 11757 B/s | RX: 26508 pkt, 21206400 bytes, 11757 B/s[0m
+[0;32mI (74695) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (74705) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (74705) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (74715) sys_monitor: BENCH: DNS queries: 69, avg latency: 167796 us, max: 984925 us[0m
+[0;32mI (74725) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 64[0m
+[0;32mI (74725) sys_monitor: Uptime: 74 seconds[0m
+[0;32mI (74735) sys_monitor: ===========================================[0m
+
+[0;32mI (75895) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -50 dBm[0m
+[0;32mI (75895) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (75895) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (75895) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (77735) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (77735) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (77735) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (77735) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (77745) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (77745) sys_monitor:   Task 'IDLE': CPU=30%, Stack HWM=1248 bytes[0m
+[0;32mI (77755) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (77755) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (77765) sys_monitor: MEM: Free heap: 95740 bytes (41.0% used)[0m
+[0;32mI (77775) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (77775) sys_monitor: NET: TX: 26482 pkt, 21185600 bytes, 3106 B/s | RX: 26524 pkt, 21219200 bytes, 4142 B/s[0m
+[0;32mI (77785) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (77795) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 1[0m
+[0;32mI (77795) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (77805) sys_monitor: BENCH: DNS queries: 69, avg latency: 167796 us, max: 984925 us[0m
+[0;32mI (77815) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 64[0m
+[0;32mI (77815) sys_monitor: Uptime: 77 seconds[0m
+[0;32mI (77825) sys_monitor: ===========================================[0m
+
+[0;32mI (78905) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -49 dBm[0m
+[0;32mI (78905) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (78905) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (78905) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (80825) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (80825) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (80825) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (80825) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (80835) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (80835) sys_monitor:   Task 'IDLE': CPU=32%, Stack HWM=1248 bytes[0m
+[0;32mI (80845) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (80845) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (80855) sys_monitor: MEM: Free heap: 95740 bytes (41.0% used)[0m
+[0;32mI (80865) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (80865) sys_monitor: NET: TX: 26532 pkt, 21225600 bytes, 12945 B/s | RX: 26574 pkt, 21259200 bytes, 12945 B/s[0m
+[0;32mI (80875) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (80885) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (80885) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (80895) sys_monitor: BENCH: DNS queries: 69, avg latency: 167796 us, max: 984925 us[0m
+[0;32mI (80905) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 64[0m
+[0;32mI (80905) sys_monitor: Uptime: 80 seconds[0m
+[0;32mI (80915) sys_monitor: ===========================================[0m
+
+[0;32mI (81915) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (81915) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (81915) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (81915) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (83455) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): youtubei.googleapis.com (type 1)[0m
+[0;33mW (83465) sys_monitor: Slow DNS query detected: 622 ms[0m
+[0;32mI (83915) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (83915) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (83915) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (83915) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (83925) sys_monitor:   Task 'IDLE': CPU=35%, Stack HWM=1248 bytes[0m
+[0;32mI (83925) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (83935) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (83935) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (83945) sys_monitor: MEM: Free heap: 95720 bytes (41.0% used)[0m
+[0;32mI (83955) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (83955) sys_monitor: NET: TX: 26615 pkt, 21292000 bytes, 21488 B/s | RX: 26661 pkt, 21328800 bytes, 22524 B/s[0m
+[0;32mI (83965) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (83975) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (83975) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (83985) sys_monitor: BENCH: DNS queries: 70, avg latency: 174287 us, max: 984925 us[0m
+[0;32mI (83995) sys_monitor: BENCH: DNS usage - Cache HITS: 5, MISSES: 65[0m
+[0;32mI (83995) sys_monitor: Uptime: 83 seconds[0m
+[0;32mI (84005) sys_monitor: ===========================================[0m
+
+[0;32mI (84925) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -48 dBm[0m
+[0;32mI (84925) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (84925) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (84925) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (85655) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients2.google.com (type 65)[0m
+[0;33mW (85655) sys_monitor: Slow DNS query detected: 195 ms[0m
+[0;32mI (85655) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients2.google.com (type 1)[0m
+[0;32mI (85695) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): accounts.google.com (type 65)[0m
+[0;32mI (85695) dns_proxy: DNS Cache HIT for accounts.google.com[0m
+[0;32mI (85705) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): accounts.google.com (type 1)[0m
+[0;32mI (85705) dns_proxy: DNS Cache HIT for accounts.google.com[0m
+[0;32mI (85765) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 65)[0m
+[0;32mI (85775) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (85885) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): prod-lt-playstoregatewayadapter-pa.googleapis.com (type 1)[0m
+[0;33mW (85895) sys_monitor: Slow DNS query detected: 111 ms[0m
+[0;32mI (86085) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clientservices.googleapis.com (type 65)[0m
+[0;33mW (86095) sys_monitor: Slow DNS query detected: 201 ms[0m
+[0;32mI (86105) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clientservices.googleapis.com (type 1)[0m
+[0;32mI (86195) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 65)[0m
+[0;33mW (86205) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (86205) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;32mI (86205) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 1)[0m
+[0;32mI (86225) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients4.google.com (type 65)[0m
+[0;32mI (86225) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients4.google.com (type 1)[0m
+[0;32mI (86305) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 65)[0m
+[0;32mI (86315) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 1)[0m
+[0;32mI (86725) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 65)[0m
+[0;33mW (86735) sys_monitor: Slow DNS query detected: 413 ms[0m
+[0;32mI (86735) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 1)[0m
+[0;32mI (87005) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (87005) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (87005) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (87005) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (87015) sys_monitor:   Task 'IDLE': CPU=36%, Stack HWM=1248 bytes[0m
+[0;32mI (87015) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (87025) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (87025) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (87035) sys_monitor: MEM: Free heap: 95432 bytes (41.0% used)[0m
+[0;32mI (87045) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (87045) sys_monitor: NET: TX: 27145 pkt, 21716000 bytes, 137220 B/s | RX: 27201 pkt, 21760800 bytes, 139809 B/s[0m
+[0;32mI (87055) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (87065) sys_monitor: WiFi: STA connected (RSSI: -48 dBm), AP clients: 1[0m
+[0;32mI (87065) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (87075) sys_monitor: BENCH: DNS queries: 87, avg latency: 154959 us, max: 984925 us[0m
+[0;32mI (87085) sys_monitor: BENCH: DNS usage - Cache HITS: 7, MISSES: 80[0m
+[0;32mI (87085) sys_monitor: BENCH: HTTP requests: 1, avg latency: 4276 us, max: 4276 us[0m
+[0;32mI (87095) sys_monitor: Uptime: 86 seconds[0m
+[0;32mI (87105) sys_monitor: ===========================================[0m
+
+[0;32mI (87935) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -47 dBm[0m
+[0;32mI (87935) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (87935) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (87935) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (90105) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (90105) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (90105) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (90105) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (90115) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (90115) sys_monitor:   Task 'IDLE': CPU=38%, Stack HWM=1248 bytes[0m
+[0;32mI (90125) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (90125) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (90135) sys_monitor: MEM: Free heap: 94656 bytes (42.0% used)[0m
+[0;32mI (90145) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (90145) sys_monitor: NET: TX: 27200 pkt, 21760000 bytes, 14193 B/s | RX: 27260 pkt, 21808000 bytes, 15225 B/s[0m
+[0;32mI (90155) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (90175) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (90175) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (90185) sys_monitor: BENCH: DNS queries: 87, avg latency: 154959 us, max: 984925 us[0m
+[0;32mI (90185) sys_monitor: BENCH: DNS usage - Cache HITS: 7, MISSES: 80[0m
+[0;32mI (90195) sys_monitor: BENCH: HTTP requests: 3, avg latency: 4153 us, max: 4568 us[0m
+[0;32mI (90205) sys_monitor: Uptime: 89 seconds[0m
+[0;32mI (90205) sys_monitor: ===========================================[0m
+
+[0;32mI (90945) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -52 dBm[0m
+[0;32mI (90945) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (90945) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (90945) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (93215) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (93215) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (93215) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (93215) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (93225) sys_monitor:   Task 'IDLE': CPU=40%, Stack HWM=1248 bytes[0m
+[0;32mI (93225) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (93235) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (93235) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (93245) sys_monitor: MEM: Free heap: 94656 bytes (42.0% used)[0m
+[0;32mI (93255) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (93255) sys_monitor: NET: TX: 27221 pkt, 21776800 bytes, 5401 B/s | RX: 27294 pkt, 21835200 bytes, 8745 B/s[0m
+[0;32mI (93265) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (93275) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (93275) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (93285) sys_monitor: BENCH: DNS queries: 87, avg latency: 154959 us, max: 984925 us[0m
+[0;32mI (93295) sys_monitor: BENCH: DNS usage - Cache HITS: 7, MISSES: 80[0m
+[0;32mI (93295) sys_monitor: BENCH: HTTP requests: 4, avg latency: 3986 us, max: 4568 us[0m
+[0;32mI (93305) sys_monitor: Uptime: 92 seconds[0m
+[0;32mI (93315) sys_monitor: ===========================================[0m
+
+[0;32mI (93955) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -52 dBm[0m
+[0;32mI (93955) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (93955) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (93955) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (95075) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (95075) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (95075) sys_monitor: Slow DNS query detected: 335 ms[0m
+[0;32mI (95585) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 65)[0m
+[0;32mI (95585) dns_proxy: DNS Cache HIT for optimizationguide-pa.googleapis.com[0m
+[0;33mW (95595) sys_monitor: Slow DNS query detected: 513 ms[0m
+[0;32mI (95595) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 1)[0m
+[0;32mI (95605) dns_proxy: DNS Cache HIT for optimizationguide-pa.googleapis.com[0m
+[0;32mI (96315) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (96315) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (96315) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (96315) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (96325) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (96325) sys_monitor:   Task 'IDLE': CPU=42%, Stack HWM=1248 bytes[0m
+[0;32mI (96335) sys_monitor:   Task 'tcpip': CPU=3%, Stack HWM=2664 bytes[0m
+[0;32mI (96335) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (96345) sys_monitor: MEM: Free heap: 94656 bytes (42.0% used)[0m
+[0;32mI (96355) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (96355) sys_monitor: NET: TX: 27422 pkt, 21937600 bytes, 51871 B/s | RX: 27499 pkt, 21999200 bytes, 52903 B/s[0m
+[0;32mI (96365) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (96375) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (96375) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (96385) sys_monitor: BENCH: DNS queries: 90, avg latency: 159412 us, max: 984925 us[0m
+[0;32mI (96395) sys_monitor: BENCH: DNS usage - Cache HITS: 10, MISSES: 80[0m
+[0;32mI (96395) sys_monitor: BENCH: HTTP requests: 6, avg latency: 4077 us, max: 4604 us[0m
+[0;32mI (96405) sys_monitor: Uptime: 95 seconds[0m
+[0;32mI (96405) sys_monitor: ===========================================[0m
+
+[0;32mI (96965) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -53 dBm[0m
+[0;32mI (96965) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (96965) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (96965) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (99415) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (99415) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (99415) sys_monitor: CPU: Active tasks: 12[0m
+[0;32mI (99415) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2304 bytes[0m
+[0;32mI (99425) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (99425) sys_monitor:   Task 'IDLE': CPU=0%, Stack HWM=1248 bytes[0m
+[0;32mI (99435) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2664 bytes[0m
+[0;32mI (99435) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3952 bytes[0m
+[0;32mI (99445) sys_monitor: MEM: Free heap: 94656 bytes (42.0% used)[0m
+[0;32mI (99455) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 1968 bytes[0m
+[0;32mI (99455) sys_monitor: NET: TX: 27428 pkt, 21942400 bytes, 1548 B/s | RX: 27507 pkt, 22005600 bytes, 2064 B/s[0m
+[0;32mI (99465) sys_monitor: NET: Errors - TX: 0, RX: 1[0m
+[0;32mI (99475) sys_monitor: WiFi: STA connected (RSSI: -51 dBm), AP clients: 1[0m
+[0;32mI (99475) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (99485) sys_monitor: BENCH: DNS queries: 90, avg latency: 159412 us, max: 984925 us[0m
+[0;32mI (99495) sys_monitor: BENCH: DNS usage - Cache HITS: 10, MISSES: 80[0m
+[0;32mI (99495) sys_monitor: BENCH: HTTP requests: 7, avg latency: 4060 us, max: 4604 us[0m
+[0;32mI (99505) sys_monitor: Uptime: 98 seconds[0m
+[0;32mI (99505) sys_monitor: ===========================================[0m
+
+[0;32mI (99975) wifi_repeater: STA connected to AP SSID: Forat, Channel: 5, RSSI: -51 dBm[0m
+[0;32mI (99975) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (99975) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (99975) wifi_repeater: STA IP: 192.168.2.153/255.255.255.0, GW: 192.168.2.1[0m
+[0;32mI (100135) web_server: Starting safe shutdown sequence...[0m
+[0;32mI (100135) wifi:state: run -> init (0x0)[0m
+[0;32mI (100145) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (100145) wifi:pm stop, total sleep time: 0 us / 97771863 us[0m
+
+[0;32mI (100145) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (100145) wifi:<ba-del>idx:1, tid:1[0m
+[0;32mI (100145) wifi:new:<5,0>, old:<5,0>, ap:<5,2>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (100155) wifi:station: ba:ae:d9:88:75:72 leave, AID = 1, reason = 2, bss_flags is 691299, bss:0x40847ea8[0m
+[0;32mI (100165) wifi:new:<5,0>, old:<5,0>, ap:<5,2>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (100175) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (100175) wifi:<ba-del>idx:1, tid:7[0m
+[0;32mI (100175) wifi:new:<5,2>, old:<5,0>, ap:<5,2>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (100185) wifi_repeater: STA disconnected (reason=8)[0m
+[0;32mI (100195) wifi_repeater: Stopped bandwidth monitoring task[0m
+[0;32mI (100195) wifi_repeater: Retrying to connect to router (attempt 1)...[0m
+[0;32mI (100205) wifi_repeater: Client ba:ae:d9:88:75:72 left, AID=1[0m
+[0;32mI (100225) wifi:flush txq[0m
+[0;32mI (100225) wifi:stop sw txq[0m
+[0;32mI (100225) wifi:lmac stop hw txq[0m
+[0;32mI (100325) wifi:Deinit lldesc rx mblock:20[0m
+[0;32mI (100435) web_server: Entering deep sleep...[0m

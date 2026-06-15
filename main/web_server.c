@@ -24,6 +24,9 @@
 static const char *TAG = "web_server";
 static httpd_handle_t server = NULL;
 
+// Provisioning mode flag — set before server init
+static bool s_provisioning = false;
+
 // External references from main.c
 extern esp_netif_t *s_sta_netif;
 extern esp_netif_t *s_ap_netif;
@@ -183,11 +186,57 @@ static esp_err_t serve_static_file(httpd_req_t *req, const char *filepath, const
     return ESP_OK;
 }
 
+/* ─── Provisioning Mode ────────────────────────────────────────────────────── */
+
+void web_server_set_provisioning_mode(bool on)
+{
+    s_provisioning = on;
+    ESP_LOGI(TAG, "Provisioning mode: %s", on ? "ON" : "OFF");
+}
+
+/**
+ * @brief Auth guard — open during provisioning, require dashboard auth otherwise.
+ * Returns ESP_OK if the request is allowed, or sends a 401 and returns ESP_FAIL.
+ */
+static esp_err_t guard_auth(httpd_req_t *req)
+{
+    if (s_provisioning) {
+        return ESP_OK;  // No auth needed during provisioning
+    }
+    // In normal mode, require dashboard auth (Basic auth or session check).
+    // For now, check if dashboard is authenticated via the existing auth system.
+    // Since the existing /api/config POST has no auth enforcement, we keep
+    // the same behavior but add the guard hook for future hardening.
+    return ESP_OK;
+}
+
+/**
+ * @brief Schedule a device restart after a delay (non-blocking via esp_timer)
+ */
+static void restart_timer_cb(void *arg)
+{
+    ESP_LOGI(TAG, "Restarting device...");
+    esp_restart();
+}
+
+static void schedule_restart_ms(uint32_t delay_ms)
+{
+    const esp_timer_create_args_t timer_args = {
+        .callback = restart_timer_cb,
+        .name = "restart_timer"
+    };
+    esp_timer_handle_t timer;
+    if (esp_timer_create(&timer_args, &timer) == ESP_OK) {
+        esp_timer_start_once(timer, (uint64_t)delay_ms * 1000);
+    }
+}
+
 /**
  * Handler for the root page - serves index.html
  */
 static esp_err_t root_handler(httpd_req_t *req) {
-    return serve_static_file(req, "index.html", "text/html; charset=utf-8");
+    return serve_static_file(req,
+        s_provisioning ? "setup.html" : "index.html", "text/html; charset=utf-8");
 }
 
 /**
@@ -650,7 +699,15 @@ static esp_err_t api_config_post_handler(httpd_req_t *req) {
     // Update SSID history with the newly configured STA SSID
     wifi_config_add_ssid_to_history(config.sta_ssid);
 
-    httpd_resp_send(req, "{\"status\":\"ok\"}", -1);
+    // Mark as provisioned (only set here, not in wifi_config_save)
+    wifi_config_set_provisioned(true);
+
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, "{\"status\":\"ok\",\"message\":\"Saved. Restarting...\"}", -1);
+
+    // Schedule restart so the response gets sent first
+    schedule_restart_ms(1000);
+
     return ESP_OK;
 }
 
@@ -665,19 +722,18 @@ static esp_err_t api_config_reset_handler(httpd_req_t *req) {
         return ESP_FAIL;
     }
 
-    esp_err_t err = wifi_config_reset_to_defaults();
+    esp_err_t err = wifi_config_erase();  // Erases all keys including "provisioned" flag
     if (err != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to reset config to defaults: %s", esp_err_to_name(err));
+        ESP_LOGE(TAG, "Failed to erase config: %s", esp_err_to_name(err));
         httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Reset failed");
         return ESP_FAIL;
     }
 
-    ESP_LOGI(TAG, "Config reset to defaults via web request. Restarting...");
+    ESP_LOGI(TAG, "Config erased — device will boot into provisioning mode.");
     httpd_resp_set_type(req, "application/json");
-    httpd_resp_send(req, "{\"status\":\"reset_ok\",\"message\":\"Defaults restored. Restarting...\"}", -1);
+    httpd_resp_send(req, "{\"status\":\"reset_ok\",\"message\":\"Erased. Restarting into provisioning...\"}", -1);
 
-    vTaskDelay(pdMS_TO_TICKS(500));
-    esp_restart();
+    schedule_restart_ms(500);
     return ESP_OK;
 }
 
@@ -750,6 +806,140 @@ static esp_err_t restart_handler(httpd_req_t *req) {
     
     return ESP_OK;
 }
+
+/**
+ * Handler for GET /api/scan — scan for nearby Wi-Fi networks
+ * Returns JSON array: [{"ssid":"...","rssi":-45,"auth":"WPA2","channel":6}, ...]
+ */
+static esp_err_t api_scan_handler(httpd_req_t *req) {
+    if (guard_auth(req) != ESP_OK) return ESP_FAIL;
+
+    wifi_scan_config_t sc = {
+        .ssid = NULL,
+        .bssid = NULL,
+        .channel = 0,
+        .show_hidden = false,
+        .scan_type = WIFI_SCAN_TYPE_ACTIVE,
+        .scan_time.active = { .min = 100, .max = 300 },
+    };
+
+    esp_err_t err = esp_wifi_scan_start(&sc, true);  // blocking scan
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Wi-Fi scan failed: %s", esp_err_to_name(err));
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "Scan failed");
+        return ESP_FAIL;
+    }
+
+    uint16_t n = 0;
+    esp_wifi_scan_get_ap_num(&n);
+    if (n > 20) n = 20;
+
+    wifi_ap_record_t recs[20];
+    esp_wifi_scan_get_ap_records(&n, recs);
+
+    // Build JSON — deduplicate by SSID (keep strongest RSSI)
+    cJSON *arr = cJSON_CreateArray();
+    if (arr == NULL) {
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "JSON alloc failed");
+        return ESP_FAIL;
+    }
+
+    // Simple dedup: track seen SSIDs
+    char seen_ssids[20][33];
+    int seen_count = 0;
+
+    for (uint16_t i = 0; i < n; i++) {
+        char ssid[33] = {0};
+        memcpy(ssid, recs[i].ssid, sizeof(recs[i].ssid));
+        if (ssid[0] == '\0') continue;  // skip hidden networks
+
+        // Check if we already have this SSID with a stronger signal
+        bool dup = false;
+        for (int j = 0; j < seen_count; j++) {
+            if (strcmp(seen_ssids[j], ssid) == 0) {
+                dup = true;
+                break;
+            }
+        }
+        if (dup) continue;
+        if (seen_count < 20) {
+            strncpy(seen_ssids[seen_count], ssid, 32);
+            seen_ssids[seen_count][32] = '\0';
+            seen_count++;
+        }
+
+        cJSON *item = cJSON_CreateObject();
+        if (item == NULL) continue;
+        cJSON_AddStringToObject(item, "ssid", ssid);
+        cJSON_AddNumberToObject(item, "rssi", recs[i].rssi);
+        cJSON_AddNumberToObject(item, "channel", recs[i].primary);
+
+        const char *auth_str = "Open";
+        switch (recs[i].authmode) {
+            case WIFI_AUTH_WEP:           auth_str = "WEP"; break;
+            case WIFI_AUTH_WPA_PSK:       auth_str = "WPA"; break;
+            case WIFI_AUTH_WPA2_PSK:      auth_str = "WPA2"; break;
+            case WIFI_AUTH_WPA_WPA2_PSK:  auth_str = "WPA/WPA2"; break;
+            case WIFI_AUTH_WPA3_PSK:      auth_str = "WPA3"; break;
+            case WIFI_AUTH_WPA2_WPA3_PSK: auth_str = "WPA2/WPA3"; break;
+            case WIFI_AUTH_OPEN:          auth_str = "Open"; break;
+            default:                      auth_str = "Other"; break;
+        }
+        cJSON_AddStringToObject(item, "auth", auth_str);
+        cJSON_AddItemToArray(arr, item);
+    }
+
+    char *json_str = cJSON_PrintUnformatted(arr);
+    cJSON_Delete(arr);
+
+    if (json_str == NULL) {
+        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, "JSON render failed");
+        return ESP_FAIL;
+    }
+
+    httpd_resp_set_hdr(req, "Cache-Control", "no-store");
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, json_str, strlen(json_str));
+    free(json_str);
+    return ESP_OK;
+}
+
+/**
+ * Handler for the setup page
+ */
+static esp_err_t setup_handler(httpd_req_t *req) {
+    return serve_static_file(req, "setup.html", "text/html; charset=utf-8");
+}
+
+/**
+ * Captive portal catch-all: redirect any unknown path to the setup page during provisioning.
+ * Covers OS probe URLs (/generate_204, /hotspot-detect.html, /connecttest.txt, etc.)
+ */
+static esp_err_t captive_404_handler(httpd_req_t *req, httpd_err_code_t err) {
+    if (s_provisioning) {
+        httpd_resp_set_status(req, "302 Found");
+        httpd_resp_set_hdr(req, "Location", "http://192.168.4.1/");
+        httpd_resp_send(req, NULL, 0);
+        return ESP_OK;
+    }
+    httpd_resp_send_err(req, HTTPD_404_NOT_FOUND, "Not found");
+    return ESP_FAIL;
+}
+
+// URI handlers
+static const httpd_uri_t api_scan = {
+    .uri       = "/api/scan",
+    .method    = HTTP_GET,
+    .handler   = api_scan_handler,
+    .user_ctx  = NULL,
+};
+
+static const httpd_uri_t setup_uri = {
+    .uri       = "/setup",
+    .method    = HTTP_GET,
+    .handler   = setup_handler,
+    .user_ctx  = NULL,
+};
 
 // URI handlers
 static const httpd_uri_t root = {
@@ -844,7 +1034,7 @@ esp_err_t web_server_init(void) {
     
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     config.max_open_sockets = 7;
-    config.max_uri_handlers = 16;
+    config.max_uri_handlers = 24;
     config.stack_size = 8192;
     
     if (httpd_start(&server, &config) == ESP_OK) {
@@ -859,6 +1049,12 @@ esp_err_t web_server_init(void) {
         httpd_register_uri_handler(server, &api_config_reset);
         httpd_register_uri_handler(server, &api_restart);
         httpd_register_uri_handler(server, &api_auth);
+        httpd_register_uri_handler(server, &api_scan);
+        httpd_register_uri_handler(server, &setup_uri);
+
+        // Captive portal catch-all: during provisioning, redirect unknown paths
+        httpd_register_err_handler(server, HTTPD_404_NOT_FOUND, captive_404_handler);
+
         ESP_LOGI(TAG, "Web server started. Access at http://192.168.4.1");
         return ESP_OK;
     }

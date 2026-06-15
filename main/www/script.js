@@ -535,6 +535,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// WiFi Scan in Settings Modal
+function scanNetworksSettings() {
+    var btn = document.getElementById('scanSettingsBtn');
+    var container = document.getElementById('scanResultsSettings');
+    btn.disabled = true;
+    btn.textContent = '⏳...';
+    container.innerHTML = '';
+
+    fetch('/api/scan', { cache: 'no-store' })
+        .then(function(r) {
+            if (!r.ok) throw new Error('Scan failed');
+            return r.json();
+        })
+        .then(function(data) {
+            btn.disabled = false;
+            btn.textContent = '📡 Scan';
+            if (!data || data.length === 0) {
+                container.innerHTML = '<div style="color:#999;font-size:0.85em;padding:8px">No networks found</div>';
+                return;
+            }
+            var html = '<div class="scan-results">';
+            for (var i = 0; i < data.length; i++) {
+                var n = data[i];
+                var icon = (n.auth === 'Open') ? '🔓' : '🔒';
+                html += '<div class="scan-item" onclick="pickScanSSID(\'' +
+                    n.ssid.replace(/'/g, "\\'") + '\')">';
+                html += '<span class="scan-icon">' + icon + '</span>';
+                html += '<span class="scan-ssid">' + escapeHtmlStr(n.ssid) + '</span>';
+                html += '<span class="scan-meta">' + n.rssi + ' dBm · ' + n.auth + '</span>';
+                html += '</div>';
+            }
+            html += '</div>';
+            container.innerHTML = html;
+        })
+        .catch(function(err) {
+            btn.disabled = false;
+            btn.textContent = '📡 Scan';
+            container.innerHTML = '<div style="color:#e53935;font-size:0.85em;padding:8px">Scan error: ' + err.message + '</div>';
+        });
+}
+
+function pickScanSSID(ssid) {
+    document.getElementById('sta_ssid').value = ssid;
+    document.getElementById('scanResultsSettings').innerHTML = '';
+    document.getElementById('sta_pass').focus();
+}
+
+function escapeHtmlStr(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
 // Initialize
 fetchData();
 setInterval(fetchData, updateInterval);

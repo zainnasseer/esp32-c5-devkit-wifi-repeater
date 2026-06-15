@@ -41,8 +41,11 @@ static const char *TAG = "wifi_repeater";
 #define ESP_WIFI_MAXIMUM_RETRY  -1  // -1 = retry forever
 
 static int s_retry_num = 0;
-esp_netif_t *s_sta_netif = NULL;
+esp_netif_t *s_sta_netif = NULL; 
 esp_netif_t *s_ap_netif  = NULL;
+
+// Provisioning mode flag — true when device has never been provisioned
+bool g_provisioning_mode = false;
 
 // Handle for bandwidth monitoring task
 static TaskHandle_t s_bw_task_handle = NULL;
@@ -63,8 +66,12 @@ static void wifi_event_handler(void *arg,
     if (event_base == WIFI_EVENT) {
         switch (event_id) {
         case WIFI_EVENT_STA_START:
-            ESP_LOGI(TAG, "STA started, connecting to router...");
-            esp_wifi_connect();
+            if (!g_provisioning_mode) {
+                ESP_LOGI(TAG, "STA started, connecting to router...");
+                esp_wifi_connect();
+            } else {
+                ESP_LOGI(TAG, "STA started (provisioning mode — idle, not connecting)");
+            }
             break;
 
         case WIFI_EVENT_STA_CONNECTED: {
@@ -85,19 +92,21 @@ static void wifi_event_handler(void *arg,
                 s_bw_task_handle = NULL;
                 ESP_LOGI(TAG, "Stopped bandwidth monitoring task");
             }
-            if (ESP_WIFI_MAXIMUM_RETRY < 0 || s_retry_num < ESP_WIFI_MAXIMUM_RETRY) {
-                esp_wifi_connect();
-                s_retry_num++;
-                if (ESP_WIFI_MAXIMUM_RETRY < 0) {
-                    ESP_LOGI(TAG, "Retrying to connect to router (attempt %d)...",
-                             s_retry_num);
+            if (!g_provisioning_mode) {
+                if (ESP_WIFI_MAXIMUM_RETRY < 0 || s_retry_num < ESP_WIFI_MAXIMUM_RETRY) {
+                    esp_wifi_connect();
+                    s_retry_num++;
+                    if (ESP_WIFI_MAXIMUM_RETRY < 0) {
+                        ESP_LOGI(TAG, "Retrying to connect to router (attempt %d)...",
+                                 s_retry_num);
+                    } else {
+                        ESP_LOGI(TAG, "Retrying to connect to router (%d/%d)...",
+                                 s_retry_num, ESP_WIFI_MAXIMUM_RETRY);
+                    }
                 } else {
-                    ESP_LOGI(TAG, "Retrying to connect to router (%d/%d)...",
-                             s_retry_num, ESP_WIFI_MAXIMUM_RETRY);
+                    ESP_LOGE(TAG, "Failed to connect to router after %d retries",
+                             ESP_WIFI_MAXIMUM_RETRY);
                 }
-            } else {
-                ESP_LOGE(TAG, "Failed to connect to router after %d retries",
-                         ESP_WIFI_MAXIMUM_RETRY);
             }
             break;
         }
@@ -369,15 +378,17 @@ static void wifi_init_repeater(void)
     esp_err_t cfg_err = wifi_config_load(&wifi_cfg);
     
     if (cfg_err == ESP_ERR_NVS_NOT_FOUND) {
-        ESP_LOGI(TAG, "No WiFi config in NVS, using defaults (first boot)");
-        // Save defaults to NVS for future boots
-        wifi_config_save(&wifi_cfg);
-        ESP_LOGI(TAG, "Default configuration saved to NVS");
+        ESP_LOGI(TAG, "No WiFi config in NVS — first boot (provisioning)");
+        // Do NOT save defaults to NVS; keep STA unprovisioned.
+        // wifi_cfg is already populated with defaults by wifi_config_load().
     } else if (cfg_err == ESP_OK) {
         ESP_LOGI(TAG, "WiFi configuration loaded from NVS");
     } else {
         ESP_LOGW(TAG, "Error loading WiFi config, using defaults");
     }
+
+    // Determine provisioning state from NVS flag
+    g_provisioning_mode = !wifi_config_has_sta_credentials();
 
     // ===== Configure STA (uplink to your router) =====
     wifi_config_t sta_config = {
@@ -425,12 +436,18 @@ static void wifi_init_repeater(void)
         ap_config.ap.authmode = WIFI_AUTH_OPEN;
     }
 
-    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_APSTA));
-    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &sta_config));
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_APSTA));  // Always APSTA so STA can scan
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &ap_config));
+    if (!g_provisioning_mode) {
+        ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &sta_config));
+    }
 
     ESP_LOGI(TAG, "Starting Wi-Fi in AP+STA mode...");
     ESP_ERROR_CHECK(esp_wifi_start());
+
+    if (g_provisioning_mode) {
+        ESP_LOGW(TAG, "No STA credentials — starting in PROVISIONING (AP idle) mode");
+    }
     // Keep radio fully awake to reduce latency and improve NAT reliability
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
 
@@ -544,7 +561,37 @@ void app_main(void)
 
     // Initialize web server for dashboard
     ESP_LOGI(TAG, "Initializing web server...");
+    if (g_provisioning_mode) {
+        web_server_set_provisioning_mode(true);
+    }
     web_server_init();
+
+    // Provisioning mode: configure captive portal
+    if (g_provisioning_mode) {
+        esp_netif_ip_info_t ap_ip;
+        ESP_ERROR_CHECK(esp_netif_get_ip_info(s_ap_netif, &ap_ip));
+
+        // Configure DHCP to advertise device as DNS so clients send queries here
+        esp_netif_dhcps_stop(s_ap_netif);
+
+        esp_netif_dns_info_t dns = { .ip = { .type = ESP_IPADDR_TYPE_V4 } };
+        dns.ip.u_addr.ip4.addr = ap_ip.ip.addr;
+        esp_netif_set_dns_info(s_ap_netif, ESP_NETIF_DNS_MAIN, &dns);
+
+        uint8_t dns_offer = 1;
+        esp_netif_dhcps_option(s_ap_netif, ESP_NETIF_OP_SET,
+                               ESP_NETIF_DOMAIN_NAME_SERVER, &dns_offer, sizeof(dns_offer));
+
+        esp_netif_dhcps_start(s_ap_netif);
+
+        // Start DNS captive portal (resolves all domains to the device IP)
+        dns_proxy_set_captive_mode(true, &ap_ip.ip);
+        dns_proxy_start();
+
+        repeater_config_t cfg;
+        wifi_config_load(&cfg);
+        ESP_LOGI(TAG, "Provisioning: connect to AP '%s' and open any URL", cfg.ap_ssid);
+    }
 
     // Start button task
     xTaskCreate(start_button_task, "start_button_task", 2048, NULL, 5, NULL);

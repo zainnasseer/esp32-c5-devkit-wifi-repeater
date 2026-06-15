@@ -52,6 +52,10 @@ static volatile bool s_dns_running = false;      // Flag indicating if the proxy
 static esp_ip4_addr_t s_upstream_dns = {0};      // IP address of the upstream DNS server to forward queries to
 static bool s_has_upstream = false;              // Flag indicating if an upstream DNS is configured
 
+/* Captive portal mode state */
+static bool            s_captive_mode = false;    // When true, hijack all DNS queries
+static esp_ip4_addr_t  s_captive_ip;              // Device IP to resolve all domains to
+
 /**
  * @brief Format a MAC address as a human-readable string
  * 
@@ -318,6 +322,67 @@ static void dns_cache_store(const char *qname, uint16_t qtype, const uint8_t *re
     s_dns_cache[idx].valid = true;
 }
 
+/* ─── Captive Portal DNS Response Builders ─────────────────────────────────── */
+
+/**
+ * @brief Find the end offset of the DNS question section
+ *
+ * Walks past the 12-byte header and the QNAME labels to find the byte
+ * after QTYPE + QCLASS (4 bytes). Returns -1 on malformed input.
+ */
+static int question_end(const uint8_t *buf, int len)
+{
+    int off = 12;
+    while (off < len && buf[off] != 0) {
+        off += buf[off] + 1;  // walk labels
+    }
+    return (off < len) ? off + 1 + 4 : -1;  // null byte + QTYPE(2) + QCLASS(2)
+}
+
+/**
+ * @brief Build a DNS A-record response pointing to the captive portal IP
+ *
+ * Copies the query header + question, sets QR=1/RA=1/ANCOUNT=1, appends
+ * a compressed A record pointing to the given IPv4 address with TTL=60s.
+ */
+static int build_captive_response(const uint8_t *q, int qlen,
+                                  uint8_t *out, int out_cap, uint32_t ip_be)
+{
+    int qend = question_end(q, qlen);
+    if (qend < 0 || qend + 16 > out_cap) return -1;
+    memcpy(out, q, qend);
+    out[2] = 0x81; out[3] = 0x80;           // QR=1, RD=1, RA=1, RCODE=0
+    out[6] = 0x00; out[7] = 0x01;           // ANCOUNT = 1
+    out[8] = out[9] = out[10] = out[11] = 0; // NSCOUNT/ARCOUNT = 0
+    int o = qend;
+    out[o++] = 0xC0; out[o++] = 0x0C;       // name pointer -> offset 12
+    out[o++] = 0x00; out[o++] = 0x01;       // TYPE A
+    out[o++] = 0x00; out[o++] = 0x01;       // CLASS IN
+    out[o++] = 0x00; out[o++] = 0x00;
+    out[o++] = 0x00; out[o++] = 0x3C;       // TTL 60s
+    out[o++] = 0x00; out[o++] = 0x04;       // RDLENGTH 4
+    memcpy(out + o, &ip_be, 4); o += 4;     // RDATA (network byte order)
+    return o;
+}
+
+/**
+ * @brief Build a DNS NODATA response (NOERROR, 0 answers)
+ *
+ * Used for AAAA and other non-A queries in captive mode so clients
+ * fall back to IPv4 instead of stalling.
+ */
+static int build_nodata_response(const uint8_t *q, int qlen,
+                                 uint8_t *out, int out_cap)
+{
+    int qend = question_end(q, qlen);
+    if (qend < 0 || qend > out_cap) return -1;
+    memcpy(out, q, qend);
+    out[2] = 0x81; out[3] = 0x80;           // QR=1, RA=1, RCODE=0
+    out[6] = out[7] = 0x00;                 // ANCOUNT = 0 (NODATA)
+    out[8] = out[9] = out[10] = out[11] = 0;
+    return qend;
+}
+
 
 /**
  * @brief Main DNS proxy task that handles all DNS query forwarding
@@ -425,6 +490,20 @@ static void dns_proxy_task(void *arg)
                      have_mac ? client_mac : "unknown", client_ip_str, qname, qtype);
             dns_log_add(have_mac ? client_mac : "unknown", client_ip_str, qname, qtype);
             
+            // --- CAPTIVE PORTAL INTERCEPT ---
+            if (s_captive_mode) {
+                uint8_t captive_resp[DNS_PROXY_BUF_SIZE];
+                int rlen = (qtype == 1 /* A-record */)
+                    ? build_captive_response(buf, len, captive_resp, sizeof(captive_resp), s_captive_ip.addr)
+                    : build_nodata_response(buf, len, captive_resp, sizeof(captive_resp));
+                if (rlen > 0) {
+                    sendto(listen_sock, captive_resp, rlen, 0, (struct sockaddr *)&from, from_len);
+                }
+                uint32_t query_latency = BENCHMARK_GET_ELAPSED(dns_query);
+                sys_monitor_record_dns_query(query_latency);
+                continue;  // Skip upstream forwarding
+            }
+
             // --- CACHE LOOKUP ---
             uint8_t resp_buf[DNS_PROXY_BUF_SIZE];
             int cached_len = dns_cache_lookup(qname, qtype, resp_buf, sizeof(resp_buf));
@@ -578,4 +657,18 @@ void dns_proxy_set_upstream(const esp_ip4_addr_t *dns_ip)
     // Set upstream DNS server
     s_upstream_dns = *dns_ip;
     s_has_upstream = (dns_ip->addr != 0);  // Only mark as valid if non-zero
+}
+
+void dns_proxy_set_captive_mode(bool enable, const esp_ip4_addr_t *device_ip)
+{
+    s_captive_mode = enable;
+    if (device_ip) {
+        s_captive_ip = *device_ip;
+    }
+    if (enable && device_ip) {
+        ESP_LOGI(TAG, "Captive portal mode ENABLED (IP: " IPSTR ")",
+                 IP2STR(device_ip));
+    } else if (!enable) {
+        ESP_LOGI(TAG, "Captive portal mode DISABLED");
+    }
 }

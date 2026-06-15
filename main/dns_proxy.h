@@ -66,4 +66,16 @@ void dns_proxy_stop(void);
  */
 void dns_proxy_set_upstream(const esp_ip4_addr_t *dns_ip);
 
+/**
+ * @brief Enable or disable captive portal mode
+ *
+ * When enabled, every A-record query resolves to the device's own IP
+ * and AAAA queries receive NODATA (NOERROR, 0 answers), forcing clients
+ * to fall back to IPv4. This triggers the OS "Sign in to Wi-Fi" popup.
+ *
+ * @param enable true to enable captive mode, false to disable
+ * @param device_ip The device's AP IP address (typically 192.168.4.1), or NULL when disabling
+ */
+void dns_proxy_set_captive_mode(bool enable, const esp_ip4_addr_t *device_ip);
+
 #endif // DNS_PROXY_H

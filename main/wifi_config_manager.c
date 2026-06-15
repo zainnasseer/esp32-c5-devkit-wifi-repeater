@@ -25,6 +25,8 @@ static const char *TAG = "wifi_config";
 // SSID history: store count + each entry by index
 #define NVS_KEY_HIST_COUNT   "hist_count"
 #define NVS_KEY_HIST_SSID_FMT "hist_ssid_%d" // up to 5, formatted at runtime
+// Provisioning flag
+#define NVS_KEY_PROVISIONED  "provisioned"
 
 // Default configuration
 #define DEFAULT_STA_SSID       "Router1"
@@ -566,5 +568,40 @@ esp_err_t wifi_config_add_ssid_to_history(const char *ssid)
 
 hist_done:
     nvs_close(nvs_handle);
+    return err;
+}
+
+/* ─── Provisioning Flag ────────────────────────────────────────────────────── */
+
+bool wifi_config_has_sta_credentials(void)
+{
+    nvs_handle_t h;
+    if (nvs_open(NVS_NAMESPACE, NVS_READONLY, &h) != ESP_OK) {
+        return false;
+    }
+    uint8_t flag = 0;
+    esp_err_t err = nvs_get_u8(h, NVS_KEY_PROVISIONED, &flag);
+    nvs_close(h);
+    return (err == ESP_OK && flag == 1);
+}
+
+esp_err_t wifi_config_set_provisioned(bool provisioned)
+{
+    nvs_handle_t h;
+    esp_err_t err = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &h);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to open NVS for provisioned flag: %s", esp_err_to_name(err));
+        return err;
+    }
+    err = nvs_set_u8(h, NVS_KEY_PROVISIONED, provisioned ? 1 : 0);
+    if (err == ESP_OK) {
+        err = nvs_commit(h);
+    }
+    nvs_close(h);
+    if (err == ESP_OK) {
+        ESP_LOGI(TAG, "Provisioned flag set to %d", provisioned ? 1 : 0);
+    } else {
+        ESP_LOGE(TAG, "Failed to set provisioned flag: %s", esp_err_to_name(err));
+    }
     return err;
 }

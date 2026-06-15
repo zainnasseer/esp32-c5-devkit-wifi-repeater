@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiFi Repeater Setup</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .setup-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.25);
+    }
+    .setup-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .setup-header h1 {
+      font-size: 1.6em;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .setup-header p {
+      font-size: 0.9em;
+      color: #888;
+    }
+    .scan-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      margin-bottom: 16px;
+    }
+    .scan-btn:hover { opacity: 0.9; }
+    .scan-btn:disabled { opacity: 0.5; cursor: wait; }
+    .net-list {
+      max-height: 240px;
+      overflow-y: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .net-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #f3f4f6;
+      transition: background 0.15s;
+    }
+    .net-item:last-child { border-bottom: none; }
+    .net-item:hover { background: #f0f0ff; }
+    .net-item.selected { background: #eef2ff; border-left: 3px solid #667eea; }
+    .net-icon { font-size: 1.1em; margin-right: 10px; flex-shrink: 0; }
+    .net-info { flex: 1; min-width: 0; }
+    .net-ssid {
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .net-meta {
+      font-size: 0.78em;
+      color: #888;
+      margin-top: 2px;
+    }
+    .signal-bars {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 1px;
+      height: 14px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .signal-bars .bar {
+      width: 3px;
+      background: #d1d5db;
+      border-radius: 1px;
+    }
+    .signal-bars .bar.active { background: #667eea; }
+    .signal-bars .bar:nth-child(1) { height: 4px; }
+    .signal-bars .bar:nth-child(2) { height: 7px; }
+    .signal-bars .bar:nth-child(3) { height: 10px; }
+    .signal-bars .bar:nth-child(4) { height: 14px; }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.9em;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: inherit;
+    }
+    .form-group input:focus {
+      border-color: #667eea;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+    }
+    .ap-toggle {
+      font-size: 0.85em;
+      color: #667eea;
+      cursor: pointer;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .ap-toggle:hover { text-decoration: underline; }
+    .ap-section { display: none; margin-bottom: 14px; }
+    .ap-section.show { display: block; }
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 16px 0;
+    }
+    .save-btn {
+      width: 100%;
+      padding: 12px;
+      background: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .save-btn:hover { background: #43a047; }
+    .save-btn:disabled { background: #aaa; cursor: not-allowed; }
+    .status-msg {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.9em;
+      color: #666;
+      min-height: 1.2em;
+    }
+    .status-msg.error { color: #e53935; }
+    .status-msg.success { color: #43a047; }
+    .empty-state {
+      text-align: center;
+      padding: 24px;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="setup-card">
+    <div class="setup-header">
+      <h1>🛜 WiFi Repeater Setup</h1>
+      <p>Connect your repeater to a Wi-Fi network</p>
+    </div>
+
+    <button class="scan-btn" id="scanBtn" onclick="scanNetworks()">
+      📡 Scan for Networks
+    </button>
+
+    <div id="netList"></div>
+
+    <div class="form-group">
+      <label for="ssid">Network SSID</label>
+      <input type="text" id="ssid" placeholder="Select a network above or type manually">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter network password">
+    </div>
+
+    <hr>
+
+    <span class="ap-toggle" onclick="toggleAP()">▸ Customize Repeater AP (optional)</span>
+    <div class="ap-section" id="apSection">
+      <div class="form-group">
+        <label for="apSsid">Repeater AP Name</label>
+        <input type="text" id="apSsid" placeholder="Zains_ESP_Repeater">
+      </div>
+      <div class="form-group">
+        <label for="apPass">Repeater AP Password</label>
+        <input type="password" id="apPass" placeholder="Min 8 characters">
+      </div>
+    </div>
+
+    <button class="save-btn" id="saveBtn" onclick="saveConfig()">
+      💾 Save &amp; Connect
+    </button>
+    <div class="status-msg" id="statusMsg"></div>
+  </div>
+
+  <script>
+    var selectedSSID = '';
+    var networks = [];
+
+    function signalBars(rssi) {
+      var level = rssi >= -50 ? 4 : rssi >= -60 ? 3 : rssi >= -70 ? 2 : 1;
+      var html = '<span class="signal-bars">';
+      for (var i = 1; i <= 4; i++) {
+        html += '<span class="bar' + (i <= level ? ' active' : '') + '"></span>';
+      }
+      return html + '</span>';
+    }
+
+    function scanNetworks() {
+      var btn = document.getElementById('scanBtn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Scanning...';
+      setStatus('');
+
+      fetch('/api/scan', { cache: 'no-store' })
+        .then(function(r) {
+          if (!r.ok) throw new Error('Scan failed (HTTP ' + r.status + ')');
+          return r.json();
+        })
+        .then(function(data) {
+          networks = data;
+          renderNetworks();
+          btn.disabled = false;
+          btn.textContent = '📡 Scan for Networks';
+          if (data.length === 0) {
+            setStatus('No networks found. Try again.', 'error');
+          }
+        })
+        .catch(function(err) {
+          btn.disabled = false;
+          btn.textContent = '📡 Scan for Networks';
+          setStatus('Scan error: ' + err.message, 'error');
+        });
+    }
+
+    function renderNetworks() {
+      var container = document.getElementById('netList');
+      if (networks.length === 0) {
+        container.innerHTML = '';
+        return;
+      }
+      var html = '<div class="net-list">';
+      for (var i = 0; i < networks.length; i++) {
+        var n = networks[i];
+        var isOpen = (n.auth === 'Open');
+        var icon = isOpen ? '🔓' : '🔒';
+        var sel = (n.ssid === selectedSSID) ? ' selected' : '';
+        html += '<div class="net-item' + sel + '" onclick="selectNetwork(\'' +
+          n.ssid.replace(/'/g, "\\'") + '\')">';
+        html += '<span class="net-icon">' + icon + '</span>';
+        html += '<div class="net-info">';
+        html += '<div class="net-ssid">' + escapeHtml(n.ssid) + '</div>';
+        html += '<div class="net-meta">' + n.auth + ' · Ch ' + n.channel +
+          ' · ' + n.rssi + ' dBm' + signalBars(n.rssi) + '</div>';
+        html += '</div></div>';
+      }
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function selectNetwork(ssid) {
+      selectedSSID = ssid;
+      document.getElementById('ssid').value = ssid;
+      renderNetworks();
+      document.getElementById('password').focus();
+    }
+
+    function toggleAP() {
+      var sec = document.getElementById('apSection');
+      var toggle = document.querySelector('.ap-toggle');
+      if (sec.classList.contains('show')) {
+        sec.classList.remove('show');
+        toggle.textContent = '▸ Customize Repeater AP (optional)';
+      } else {
+        sec.classList.add('show');
+        toggle.textContent = '▾ Customize Repeater AP (optional)';
+      }
+    }
+
+    function setStatus(msg, type) {
+      var el = document.getElementById('statusMsg');
+      el.textContent = msg;
+      el.className = 'status-msg' + (type ? ' ' + type : '');
+    }
+
+    function escapeHtml(str) {
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
+    function saveConfig() {
+      var ssid = document.getElementById('ssid').value.trim();
+      var pass = document.getElementById('password').value;
+      var apSsid = document.getElementById('apSsid').value.trim();
+      var apPass = document.getElementById('apPass').value;
+
+      if (!ssid) {
+        setStatus('Please enter or select a network SSID.', 'error');
+        return;
+      }
+
+      var config = { sta_ssid: ssid, sta_pass: pass };
+      if (apSsid) config.ap_ssid = apSsid;
+      if (apPass) {
+        if (apPass.length < 8) {
+          setStatus('AP password must be at least 8 characters.', 'error');
+          return;
+        }
+        config.ap_pass = apPass;
+      }
+
+      var btn = document.getElementById('saveBtn');
+      btn.disabled = true;
+      btn.textContent = '⏳ Saving...';
+      setStatus('Saving configuration...', '');
+
+      fetch('/api/config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(config)
+      })
+      .then(function(r) {
+        if (!r.ok) throw new Error('Save failed (HTTP ' + r.status + ')');
+        return r.json();
+      })
+      .then(function(data) {
+        setStatus('✅ Saved! Device is restarting... Reconnect to the repeater AP in ~10 seconds.', 'success');
+        btn.textContent = '✅ Saved — Restarting...';
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        btn.textContent = '💾 Save & Connect';
+        setStatus('Error: ' + err.message, 'error');
+      });
+    }
+  </script>
+</body>
+</html>
