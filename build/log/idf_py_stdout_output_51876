@@ -1,0 +1,2156 @@
+Command: /Users/zainnasseer/.espressif/python_env/idf6.1_py3.14_env/bin/python /Users/zainnasseer/development/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-110 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c5 --revision 100 --decode-panic backtrace /Users/zainnasseer/development/esp/wifi_repeater/build/wifi_repeater.elf /Users/zainnasseer/development/esp/wifi_repeater/build/bootloader/bootloader.elf -m '/Users/zainnasseer/.espressif/python_env/idf6.1_py3.14_env/bin/python' '/Users/zainnasseer/development/esp/esp-idf/tools/idf.py'
+chip rev:     v1.0
+[0;32mI (342) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (346) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (350) heap_init:210 len 00035390 (212 KiB): RAM[0m
+[0;32mI (361) heap_init: At 4085C5A0 len 00002F58 (11 KiB): RAM[0m
+[0;32mI (366) heap_init: At 500000A8 len 00003F40 (15 KiB): RTCRAM[0m
+[0;32mI (373) spi_flash: detected chip: generic[0m�ESP-ROM:esp32c5-eco2-20250121
+Build:Jan 21 2025
+rst:0x1 (POWERON),boot:0x18 (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x408556c0,len:0x16d4
+load:0x4084bba0,len:0xd8c
+load:0x4084e5a0,len:0x3290
+entry 0x4084bbaa
+[0;32mI (23) boot: ESP-IDF 683ddf8a-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun 16 2026 22:35:58[0m
+[0;32mI (24) boot: chip revision: v1.0[0m
+[0;32mI (25) boot: efuse block revision: v0.2[0m
+[0;32mI (28) boot.esp32c5: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c5: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c5: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot:  3 www              Unknown data     01 82 00110000 00040000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=420c0020 size=22430h (140336) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00032458 vaddr=40800000 size=0dbc0h ( 56256) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=b7cb4h (752820) map[0m
+[0;32mI (255) esp_image: segment 3: paddr=000f7cdc vaddr=4080dbc0 size=07e20h ( 32288) load[0m
+[0;32mI (262) esp_image: segment 4: paddr=000ffb04 vaddr=40815a00 size=0408ch ( 16524) load[0m
+[0;32mI (266) esp_image: segment 5: paddr=00103b98 vaddr=50000000 size=000a8h (   168) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (272) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) MSPI Timing: Enter flash timing tuning[0m
+[0;32mI (289) cpu_start: Unicore app[0m
+[0;32mI (309) cpu_start: GPIO 12 and 11 are used as console UART I/O pins[0m
+[0;32mI (310) cpu_start: Pro cpu start user code[0m
+[0;32mI (310) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (312) app_init: Application information:[0m
+[0;32mI (315) app_init: Project name:     wifi_repeater[0m
+[0;32mI (320) app_init: App version:      df7850d-dirty[0m
+[0;32mI (324) app_init: Compile time:     Jun 16 2026 22:35:48[0m
+[0;32mI (329) app_init: ELF file SHA256:  7ab55c383...[0m
+[0;32mI (334) app_init: ESP-IDF:          683ddf8a-dirty[0m
+[0;32mI (338) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (342) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (346) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (356) heap_init: At 40827210 len 00035390 (212 KiB): RAM[0m
+[0;32mI (361) heap_init: At 4085C5A0 len 00002F58 (11 KiB): RAM[0m
+[0;32mI (366) heap_init: At 500000A8 len 00003F40 (15 KiB): RTCRAM[0m
+[0;32mI (373) spi_flash: detected chip: generic[0m
+[0;32mI (375) spi_flash: flash io: dio[0m
+[0;33mW (378) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (391) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (397) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) wifi_repeater: NVS initialized[0m
+[0;32mI (434) wifi_config: WiFi configuration manager initialized[0m
+[0;32mI (434) wifi_repeater: Initializing system monitor...[0m
+[0;32mI (434) sys_monitor: Initializing system monitoring...[0m
+[0;32mI (444) sys_monitor: System monitoring task started[0m
+[0;32mI (444) sys_monitor: System monitoring initialized successfully[0m
+[0;32mI (454) wifi_repeater: Initializing netif and event loop...[0m
+[0;32mI (464) pp: pp rom version: 78a72e9d5[0m
+[0;32mI (464) net80211: net80211 rom version: 78a72e9d5[0m
+[0;32mI (474) wifi:wifi driver task: 4082f134, prio:23, stack:6656, core=0[0m
+[0;32mI (484) wifi:wifi firmware version: 62ce4c3[0m
+[0;32mI (484) wifi:wifi certification version: v7.0[0m
+[0;32mI (484) wifi:config NVS flash: enabled[0m
+[0;32mI (484) wifi:config nano formatting: disabled[0m
+[0;32mI (484) wifi:mac_version:HAL_MAC_ESP32AX_752MP_ECO2,ut_version:N, band mode:0x3[0m
+[0;32mI (494) wifi:Init data frame dynamic rx buffer num: 64[0m
+[0;32mI (504) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (504) wifi:Init management short buffer num: 32[0m
+[0;32mI (504) wifi:Init dynamic tx buffer num: 64[0m
+[0;32mI (514) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (514) wifi:Init static rx buffer size: 1700 (rxctrl:64, csi:512)[0m
+[0;32mI (524) wifi:Init static rx buffer num: 20[0m
+[0;32mI (524) wifi:Init dynamic rx buffer num: 64[0m
+[0;32mI (534) wifi_init: rx ba win: 32[0m
+[0;32mI (534) wifi_init: accept mbox: 6[0m
+[0;32mI (534) wifi_init: tcpip mbox: 64[0m
+[0;32mI (544) wifi_init: udp mbox: 16[0m
+[0;32mI (544) wifi_init: tcp mbox: 16[0m
+[0;32mI (544) wifi_init: tcp tx win: 57600[0m
+[0;32mI (544) wifi_init: tcp rx win: 57600[0m
+[0;32mI (554) wifi_init: tcp mss: 1440[0m
+[0;32mI (554) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (554) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (564) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (564) wifi_config: WiFi configuration loaded from NVS[0m
+[0;32mI (574) wifi_config:   STA SSID: Kite Roastery[0m
+[0;32mI (574) wifi_config:   AP SSID: Zains_ESP_Repeater[0m
+[0;32mI (584) wifi_config:   AP Max Connections: 4[0m
+[0;32mI (584) wifi_repeater: WiFi configuration loaded from NVS[0m
+[0;32mI (594) wifi_repeater: Starting Wi-Fi in AP+STA mode...[0m
+[0;32mI (594) phy_init: phy_version 107,8c534c84,Nov 17 2025,13:41:12[0m
+[0;33mW (1214) wifi:WDEV_RXCCK_DELAY:960[0m
+[0;33mW (1214) wifi:WDEV_RXOFDM_DELAY:257[0m
+[0;33mW (1214) wifi:WDEV_RX_11G_OFDM_DELAY:258[0m
+[0;33mW (1214) wifi:WDEV_TXCCK_DELAY:630[0m
+[0;33mW (1224) wifi:WDEV_TXOFDM_DELAY:94[0m
+[0;33mW (1224) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1234) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1244) wifi:WDEVBEAMFORMCONF:0x61d7120, HE_BF_RPT_RA_SET_OPT:1[0m
+[0;33mW (1244) wifi:WDEVVHTBEAMFORMCONF: 0x61d7120, WDEV_VHT_BEAMFORMEE_ENA: 1, WDEV_VHT_NG_SEL: 0[0m
+[0;33mW (1254) wifi:(agc)0x600a7128:0xd21f0c20, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f0, min.RRssi:0xc20(-62.00)[0m
+[0;33mW (1264) wifi:MODEM_SYSCON_WIFI_BB_CFG_REG(0x600a9c18):0x10003802[0m
+[0;33mW (1264) wifi:(phy)rate:0x0(  LP-1Mbps), pwr:20, txing:20[0m
+[0;33mW (1274) wifi:(phy)rate:0x1(  LP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1274) wifi:(phy)rate:0x2(LP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1284) wifi:(phy)rate:0x3( LP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1284) wifi:(phy)rate:0x5(  SP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1294) wifi:(phy)rate:0x6(SP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1294) wifi:(phy)rate:0x7( SP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1304) wifi:(phy)rate:0x8(    48Mbps), pwr:17, txing:17[0m
+[0;33mW (1314) wifi:(phy)rate:0x9(    24Mbps), pwr:19, txing:19[0m
+[0;33mW (1314) wifi:(phy)rate:0xa(    12Mbps), pwr:19, txing:19[0m
+[0;33mW (1324) wifi:(phy)rate:0xb(     6Mbps), pwr:19, txing:19[0m
+[0;33mW (1324) wifi:(phy)rate:0xc(    54Mbps), pwr:17, txing:17[0m
+[0;33mW (1334) wifi:(phy)rate:0xd(    36Mbps), pwr:19, txing:19[0m
+[0;33mW (1334) wifi:(phy)rate:0xe(    18Mbps), pwr:19, txing:19[0m
+[0;33mW (1344) wifi:(phy)rate:0xf(     9Mbps), pwr:19, txing:19[0m
+[0;33mW (1344) wifi:(phy)rate:0x10, mcs:0x0, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1354) wifi:(phy)rate:0x11, mcs:0x1, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1364) wifi:(phy)rate:0x12, mcs:0x2, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1374) wifi:(phy)rate:0x13, mcs:0x3, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1384) wifi:(phy)rate:0x14, mcs:0x4, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1384) wifi:(phy)rate:0x15, mcs:0x5, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1394) wifi:(phy)rate:0x16, mcs:0x6, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1404) wifi:(phy)rate:0x17, mcs:0x7, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1414) wifi:(phy)rate:0x18, mcs:0x8, pwr(bw20:19, bw40:16), txing:19, HE pwr(bw20:16), txing:16[0m
+[0;33mW (1424) wifi:(phy)rate:0x19, mcs:0x9, pwr(bw20:18, bw40:16), txing:18, HE pwr(bw20:15), txing:15[0m
+[0;33mW (1434) wifi:(hal)co_hosted_bss:0, max_indicator:0, bitmask:0xff, mBSSIDsEnable:0[0m
+[0;32mI (1434) wifi:11ax coex: WDEVAX_PTI0(0x040000a0), WDEVAX_PTI1(0x0000824a).[0m
+
+[0;32mI (1444) wifi:mode : sta (3c:dc:75:81:38:14) + softAP (3c:dc:75:81:38:15)[0m
+[0;32mI (1454) wifi:enable tsf[0m
+[0;33mW (1454) wifi:(BB)enable busy check(0x18), disable idle check(0xaa)[0m
+[0;33mW (1464) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 2G phymode changed to 11N[0m
+[0;33mW (1464) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 5G phymode changed to 11N[0m
+[0;32mI (1534) wifi:Total power save buffer number: 32[0m
+[0;32mI (1534) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1534) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1534) wifi_repeater: STA started, connecting to router...[0m
+[0;32mI (1544) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1554) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;33mW (1554) wifi:(regdomain)len:6, country:DE, env:all, ngroup:1[0m
+[0;32mI (1564) wifi:ap channel adjust o:1,1 n:9,2[0m
+[0;32mI (1564) wifi:new:<9,0>, old:<1,1>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1574) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1574) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (1584) wifi_repeater: STA HT40 not set, using default (ESP_ERR_INVALID_ARG)[0m
+[0;32mI (1584) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1594) wifi_repeater: AP bandwidth: HT40 (2.4G) + HT40 (5G)[0m
+[0;32mI (1594) wifi_repeater: TX power set to maximum (21 dBm)[0m
+[0;32mI (1604) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (1614) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (1624) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1624) wifi:(trc)phytype:CBW20-SGI, snr:44, maxRate:144, highestRateIdx:0[0m
+[0;33mW (1634) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (1644) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:44, ampduState:wait operational[0m
+[0;32mI (1654) wifi:ifidx:0, rssi:-53, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1664) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (1664) wifi_repeater: Wi-Fi AP SSID: Zains_ESP_Repeater, password: 12345678[0m
+[0;32mI (1674) wifi_repeater: Connecting STA to SSID: Kite Roastery[0m
+[0;32mI (1684) wifi_repeater: Initializing web server...[0m
+[0;32mI (1684) web_server: Initializing SPIFFS[0m
+[0;32mI (1694) web_server: SPIFFS: total: 233681, used: 52459[0m
+[0;32mI (1694) web_server: Web server started. Access at http://192.168.4.1[0m
+[0;32mI (1714) wifi:connected with Kite Roastery, aid = 23, channel 9, BW20(BELOW, 00), bssid = b2:29:21:4e:8d:b2[0m
+[0;32mI (1714) wifi:security: WPA2-PSK, phy:bgn, rssi:-53, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1724) wifi:pm start, type: 0, twt_start:0[0m
+
+[0;32mI (1724) wifi:pm start, type:0, aid:0x17, trans-BSSID:b2:29:21:4e:8d:b2, BSSID[5]:0xb2, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1734) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1744) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1754) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1764) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1774) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1784) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1794) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1804) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1814) wifi_repeater: STA connected, channel=9[0m
+[0;33mW (1814) wifi:STA is scanning or connecting, or AP has connected with external STAs, cannot set channel[0m
+
+[0;32mI (2844) esp_netif_handlers: sta ip: 192.168.68.63, mask: 255.255.252.0, gw: 192.168.68.1[0m
+[0;32mI (2844) wifi_repeater: STA got IP: 192.168.68.63[0m
+[0;32mI (2844) wifi_repeater: Netmask: 255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (2844) wifi_repeater: Configuring NAT and DNS for AP interface[0m
+[0;32mI (2854) wifi_repeater: Enabling NAT on AP IP: 192.168.4.1[0m
+[0;32mI (2854) wifi_repeater: NAT enabled on AP[0m
+[0;32mI (2864) wifi_repeater: Using upstream DNS server: 192.168.1.1[0m
+[0;32mI (2864) wifi_repeater: Configuring DHCP server to advertise gateway and DNS to AP clients[0m
+[0;32mI (2874) dns_proxy: DNS proxy started on UDP/53[0m
+[0;32mI (2974) wifi_repeater: Set AP gateway to: 192.168.4.1[0m
+[0;32mI (2974) wifi_repeater: Setting DNS offer to: 192.168.4.1[0m
+[0;32mI (2974) wifi_repeater: AP DNS (netif): 192.168.4.1[0m
+[0;32mI (2974) wifi_repeater: Set secondary DNS to: 192.168.4.1[0m
+[0;32mI (2974) wifi_repeater: Enable DHCP router offer (opt3): 0[0m
+[0;32mI (2984) wifi_repeater: Enable DHCP DNS offer (opt6): 0[0m
+[0;32mI (3034) wifi_repeater: DHCP server started with result: 0[0m
+[0;32mI (3234) wifi_repeater: DHCP opt3 (router) offer enabled: 1, router IP: 192.168.4.1[0m
+[0;32mI (3234) wifi_repeater: DHCP opt6 (DNS) offer enabled: 1, DNS: 192.168.4.1[0m
+[0;32mI (3234) wifi_repeater: DHCP configuration complete - GW: 192.168.4.1, DNS: 192.168.4.1[0m
+[0;32mI (3244) wifi_repeater: Started bandwidth monitoring task[0m
+[0;32mI (3244) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -55 dBm[0m
+[0;32mI (3254) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (3254) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (3264) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (3444) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (3444) sys_monitor: CPU: Total usage: 47%[0m
+[0;32mI (3444) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (3444) sys_monitor:   Task 'sys_monitor': CPU=0%, Stack HWM=2476 bytes[0m
+[0;32mI (3454) sys_monitor:   Task 'IDLE': CPU=49%, Stack HWM=1296 bytes[0m
+[0;32mI (3454) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1804 bytes[0m
+[0;32mI (3464) sys_monitor:   Task 'main': CPU=5%, Stack HWM=1240 bytes[0m
+[0;32mI (3464) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (3474) sys_monitor: MEM: Free heap: 88976 bytes (26.0% used)[0m
+[0;32mI (3484) sys_monitor: MEM: Largest free block: 69632 bytes, Min free ever: 87064 bytes[0m
+[0;32mI (3484) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 533 B/s | RX: 7 pkt, 5600 bytes, 1868 B/s[0m
+[0;32mI (3494) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (3504) sys_monitor: WiFi: STA connected (RSSI: -55 dBm), AP clients: 0[0m
+[0;32mI (3504) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (3514) sys_monitor: Uptime: 2 seconds[0m
+[0;32mI (3514) sys_monitor: ===========================================[0m
+
+[0;32mI (6274) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (6274) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (6274) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (6274) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (6524) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (6524) sys_monitor: CPU: Total usage: 24%[0m
+[0;32mI (6524) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (6524) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2392 bytes[0m
+[0;32mI (6534) sys_monitor:   Task 'IDLE': CPU=72%, Stack HWM=1296 bytes[0m
+[0;32mI (6534) sys_monitor:   Task 'main': CPU=2%, Stack HWM=1240 bytes[0m
+[0;32mI (6544) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2868 bytes[0m
+[0;32mI (6544) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (6554) sys_monitor: MEM: Free heap: 88620 bytes (27.0% used)[0m
+[0;32mI (6554) sys_monitor: MEM: Largest free block: 69632 bytes, Min free ever: 86708 bytes[0m
+[0;32mI (6564) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 0 B/s | RX: 13 pkt, 10400 bytes, 1558 B/s[0m
+[0;32mI (6574) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (6574) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 0[0m
+[0;32mI (6584) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (6594) sys_monitor: Uptime: 6 seconds[0m
+[0;32mI (6594) sys_monitor: ===========================================[0m
+
+[0;32mI (9284) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -49 dBm[0m
+[0;32mI (9284) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (9284) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (9284) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (9604) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (9604) sys_monitor: CPU: Total usage: 15%[0m
+[0;32mI (9604) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (9604) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2392 bytes[0m
+[0;32mI (9614) sys_monitor:   Task 'IDLE': CPU=80%, Stack HWM=1296 bytes[0m
+[0;32mI (9614) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (9624) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4096 bytes[0m
+[0;32mI (9624) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2868 bytes[0m
+[0;32mI (9634) sys_monitor: MEM: Free heap: 88620 bytes (27.0% used)[0m
+[0;32mI (9634) sys_monitor: MEM: Largest free block: 69632 bytes, Min free ever: 86708 bytes[0m
+[0;32mI (9644) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 0 B/s | RX: 25 pkt, 20000 bytes, 3116 B/s[0m
+[0;32mI (9654) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (9654) sys_monitor: WiFi: STA connected (RSSI: -49 dBm), AP clients: 0[0m
+[0;32mI (9664) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (9674) sys_monitor: Uptime: 9 seconds[0m
+[0;32mI (9674) sys_monitor: ===========================================[0m
+
+[0;32mI (11214) wifi:new:<9,0>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11214) wifi:(trc)phytype:CBW20-SGI, snr:63, maxRate:144, highestRateIdx:0[0m
+[0;33mW (11214) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (11224) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:63, ampduState:wait operational[0m
+[0;32mI (11234) wifi:ifidx:1, rssi:-32, nf:-95, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (11244) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (11254) wifi:station: ba:ae:d9:88:75:72 join, AID=1, bgn, 20[0m
+[0;32mI (11264) wifi:station: ba:ae:d9:88:75:72 leave, AID = 1, reason = 49, bss_flags is 167010, bss:0x4084a91c[0m
+[0;32mI (11274) wifi:new:<9,0>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11274) wifi:new:<9,2>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11354) wifi:new:<9,0>, old:<9,2>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (11354) wifi:(trc)phytype:CBW20-SGI, snr:64, maxRate:144, highestRateIdx:0[0m
+[0;33mW (11354) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (11364) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:64, ampduState:wait operational[0m
+[0;32mI (11374) wifi:ifidx:1, rssi:-31, nf:-95, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (11384) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (11394) wifi:station: ba:ae:d9:88:75:72 join, AID=1, bgn, 20[0m
+[0;32mI (11504) wifi_repeater: Client ba:ae:d9:88:75:72 joined, AID=1[0m
+[0;33mW (11724) wifi:conn=0x4083a82c alloc softap rx ba index=0 ba index 8[0m
+[0;32mI (11724) wifi:<ba-add>extra, idx:0, ifx:1, tid:0, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:0, win:64), CONF:0xc0000001[0m
+[0;32mI (12034) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (12034) ap_clients: Client IP assigned: ba:ae:d9:88:75:72 -> 192.168.4.2[0m
+[0;32mI (12164) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (12164) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (12194) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): connectivitycheck.gstatic.com (type 1)[0m
+[0;33mW (12214) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100b28d, TALO:0x4e2129b2, (ssn:5, win:64, cur_ssn:5), CONF:0xc0000001[0m
+[0;33mW (12224) sys_monitor: Slow DNS query detected: 341 ms[0m
+[0;32mI (12224) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (12294) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (12294) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (12294) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (12294) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (12324) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): epdg.epc.mnc005.mcc418.pub.3gppnetwork.org (type 1)[0m
+[0;32mI (12364) wifi:[ADDBA]TX addba request, tid:3, dialogtoken:5, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (12364) wifi:[ADDBA]RX addba response, status:0, tid:3/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (12374) wifi:<ba-add>idx:1, ifx:0, tid:3, TAHI:0x100b28d, TALO:0x4e2129b2, (ssn:1, win:64, cur_ssn:1), CONF:0xc0003001[0m
+[0;32mI (12404) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): mtalk.google.com (type 1)[0m
+[0;32mI (12434) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): semanticlocation-pa.googleapis.com (type 1)[0m
+[0;32mI (12684) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (12684) sys_monitor: CPU: Total usage: 14%[0m
+[0;32mI (12684) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (12684) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (12684) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): z-m-gateway.facebook.com (type 1)[0m
+[0;32mI (12704) sys_monitor:   Task 'IDLE': CPU=82%, Stack HWM=1248 bytes[0m
+[0;32mI (12704) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1804 bytes[0m
+[0;32mI (12714) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;33mW (12714) sys_monitor: Slow DNS query detected: 260 ms[0m
+[0;32mI (12724) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (12724) sys_monitor: MEM: Free heap: 81588 bytes (32.0% used)[0m
+[0;32mI (12734) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 75196 bytes[0m
+[0;32mI (12744) sys_monitor: NET: TX: 43 pkt, 34400 bytes, 10649 B/s | RX: 78 pkt, 62400 bytes, 13766 B/s[0m
+[0;32mI (12754) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (12754) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (12764) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (12764) sys_monitor: BENCH: DNS queries: 6, avg latency: 138471 us, max: 341171 us[0m
+[0;32mI (12774) sys_monitor: BENCH: DNS usage - Cache HITS: 0, MISSES: 6[0m
+[0;32mI (12784) sys_monitor: Uptime: 12 seconds[0m
+[0;32mI (12784) sys_monitor: ===========================================[0m
+
+[0;32mI (12964) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (12964) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (12974) sys_monitor: Slow DNS query detected: 246 ms[0m
+[0;32mI (13754) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): beacons3.gvt2.com (type 65)[0m
+[0;33mW (13764) sys_monitor: Slow DNS query detected: 794 ms[0m
+[0;32mI (13774) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): beacons3.gvt2.com (type 1)[0m
+[0;32mI (15304) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (15304) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (15304) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (15304) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (15794) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (15794) sys_monitor: CPU: Total usage: 12%[0m
+[0;32mI (15794) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (15794) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (15804) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (15804) sys_monitor:   Task 'IDLE': CPU=84%, Stack HWM=1248 bytes[0m
+[0;32mI (15814) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (15814) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (15824) sys_monitor: MEM: Free heap: 80992 bytes (33.0% used)[0m
+[0;32mI (15834) sys_monitor: MEM: Largest free block: 51200 bytes, Min free ever: 65448 bytes[0m
+[0;32mI (15834) sys_monitor: NET: TX: 220 pkt, 176000 bytes, 45532 B/s | RX: 294 pkt, 235200 bytes, 55564 B/s[0m
+[0;32mI (15844) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (15854) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (15854) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (15864) sys_monitor: BENCH: DNS queries: 9, avg latency: 209487 us, max: 794791 us[0m
+[0;32mI (15874) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 8[0m
+[0;32mI (15874) sys_monitor: BENCH: HTTP requests: 1, avg latency: 3501 us, max: 3501 us[0m
+[0;32mI (15884) sys_monitor: Uptime: 15 seconds[0m
+[0;32mI (15884) sys_monitor: ===========================================[0m
+
+[0;32mI (18314) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (18314) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (18314) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (18314) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (18894) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (18894) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (18894) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (18894) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (18904) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (18904) sys_monitor:   Task 'IDLE': CPU=86%, Stack HWM=1248 bytes[0m
+[0;32mI (18914) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (18914) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (18924) sys_monitor: MEM: Free heap: 80992 bytes (33.0% used)[0m
+[0;32mI (18934) sys_monitor: MEM: Largest free block: 51200 bytes, Min free ever: 65448 bytes[0m
+[0;32mI (18934) sys_monitor: NET: TX: 226 pkt, 180800 bytes, 1548 B/s | RX: 312 pkt, 249600 bytes, 4645 B/s[0m
+[0;32mI (18944) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (18954) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (18954) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (18964) sys_monitor: BENCH: DNS queries: 9, avg latency: 209487 us, max: 794791 us[0m
+[0;32mI (18974) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 8[0m
+[0;32mI (18974) sys_monitor: BENCH: HTTP requests: 1, avg latency: 3501 us, max: 3501 us[0m
+[0;32mI (18984) sys_monitor: Uptime: 18 seconds[0m
+[0;32mI (18984) sys_monitor: ===========================================[0m
+
+[0;33mW (19694) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (19694) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (20414) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): play.googleapis.com (type 1)[0m
+[0;33mW (20424) sys_monitor: Slow DNS query detected: 642 ms[0m
+[0;32mI (21324) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (21324) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (21324) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (21324) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (21734) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 65)[0m
+[0;33mW (21744) sys_monitor: Slow DNS query detected: 321 ms[0m
+[0;32mI (21744) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 1)[0m
+[0;32mI (21994) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (21994) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (21994) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (21994) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (22004) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (22004) sys_monitor:   Task 'IDLE': CPU=87%, Stack HWM=1248 bytes[0m
+[0;32mI (22014) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (22014) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (22024) sys_monitor: MEM: Free heap: 80212 bytes (34.0% used)[0m
+[0;32mI (22034) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (22034) sys_monitor: NET: TX: 353 pkt, 282400 bytes, 32774 B/s | RX: 450 pkt, 360000 bytes, 35612 B/s[0m
+[0;32mI (22044) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (22054) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (22054) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (22064) sys_monitor: BENCH: DNS queries: 12, avg latency: 238496 us, max: 794791 us[0m
+[0;32mI (22074) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 11[0m
+[0;32mI (22074) sys_monitor: BENCH: HTTP requests: 4, avg latency: 3797 us, max: 4256 us[0m
+[0;32mI (22084) sys_monitor: Uptime: 21 seconds[0m
+[0;32mI (22084) sys_monitor: ===========================================[0m
+
+[1;31mE (22754) httpd: httpd_accept_conn: error in accept (23)[0m
+[0;33mW (22754) httpd: httpd_server: error accepting new connection[0m
+[0;32mI (24334) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (24334) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (24334) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (24334) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (25094) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (25094) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (25094) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (25094) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (25104) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (25104) sys_monitor:   Task 'IDLE': CPU=87%, Stack HWM=1248 bytes[0m
+[0;32mI (25114) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (25114) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (25124) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (25134) sys_monitor: MEM: Largest free block: 51200 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (25134) sys_monitor: NET: TX: 403 pkt, 322400 bytes, 12903 B/s | RX: 521 pkt, 416800 bytes, 18322 B/s[0m
+[0;32mI (25144) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (25154) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (25154) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (25164) sys_monitor: BENCH: DNS queries: 12, avg latency: 238496 us, max: 794791 us[0m
+[0;32mI (25174) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 11[0m
+[0;32mI (25174) sys_monitor: BENCH: HTTP requests: 7, avg latency: 3780 us, max: 4256 us[0m
+[0;32mI (25184) sys_monitor: Uptime: 24 seconds[0m
+[0;32mI (25184) sys_monitor: ===========================================[0m
+
+[0;32mI (27344) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (27344) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (27344) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (27344) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (28194) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (28194) sys_monitor: CPU: Total usage: 7%[0m
+[0;32mI (28194) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (28194) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (28204) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (28204) sys_monitor:   Task 'IDLE': CPU=88%, Stack HWM=1248 bytes[0m
+[0;32mI (28214) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (28214) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (28224) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (28234) sys_monitor: MEM: Largest free block: 51200 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (28234) sys_monitor: NET: TX: 418 pkt, 334400 bytes, 3870 B/s | RX: 553 pkt, 442400 bytes, 8258 B/s[0m
+[0;32mI (28244) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (28254) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (28254) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (28264) sys_monitor: BENCH: DNS queries: 12, avg latency: 238496 us, max: 794791 us[0m
+[0;32mI (28274) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 11[0m
+[0;32mI (28274) sys_monitor: BENCH: HTTP requests: 10, avg latency: 3630 us, max: 4256 us[0m
+[0;32mI (28284) sys_monitor: Uptime: 27 seconds[0m
+[0;32mI (28284) sys_monitor: ===========================================[0m
+
+[0;32mI (30354) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (30354) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (30354) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (30354) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (31294) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (31294) sys_monitor: CPU: Total usage: 7%[0m
+[0;32mI (31294) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (31294) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (31304) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (31304) sys_monitor:   Task 'IDLE': CPU=89%, Stack HWM=1248 bytes[0m
+[0;32mI (31314) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (31314) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (31324) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (31334) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (31334) sys_monitor: NET: TX: 438 pkt, 350400 bytes, 5161 B/s | RX: 593 pkt, 474400 bytes, 10322 B/s[0m
+[0;32mI (31344) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (31354) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (31354) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (31364) sys_monitor: BENCH: DNS queries: 12, avg latency: 238496 us, max: 794791 us[0m
+[0;32mI (31374) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 11[0m
+[0;32mI (31374) sys_monitor: BENCH: HTTP requests: 14, avg latency: 3609 us, max: 4256 us[0m
+[0;32mI (31384) sys_monitor: Uptime: 30 seconds[0m
+[0;32mI (31384) sys_monitor: ===========================================[0m
+
+[0;32mI (32324) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): beacons.gcp.gvt2.com (type 65)[0m
+[0;33mW (32334) sys_monitor: Slow DNS query detected: 580 ms[0m
+[0;32mI (32334) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): beacons.gcp.gvt2.com (type 1)[0m
+[0;32mI (33364) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (33364) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (33364) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (33364) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (34394) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (34394) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (34394) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (34394) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (34404) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (34404) sys_monitor:   Task 'IDLE': CPU=89%, Stack HWM=1248 bytes[0m
+[0;32mI (34414) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (34414) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (34424) sys_monitor: MEM: Free heap: 79644 bytes (34.0% used)[0m
+[0;32mI (34434) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (34434) sys_monitor: NET: TX: 488 pkt, 390400 bytes, 12902 B/s | RX: 664 pkt, 531200 bytes, 18322 B/s[0m
+[0;32mI (34444) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (34454) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (34454) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (34464) sys_monitor: BENCH: DNS queries: 14, avg latency: 247174 us, max: 794791 us[0m
+[0;32mI (34474) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 13[0m
+[0;32mI (34474) sys_monitor: BENCH: HTTP requests: 17, avg latency: 3646 us, max: 4277 us[0m
+[0;32mI (34484) sys_monitor: Uptime: 33 seconds[0m
+[0;32mI (34484) sys_monitor: ===========================================[0m
+
+[0;32mI (36074) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients4.google.com (type 65)[0m
+[0;33mW (36084) sys_monitor: Slow DNS query detected: 747 ms[0m
+[0;32mI (36084) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): clients4.google.com (type 1)[0m
+[0;32mI (36374) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (36374) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (36374) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (36374) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (37494) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (37494) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (37494) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (37494) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (37504) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (37504) sys_monitor:   Task 'IDLE': CPU=89%, Stack HWM=1248 bytes[0m
+[0;32mI (37514) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (37514) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (37524) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (37534) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (37534) sys_monitor: NET: TX: 533 pkt, 426400 bytes, 11613 B/s | RX: 726 pkt, 580800 bytes, 16000 B/s[0m
+[0;32mI (37544) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (37554) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (37554) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (37564) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (37574) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (37574) sys_monitor: BENCH: HTTP requests: 20, avg latency: 3658 us, max: 4277 us[0m
+[0;32mI (37584) sys_monitor: Uptime: 37 seconds[0m
+[0;32mI (37584) sys_monitor: ===========================================[0m
+
+[0;32mI (39384) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -49 dBm[0m
+[0;32mI (39384) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (39384) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (39384) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (40594) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (40594) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (40594) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (40594) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (40604) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (40604) sys_monitor:   Task 'IDLE': CPU=90%, Stack HWM=1248 bytes[0m
+[0;32mI (40614) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (40614) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (40624) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (40634) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (40634) sys_monitor: NET: TX: 548 pkt, 438400 bytes, 3870 B/s | RX: 757 pkt, 605600 bytes, 8000 B/s[0m
+[0;32mI (40644) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (40654) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (40654) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (40664) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (40674) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (40674) sys_monitor: BENCH: HTTP requests: 23, avg latency: 3711 us, max: 4502 us[0m
+[0;32mI (40684) sys_monitor: Uptime: 40 seconds[0m
+[0;32mI (40684) sys_monitor: ===========================================[0m
+
+[0;32mI (42394) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (42394) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (42394) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (42394) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (43694) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (43694) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (43694) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (43694) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (43704) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (43704) sys_monitor:   Task 'IDLE': CPU=90%, Stack HWM=1248 bytes[0m
+[0;32mI (43714) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (43714) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (43724) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (43734) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (43734) sys_monitor: NET: TX: 564 pkt, 451200 bytes, 4129 B/s | RX: 799 pkt, 639200 bytes, 10838 B/s[0m
+[0;32mI (43744) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (43754) sys_monitor: WiFi: STA connected (RSSI: -50 dBm), AP clients: 1[0m
+[0;32mI (43754) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (43764) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (43774) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (43774) sys_monitor: BENCH: HTTP requests: 26, avg latency: 3739 us, max: 4526 us[0m
+[0;32mI (43784) sys_monitor: Uptime: 43 seconds[0m
+[0;32mI (43784) sys_monitor: ===========================================[0m
+
+[0;32mI (45404) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -50 dBm[0m
+[0;32mI (45404) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (45404) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (45404) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (46794) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (46794) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (46794) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (46794) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (46804) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (46804) sys_monitor:   Task 'IDLE': CPU=90%, Stack HWM=1248 bytes[0m
+[0;32mI (46814) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (46814) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (46824) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (46834) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (46834) sys_monitor: NET: TX: 580 pkt, 464000 bytes, 4128 B/s | RX: 848 pkt, 678400 bytes, 12644 B/s[0m
+[0;32mI (46844) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (46854) sys_monitor: WiFi: STA connected (RSSI: -51 dBm), AP clients: 1[0m
+[0;32mI (46854) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (46864) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (46874) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (46874) sys_monitor: BENCH: HTTP requests: 29, avg latency: 3742 us, max: 4526 us[0m
+[0;32mI (46884) sys_monitor: Uptime: 46 seconds[0m
+[0;32mI (46884) sys_monitor: ===========================================[0m
+
+[0;32mI (48414) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -54 dBm[0m
+[0;32mI (48414) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (48414) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (48414) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (49894) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (49894) sys_monitor: CPU: Total usage: 5%[0m
+[0;32mI (49894) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (49894) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (49904) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (49904) sys_monitor:   Task 'IDLE': CPU=4%, Stack HWM=1248 bytes[0m
+[0;32mI (49914) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (49914) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (49924) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (49934) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (49934) sys_monitor: NET: TX: 595 pkt, 476000 bytes, 3870 B/s | RX: 880 pkt, 704000 bytes, 8258 B/s[0m
+[0;32mI (49944) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (49954) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (49954) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (49964) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (49974) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (49974) sys_monitor: BENCH: HTTP requests: 32, avg latency: 3771 us, max: 4526 us[0m
+[0;32mI (49984) sys_monitor: Uptime: 49 seconds[0m
+[0;32mI (49984) sys_monitor: ===========================================[0m
+
+[0;32mI (51424) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -51 dBm[0m
+[0;32mI (51424) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (51424) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (51424) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (52994) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (52994) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (52994) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (52994) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2392 bytes[0m
+[0;32mI (53004) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (53004) sys_monitor:   Task 'IDLE': CPU=9%, Stack HWM=1248 bytes[0m
+[0;32mI (53014) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (53014) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (53024) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (53034) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (53034) sys_monitor: NET: TX: 610 pkt, 488000 bytes, 3871 B/s | RX: 914 pkt, 731200 bytes, 8774 B/s[0m
+[0;32mI (53044) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (53054) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (53054) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (53064) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (53074) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (53074) sys_monitor: BENCH: HTTP requests: 35, avg latency: 3733 us, max: 4526 us[0m
+[0;32mI (53084) sys_monitor: Uptime: 52 seconds[0m
+[0;32mI (53084) sys_monitor: ===========================================[0m
+
+[0;32mI (54434) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (54434) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (54434) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (54434) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (56094) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (56094) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (56094) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (56094) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2392 bytes[0m
+[0;32mI (56104) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (56104) sys_monitor:   Task 'IDLE': CPU=14%, Stack HWM=1248 bytes[0m
+[0;32mI (56114) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (56114) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (56124) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (56134) sys_monitor: MEM: Largest free block: 49152 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (56134) sys_monitor: NET: TX: 625 pkt, 500000 bytes, 3870 B/s | RX: 940 pkt, 752000 bytes, 6709 B/s[0m
+[0;32mI (56144) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (56154) sys_monitor: WiFi: STA connected (RSSI: -54 dBm), AP clients: 1[0m
+[0;32mI (56154) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (56164) sys_monitor: BENCH: DNS queries: 16, avg latency: 263634 us, max: 794791 us[0m
+[0;32mI (56174) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 15[0m
+[0;32mI (56174) sys_monitor: BENCH: HTTP requests: 38, avg latency: 3711 us, max: 4526 us[0m
+[0;32mI (56184) sys_monitor: Uptime: 55 seconds[0m
+[0;32mI (56184) sys_monitor: ===========================================[0m
+
+[0;32mI (56954) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): s.youtube.com (type 1)[0m
+[0;33mW (56964) sys_monitor: Slow DNS query detected: 879 ms[0m
+[0;32mI (57444) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (57444) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (57444) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (57444) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (59194) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (59194) sys_monitor: CPU: Total usage: 6%[0m
+[0;32mI (59194) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (59194) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2392 bytes[0m
+[0;32mI (59204) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (59204) sys_monitor:   Task 'IDLE': CPU=18%, Stack HWM=1248 bytes[0m
+[0;32mI (59214) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (59214) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4044 bytes[0m
+[0;32mI (59224) sys_monitor: MEM: Free heap: 79652 bytes (34.0% used)[0m
+[0;32mI (59234) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 44952 bytes[0m
+[0;32mI (59234) sys_monitor: NET: TX: 677 pkt, 541600 bytes, 13419 B/s | RX: 1010 pkt, 808000 bytes, 18065 B/s[0m
+[0;32mI (59264) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (59264) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (59264) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (59264) sys_monitor: BENCH: DNS queries: 17, avg latency: 299852 us, max: 879344 us[0m
+[0;32mI (59274) sys_monitor: BENCH: DNS usage - Cache HITS: 1, MISSES: 16[0m
+[0;32mI (59284) sys_monitor: BENCH: HTTP requests: 42, avg latency: 3719 us, max: 4526 us[0m
+[0;32mI (59284) sys_monitor: Uptime: 58 seconds[0m
+[0;32mI (59294) sys_monitor: ===========================================[0m
+
+[0;32mI (60454) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (60454) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (60454) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (60454) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (61714) web_server: Starting safe shutdown sequence...[0m
+[0;32mI (61714) wifi:state: run -> init (0x0)[0m
+[0;32mI (61724) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (61724) wifi:pm stop, total sleep time: 0 us / 59985009 us[0m
+
+[0;32mI (61724) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (61724) wifi:<ba-del>idx:1, tid:3[0m
+[0;32mI (61724) wifi:new:<9,0>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (61734) wifi:station: ba:ae:d9:88:75:72 leave, AID = 1, reason = 2, bss_flags is 8948819, bss:0x4084bc0c[0m
+[0;32mI (61744) wifi:new:<9,0>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (61754) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (61754) wifi:new:<9,2>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (61764) wifi_repeater: STA disconnected (reason=8)[0m
+[0;32mI (61764) wifi_repeater: Stopped bandwidth monitoring task[0m
+[0;32mI (61774) wifi_repeater: Retrying to connect to router (attempt 1)...[0m
+[0;32mI (61774) wifi_repeater: Client ba:ae:d9:88:75:72 left, AID=1[0m
+[0;32mI (61834) wifi:flush txq[0m
+[0;32mI (61834) wifi:stop sw txq[0m
+[0;32mI (61834) wifi:lmac stop hw txq[0m
+[0;32mI (61934) wifi:Deinit lldesc rx mblock:20[0m
+[0;32mI (62044) web_server: Entering deep sleep...[0m
+ESP-ROM:esp32c5-eco2-20250121
+Build:Jan 21 2025
+rst:0x1 (POWERON),boot:0x18 (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x408556c0,len:0x16d4
+load:0x4084bba0,len:0xd8c
+load:0x4084e5a0,len:0x3290
+entry 0x4084bbaa
+[0;32mI (23) boot: ESP-IDF 683ddf8a-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun 16 2026 22:35:58[0m
+[0;32mI (24) boot: chip revision: v1.0[0m
+[0;32mI (25) boot: efuse block revision: v0.2[0m
+[0;32mI (28) boot.esp32c5: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c5: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c5: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot:  3 www              Unknown data     01 82 00110000 00040000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=420c0020 size=22430h (140336) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00032458 vaddr=40800000 size=0dbc0h ( 56256) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=b7cb4h (752820) map[0m
+[0;32mI (255) esp_image: segment 3: paddr=000f7cdc vaddr=4080dbc0 size=07e20h ( 32288) load[0m
+[0;32mI (262) esp_image: segment 4: paddr=000ffb04 vaddr=40815a00 size=0408ch ( 16524) load[0m
+[0;32mI (266) esp_image: segment 5: paddr=00103b98 vaddr=50000000 size=000a8h (   168) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (272) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) MSPI Timing: Enter flash timing tuning[0m
+[0;32mI (289) cpu_start: Unicore app[0m
+[0;32mI (309) cpu_start: GPIO 12 and 11 are used as console UART I/O pins[0m
+[0;32mI (310) cpu_start: Pro cpu start user code[0m
+[0;32mI (310) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (312) app_init: Application information:[0m
+[0;32mI (315) app_init: Project name:     wifi_repeater[0m
+[0;32mI (320) app_init: App version:      df7850d-dirty[0m
+[0;32mI (324) app_init: Compile time:     Jun 16 2026 22:35:48[0m
+[0;32mI (329) app_init: ELF file SHA256:  7ab55c383...[0m
+[0;32mI (334) app_init: ESP-IDF:          683ddf8a-dirty[0m
+[0;32mI (338) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (342) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (346) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (356) heap_init: At 40827210 len 00035390 (212 KiB): RAM[0m
+[0;32mI (361) heap_init: At 4085C5A0 len 00002F58 (11 KiB): RAM[0m
+[0;32mI (366) heap_init: At 500000A8 len 00003F40 (15 KiB): RTCRAM[0m
+[0;32mI (373) spi_flash: detected chip: generic[0m
+[0;32mI (375) spi_flash: flash io: dio[0m
+[0;33mW (378) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (391) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (397) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) wifi_repeater: NVS initialized[0m
+[0;32mI (434) wifi_config: WiFi configuration manager initialized[0m
+[0;32mI (434) wifi_repeater: Initializing system monitor...[0m
+[0;32mI (434) sys_monitor: Initializing system monitoring...[0m
+[0;32mI (444) sys_monitor: System monitoring task started[0m
+[0;32mI (444) sys_monitor: System monitoring initialized successfully[0m
+[0;32mI (454) wifi_repeater: Initializing netif and event loop...[0m
+[0;32mI (464) pp: pp rom version: 78a72e9d5[0m
+[0;32mI (464) net80211: net80211 rom version: 78a72e9d5[0m
+[0;32mI (474) wifi:wifi driver task: 4082f134, prio:23, stack:6656, core=0[0m
+[0;32mI (484) wifi:wifi firmware version: 62ce4c3[0m
+[0;32mI (484) wifi:wifi certification version: v7.0[0m
+[0;32mI (484) wifi:config NVS flash: enabled[0m
+[0;32mI (484) wifi:config nano formatting: disabled[0m
+[0;32mI (484) wifi:mac_version:HAL_MAC_ESP32AX_752MP_ECO2,ut_version:N, band mode:0x3[0m
+[0;32mI (494) wifi:Init data frame dynamic rx buffer num: 64[0m
+[0;32mI (504) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (504) wifi:Init management short buffer num: 32[0m
+[0;32mI (504) wifi:Init dynamic tx buffer num: 64[0m
+[0;32mI (514) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (514) wifi:Init static rx buffer size: 1700 (rxctrl:64, csi:512)[0m
+[0;32mI (524) wifi:Init static rx buffer num: 20[0m
+[0;32mI (524) wifi:Init dynamic rx buffer num: 64[0m
+[0;32mI (534) wifi_init: rx ba win: 32[0m
+[0;32mI (534) wifi_init: accept mbox: 6[0m
+[0;32mI (534) wifi_init: tcpip mbox: 64[0m
+[0;32mI (544) wifi_init: udp mbox: 16[0m
+[0;32mI (544) wifi_init: tcp mbox: 16[0m
+[0;32mI (544) wifi_init: tcp tx win: 57600[0m
+[0;32mI (544) wifi_init: tcp rx win: 57600[0m
+[0;32mI (554) wifi_init: tcp mss: 1440[0m
+[0;32mI (554) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (554) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (564) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (564) wifi_config: WiFi configuration loaded from NVS[0m
+[0;32mI (574) wifi_config:   STA SSID: Kite Roastery[0m
+[0;32mI (574) wifi_config:   AP SSID: Zains_ESP_Repeater[0m
+[0;32mI (584) wifi_config:   AP Max Connections: 4[0m
+[0;32mI (584) wifi_repeater: WiFi configuration loaded from NVS[0m
+[0;32mI (594) wifi_repeater: Starting Wi-Fi in AP+STA mode...[0m
+[0;32mI (594) phy_init: phy_version 107,8c534c84,Nov 17 2025,13:41:12[0m
+[0;33mW (1214) wifi:WDEV_RXCCK_DELAY:960[0m
+[0;33mW (1214) wifi:WDEV_RXOFDM_DELAY:258[0m
+[0;33mW (1214) wifi:WDEV_RX_11G_OFDM_DELAY:259[0m
+[0;33mW (1214) wifi:WDEV_TXCCK_DELAY:630[0m
+[0;33mW (1214) wifi:WDEV_TXOFDM_DELAY:94[0m
+[0;33mW (1214) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1224) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1234) wifi:WDEVBEAMFORMCONF:0x61d7120, HE_BF_RPT_RA_SET_OPT:1[0m
+[0;33mW (1244) wifi:WDEVVHTBEAMFORMCONF: 0x61d7120, WDEV_VHT_BEAMFORMEE_ENA: 1, WDEV_VHT_NG_SEL: 0[0m
+[0;33mW (1244) wifi:(agc)0x600a7128:0xd21f0c20, min.avgNF:0xce->0xd2(dB), RCalCount:0x1f0, min.RRssi:0xc20(-62.00)[0m
+[0;33mW (1254) wifi:MODEM_SYSCON_WIFI_BB_CFG_REG(0x600a9c18):0x10003802[0m
+[0;33mW (1264) wifi:(phy)rate:0x0(  LP-1Mbps), pwr:20, txing:20[0m
+[0;33mW (1264) wifi:(phy)rate:0x1(  LP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1274) wifi:(phy)rate:0x2(LP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1274) wifi:(phy)rate:0x3( LP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1284) wifi:(phy)rate:0x5(  SP-2Mbps), pwr:20, txing:20[0m
+[0;33mW (1294) wifi:(phy)rate:0x6(SP-5.5Mbps), pwr:20, txing:20[0m
+[0;33mW (1294) wifi:(phy)rate:0x7( SP-11Mbps), pwr:20, txing:20[0m
+[0;33mW (1304) wifi:(phy)rate:0x8(    48Mbps), pwr:17, txing:17[0m
+[0;33mW (1304) wifi:(phy)rate:0x9(    24Mbps), pwr:19, txing:19[0m
+[0;33mW (1314) wifi:(phy)rate:0xa(    12Mbps), pwr:19, txing:19[0m
+[0;33mW (1314) wifi:(phy)rate:0xb(     6Mbps), pwr:19, txing:19[0m
+[0;33mW (1324) wifi:(phy)rate:0xc(    54Mbps), pwr:17, txing:17[0m
+[0;33mW (1324) wifi:(phy)rate:0xd(    36Mbps), pwr:19, txing:19[0m
+[0;33mW (1334) wifi:(phy)rate:0xe(    18Mbps), pwr:19, txing:19[0m
+[0;33mW (1334) wifi:(phy)rate:0xf(     9Mbps), pwr:19, txing:19[0m
+[0;33mW (1344) wifi:(phy)rate:0x10, mcs:0x0, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1354) wifi:(phy)rate:0x11, mcs:0x1, pwr(bw20:19, bw40:18), txing:19, HE pwr(bw20:19), txing:19[0m
+[0;33mW (1354) wifi:(phy)rate:0x12, mcs:0x2, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1364) wifi:(phy)rate:0x13, mcs:0x3, pwr(bw20:18, bw40:17), txing:18, HE pwr(bw20:18), txing:18[0m
+[0;33mW (1374) wifi:(phy)rate:0x14, mcs:0x4, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1384) wifi:(phy)rate:0x15, mcs:0x5, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1394) wifi:(phy)rate:0x16, mcs:0x6, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1404) wifi:(phy)rate:0x17, mcs:0x7, pwr(bw20:17, bw40:16), txing:17, HE pwr(bw20:17), txing:17[0m
+[0;33mW (1414) wifi:(phy)rate:0x18, mcs:0x8, pwr(bw20:19, bw40:16), txing:19, HE pwr(bw20:16), txing:16[0m
+[0;33mW (1414) wifi:(phy)rate:0x19, mcs:0x9, pwr(bw20:18, bw40:16), txing:18, HE pwr(bw20:15), txing:15[0m
+[0;33mW (1424) wifi:(hal)co_hosted_bss:0, max_indicator:0, bitmask:0xff, mBSSIDsEnable:0[0m
+[0;32mI (1434) wifi:11ax coex: WDEVAX_PTI0(0x040000a0), WDEVAX_PTI1(0x0000824a).[0m
+
+[0;32mI (1444) wifi:mode : sta (3c:dc:75:81:38:14) + softAP (3c:dc:75:81:38:15)[0m
+[0;32mI (1444) wifi:enable tsf[0m
+[0;33mW (1454) wifi:(BB)enable busy check(0x18), disable idle check(0xaa)[0m
+[0;33mW (1454) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 2G phymode changed to 11N[0m
+[0;33mW (1464) wifi:11ax/11ac mode can not work under phy bw 40M, the sta 5G phymode changed to 11N[0m
+[0;32mI (1534) wifi:Total power save buffer number: 32[0m
+[0;32mI (1534) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1534) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1534) wifi_repeater: STA started, connecting to router...[0m
+[0;32mI (1544) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;33mW (1544) wifi:(regdomain)len:6, country:DE, env:all, ngroup:1[0m
+[0;32mI (1554) wifi:ap channel adjust o:1,1 n:9,2[0m
+[0;32mI (1554) wifi:new:<9,0>, old:<1,1>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1564) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1564) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1584) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;33mW (1584) wifi_repeater: STA HT40 not set, using default (ESP_ERR_INVALID_ARG)[0m
+[0;32mI (1584) wifi_repeater: AP bandwidth: HT40 (2.4G) + HT40 (5G)[0m
+[0;32mI (1594) wifi_repeater: TX power set to maximum (21 dBm)[0m
+[0;32mI (1594) wifi_repeater: Wi-Fi AP SSID: Zains_ESP_Repeater, password: 12345678[0m
+[0;32mI (1594) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1604) wifi_repeater: Connecting STA to SSID: Kite Roastery[0m
+[0;32mI (1614) wifi_repeater: Initializing web server...[0m
+[0;32mI (1614) web_server: Initializing SPIFFS[0m
+[0;32mI (1614) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (1624) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (1634) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1644) wifi:(trc)phytype:CBW20-SGI, snr:45, maxRate:144, highestRateIdx:0[0m
+[0;33mW (1644) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (1654) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (1664) wifi:ifidx:0, rssi:-52, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1674) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:5(4 us)[0m
+[0;32mI (1694) web_server: SPIFFS: total: 233681, used: 52459[0m
+[0;32mI (1694) web_server: Web server started. Access at http://192.168.4.1[0m
+[0;32mI (1724) wifi:connected with Kite Roastery, aid = 22, channel 9, BW20(BELOW, 00), bssid = b2:29:21:4e:8d:b2[0m
+[0;32mI (1724) wifi:security: WPA2-PSK, phy:bgn, rssi:-52, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1734) wifi:pm start, type: 0, twt_start:0[0m
+
+[0;32mI (1734) wifi:pm start, type:0, aid:0x16, trans-BSSID:b2:29:21:4e:8d:b2, BSSID[5]:0xb2, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1744) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1754) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1764) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1774) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1784) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1794) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1804) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1814) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1824) wifi_repeater: STA connected, channel=9[0m
+[0;33mW (1824) wifi:STA is scanning or connecting, or AP has connected with external STAs, cannot set channel[0m
+
+[0;32mI (2874) esp_netif_handlers: sta ip: 192.168.68.63, mask: 255.255.252.0, gw: 192.168.68.1[0m
+[0;32mI (2874) wifi_repeater: STA got IP: 192.168.68.63[0m
+[0;32mI (2874) wifi_repeater: Netmask: 255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (2874) wifi_repeater: Configuring NAT and DNS for AP interface[0m
+[0;32mI (2884) wifi_repeater: Enabling NAT on AP IP: 192.168.4.1[0m
+[0;32mI (2884) wifi_repeater: NAT enabled on AP[0m
+[0;32mI (2894) wifi_repeater: Using upstream DNS server: 192.168.1.1[0m
+[0;32mI (2894) wifi_repeater: Configuring DHCP server to advertise gateway and DNS to AP clients[0m
+[0;32mI (2904) dns_proxy: DNS proxy started on UDP/53[0m
+[0;32mI (3004) wifi_repeater: Set AP gateway to: 192.168.4.1[0m
+[0;32mI (3004) wifi_repeater: Setting DNS offer to: 192.168.4.1[0m
+[0;32mI (3004) wifi_repeater: AP DNS (netif): 192.168.4.1[0m
+[0;32mI (3004) wifi_repeater: Set secondary DNS to: 192.168.4.1[0m
+[0;32mI (3004) wifi_repeater: Enable DHCP router offer (opt3): 0[0m
+[0;32mI (3014) wifi_repeater: Enable DHCP DNS offer (opt6): 0[0m
+[0;32mI (3064) wifi_repeater: DHCP server started with result: 0[0m
+[0;32mI (3264) wifi_repeater: DHCP opt3 (router) offer enabled: 1, router IP: 192.168.4.1[0m
+[0;32mI (3264) wifi_repeater: DHCP opt6 (DNS) offer enabled: 1, DNS: 192.168.4.1[0m
+[0;32mI (3264) wifi_repeater: DHCP configuration complete - GW: 192.168.4.1, DNS: 192.168.4.1[0m
+[0;32mI (3274) wifi_repeater: Started bandwidth monitoring task[0m
+[0;32mI (3274) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (3284) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (3284) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (3294) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (3444) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (3444) sys_monitor: CPU: Total usage: 47%[0m
+[0;32mI (3444) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (3444) sys_monitor:   Task 'sys_monitor': CPU=0%, Stack HWM=2476 bytes[0m
+[0;32mI (3454) sys_monitor:   Task 'IDLE': CPU=49%, Stack HWM=1296 bytes[0m
+[0;32mI (3454) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (3464) sys_monitor:   Task 'main': CPU=5%, Stack HWM=1240 bytes[0m
+[0;32mI (3464) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4092 bytes[0m
+[0;32mI (3474) sys_monitor: MEM: Free heap: 88972 bytes (26.0% used)[0m
+[0;32mI (3484) sys_monitor: MEM: Largest free block: 69632 bytes, Min free ever: 88500 bytes[0m
+[0;32mI (3484) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 533 B/s | RX: 6 pkt, 4800 bytes, 1601 B/s[0m
+[0;32mI (3494) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (3504) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 0[0m
+[0;32mI (3504) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (3514) sys_monitor: Uptime: 2 seconds[0m
+[0;32mI (3514) sys_monitor: ===========================================[0m
+
+[0;32mI (6304) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (6304) wifi_repeater: AP clients connected: 0[0m
+[0;32mI (6304) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (6304) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (6524) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (6524) sys_monitor: CPU: Total usage: 23%[0m
+[0;32mI (6524) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (6524) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2392 bytes[0m
+[0;32mI (6534) sys_monitor:   Task 'IDLE': CPU=73%, Stack HWM=1296 bytes[0m
+[0;32mI (6534) sys_monitor:   Task 'main': CPU=2%, Stack HWM=1240 bytes[0m
+[0;32mI (6544) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2868 bytes[0m
+[0;32mI (6544) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4092 bytes[0m
+[0;32mI (6554) sys_monitor: MEM: Free heap: 88616 bytes (27.0% used)[0m
+[0;32mI (6554) sys_monitor: MEM: Largest free block: 69632 bytes, Min free ever: 86688 bytes[0m
+[0;32mI (6564) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 0 B/s | RX: 20 pkt, 16000 bytes, 3636 B/s[0m
+[0;32mI (6574) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (6574) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 0[0m
+[0;32mI (6584) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (6594) sys_monitor: Uptime: 6 seconds[0m
+[0;32mI (6594) sys_monitor: ===========================================[0m
+
+[0;32mI (8794) wifi:new:<9,0>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8794) wifi:(trc)phytype:CBW20-SGI, snr:64, maxRate:144, highestRateIdx:0[0m
+[0;33mW (8794) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (8804) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:64, ampduState:wait operational[0m
+[0;32mI (8814) wifi:ifidx:1, rssi:-32, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (8824) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (8834) wifi:station: ba:ae:d9:88:75:72 join, AID=1, bgn, 20[0m
+[0;32mI (8844) wifi:station: ba:ae:d9:88:75:72 leave, AID = 1, reason = 49, bss_flags is 167010, bss:0x4084a920[0m
+[0;32mI (8854) wifi:new:<9,0>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8854) wifi:new:<9,2>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8934) wifi:new:<9,0>, old:<9,2>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8934) wifi:(trc)phytype:CBW20-SGI, snr:71, maxRate:144, highestRateIdx:0[0m
+[0;33mW (8934) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (8944) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:71, ampduState:wait operational[0m
+[0;32mI (8954) wifi:ifidx:1, rssi:-25, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (8964) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (8974) wifi:station: ba:ae:d9:88:75:72 join, AID=1, bgn, 20[0m
+[0;32mI (9084) wifi_repeater: Client ba:ae:d9:88:75:72 joined, AID=1[0m
+[0;33mW (9304) wifi:conn=0x4083a82c alloc softap rx ba index=0 ba index 8[0m
+[0;32mI (9304) wifi:<ba-add>extra, idx:0, ifx:1, tid:0, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:0, win:64), CONF:0xc0000001[0m
+[0;32mI (9314) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (9314) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (9324) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (9324) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (9604) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (9604) sys_monitor: CPU: Total usage: 16%[0m
+[0;32mI (9604) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (9604) sys_monitor:   Task 'sys_monitor': CPU=1%, Stack HWM=2392 bytes[0m
+[0;32mI (9614) sys_monitor:   Task 'IDLE': CPU=78%, Stack HWM=1296 bytes[0m
+[0;32mI (9614) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (9624) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4092 bytes[0m
+[0;32mI (9624) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2868 bytes[0m
+[0;32mI (9634) sys_monitor: MEM: Free heap: 82740 bytes (32.0% used)[0m
+[0;32mI (9634) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 78088 bytes[0m
+[0;32mI (9644) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (9654) ap_clients: Client IP assigned: ba:ae:d9:88:75:72 -> 192.168.4.2[0m
+[0;32mI (9664) sys_monitor: NET: TX: 2 pkt, 1600 bytes, 0 B/s | RX: 35 pkt, 28000 bytes, 3896 B/s[0m
+[0;32mI (9664) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (9674) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (9674) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (9684) sys_monitor: Uptime: 9 seconds[0m
+[0;32mI (9684) sys_monitor: ===========================================[0m
+
+[0;32mI (9794) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (9794) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (9804) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;33mW (9864) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100b28d, TALO:0x4e2129b2, (ssn:5, win:64, cur_ssn:5), CONF:0xc0000001[0m
+[0;33mW (9894) sys_monitor: Slow DNS query detected: 966 ms[0m
+[0;32mI (9894) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): connectivitycheck.gstatic.com (type 1)[0m
+[0;32mI (9964) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): epdg.epc.mnc005.mcc418.pub.3gppnetwork.org (type 1)[0m
+[0;32mI (9974) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): mtalk.google.com (type 1)[0m
+[0;32mI (9984) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): z-m-gateway.facebook.com (type 1)[0m
+[0;32mI (10024) wifi:[ADDBA]TX addba request, tid:3, dialogtoken:5, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;33mW (10034) wifi:<ba-add>idx:1, ifx:0, tid:3, TAHI:0x100b28d, TALO:0x4e2129b2, (ssn:1, win:64, cur_ssn:1), CONF:0xc0003001[0m
+[0;32mI (10094) wifi:[ADDBA]RX addba response, status:0, tid:3/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (10604) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (10604) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (10604) sys_monitor: Slow DNS query detected: 618 ms[0m
+[0;32mI (12334) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (12334) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (12334) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (12334) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (12494) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): youtubei.googleapis.com (type 1)[0m
+[0;33mW (12514) sys_monitor: Slow DNS query detected: 901 ms[0m
+[0;32mI (12534) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): youtubei.googleapis.com (type 1)[0m
+[0;32mI (12534) dns_proxy: DNS Cache HIT for youtubei.googleapis.com[0m
+[0;32mI (12574) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): i.ytimg.com (type 1)[0m
+[0;32mI (12694) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (12694) sys_monitor: CPU: Total usage: 14%[0m
+[0;32mI (12694) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (12694) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (12704) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (12704) sys_monitor:   Task 'IDLE': CPU=82%, Stack HWM=1248 bytes[0m
+[0;32mI (12714) sys_monitor:   Task 'tcpip': CPU=0%, Stack HWM=2660 bytes[0m
+[0;32mI (12714) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=4040 bytes[0m
+[0;32mI (12724) sys_monitor: MEM: Free heap: 81628 bytes (32.0% used)[0m
+[0;32mI (12734) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 65652 bytes[0m
+[0;32mI (12734) sys_monitor: NET: TX: 179 pkt, 143200 bytes, 45822 B/s | RX: 228 pkt, 182400 bytes, 49964 B/s[0m
+[0;32mI (12744) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (12754) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (12754) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (12764) sys_monitor: BENCH: DNS queries: 9, avg latency: 294827 us, max: 966103 us[0m
+[0;32mI (12774) sys_monitor: BENCH: DNS usage - Cache HITS: 2, MISSES: 7[0m
+[0;32mI (12774) sys_monitor: Uptime: 12 seconds[0m
+[0;32mI (12784) sys_monitor: ===========================================[0m
+
+[0;32mI (12874) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): yt3.ggpht.com (type 1)[0m
+[0;33mW (12884) sys_monitor: Slow DNS query detected: 297 ms[0m
+[0;32mI (14194) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): redirector.googlevideo.com (type 1)[0m
+[0;33mW (14194) sys_monitor: Slow DNS query detected: 319 ms[0m
+[0;32mI (14574) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): rr13---sn-x5guiapo3uxax-cbfz6.googlevideo.com (type 1)[0m
+[0;33mW (14604) sys_monitor: Slow DNS query detected: 401 ms[0m
+[0;32mI (14634) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): rr5---sn-x5guiapo3uxax-cbfzr.googlevideo.com (type 1)[0m
+[0;32mI (14644) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): rr1---sn-x5guiapo3uxax-cbfz6.googlevideo.com (type 1)[0m
+[0;32mI (15134) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.youtube.com (type 1)[0m
+[0;33mW (15144) sys_monitor: Slow DNS query detected: 472 ms[0m
+[0;32mI (15254) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.gstatic.com (type 1)[0m
+[0;33mW (15274) sys_monitor: Slow DNS query detected: 126 ms[0m
+[0;32mI (15344) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (15344) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (15344) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (15344) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;33mW (15714) wifi:conn=0x4083a82c alloc softap rx ba index=1 ba index 8[0m
+[0;32mI (15714) wifi:<ba-add>extra, idx:1, ifx:1, tid:7, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:2, win:64), CONF:0xc0007021[0m
+[0;32mI (15784) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (15784) sys_monitor: CPU: Total usage: 14%[0m
+[0;32mI (15784) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (15784) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (15794) sys_monitor:   Task 'main': CPU=1%, Stack HWM=1240 bytes[0m
+[0;32mI (15794) sys_monitor:   Task 'IDLE': CPU=83%, Stack HWM=1248 bytes[0m
+[0;32mI (15804) sys_monitor:   Task 'tcpip': CPU=1%, Stack HWM=2660 bytes[0m
+[0;32mI (15804) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (15814) sys_monitor: MEM: Free heap: 81724 bytes (32.0% used)[0m
+[0;32mI (15824) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 4908 bytes[0m
+[0;32mI (15824) sys_monitor: NET: TX: 1368 pkt, 1094400 bytes, 307856 B/s | RX: 1428 pkt, 1142400 bytes, 310704 B/s[0m
+[0;32mI (15834) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (15844) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (15844) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (15854) sys_monitor: BENCH: DNS queries: 16, avg latency: 271493 us, max: 966103 us[0m
+[0;32mI (15864) sys_monitor: BENCH: DNS usage - Cache HITS: 2, MISSES: 14[0m
+[0;32mI (15864) sys_monitor: Uptime: 15 seconds[0m
+[0;32mI (15874) sys_monitor: ===========================================[0m
+
+[0;32mI (17554) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): rr6---sn-x5guiapo3uxax-cbfzr.googlevideo.com (type 1)[0m
+[0;33mW (17564) sys_monitor: Slow DNS query detected: 293 ms[0m
+[0;32mI (17834) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): s.youtube.com (type 1)[0m
+[0;33mW (17844) sys_monitor: Slow DNS query detected: 283 ms[0m
+[0;32mI (18354) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (18354) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (18354) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (18354) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (18504) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): rr11---sn-x5guiapo3uxax-cbfzr.googlevideo.com (type 1)[0m
+[0;33mW (18514) sys_monitor: Slow DNS query detected: 667 ms[0m
+[0;32mI (18874) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (18874) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (18874) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (18874) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (18884) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (18884) sys_monitor:   Task 'IDLE': CPU=84%, Stack HWM=1248 bytes[0m
+[0;32mI (18894) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (18894) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (18904) sys_monitor: MEM: Free heap: 81724 bytes (32.0% used)[0m
+[0;32mI (18914) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 4908 bytes[0m
+[0;32mI (18914) sys_monitor: NET: TX: 1763 pkt, 1410400 bytes, 102264 B/s | RX: 1840 pkt, 1472000 bytes, 106666 B/s[0m
+[0;32mI (18924) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (18934) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (18934) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (18944) sys_monitor: BENCH: DNS queries: 19, avg latency: 294155 us, max: 966103 us[0m
+[0;32mI (18954) sys_monitor: BENCH: DNS usage - Cache HITS: 2, MISSES: 17[0m
+[0;32mI (18964) sys_monitor: Uptime: 18 seconds[0m
+[0;32mI (18964) sys_monitor: ===========================================[0m
+
+[0;32mI (19714) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): suggestqueries.google.com (type 1)[0m
+[0;33mW (19724) sys_monitor: Slow DNS query detected: 213 ms[0m
+[0;32mI (19824) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): notifications-pa.googleapis.com (type 1)[0m
+[0;33mW (19844) sys_monitor: Slow DNS query detected: 125 ms[0m
+[0;32mI (20324) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): app-measurement.com (type 1)[0m
+[0;33mW (20344) sys_monitor: Slow DNS query detected: 493 ms[0m
+[0;32mI (20484) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (20484) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (20484) sys_monitor: Slow DNS query detected: 138 ms[0m
+[0;32mI (21034) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.iq (type 1)[0m
+[0;33mW (21044) sys_monitor: Slow DNS query detected: 556 ms[0m
+[0;32mI (21364) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (21364) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (21364) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (21364) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (21964) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (21964) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (21964) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (21964) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (21974) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (21974) sys_monitor:   Task 'IDLE': CPU=84%, Stack HWM=1248 bytes[0m
+[0;32mI (21984) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (21984) sys_monitor:   Task 'tcpip': CPU=1%, Stack HWM=2660 bytes[0m
+[0;32mI (21994) sys_monitor: MEM: Free heap: 79956 bytes (34.0% used)[0m
+[0;32mI (22004) sys_monitor: MEM: Largest free block: 55296 bytes, Min free ever: 4908 bytes[0m
+[0;32mI (22004) sys_monitor: NET: TX: 3794 pkt, 3035200 bytes, 525746 B/s | RX: 3884 pkt, 3107200 bytes, 529111 B/s[0m
+[0;32mI (22014) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (22024) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (22024) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (22034) sys_monitor: BENCH: DNS queries: 24, avg latency: 296561 us, max: 966103 us[0m
+[0;32mI (22044) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 21[0m
+[0;32mI (22044) sys_monitor: Uptime: 21 seconds[0m
+[0;32mI (22054) sys_monitor: ===========================================[0m
+
+[0;33mW (23194) wifi:conn=0x4083a82c alloc softap rx ba index=2 ba index 8[0m
+[0;32mI (23194) wifi:<ba-add>extra, idx:2, ifx:1, tid:6, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:0, win:64), CONF:0xc0006041[0m
+[0;32mI (23204) wifi:[ADDBA]TX addba request, tid:6, dialogtoken:6, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (23214) wifi:[ADDBA]RX addba response, status:0, tid:6/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (24374) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (24374) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (24374) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (24374) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (25054) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (25054) sys_monitor: CPU: Total usage: 11%[0m
+[0;32mI (25054) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (25054) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (25064) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (25064) sys_monitor:   Task 'IDLE': CPU=85%, Stack HWM=1248 bytes[0m
+[0;32mI (25074) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (25074) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (25084) sys_monitor: MEM: Free heap: 81160 bytes (33.0% used)[0m
+[0;32mI (25094) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 2496 bytes[0m
+[0;32mI (25094) sys_monitor: NET: TX: 4234 pkt, 3387200 bytes, 113933 B/s | RX: 4345 pkt, 3476000 bytes, 119371 B/s[0m
+[0;32mI (25104) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (25114) sys_monitor: WiFi: STA connected (RSSI: -54 dBm), AP clients: 1[0m
+[0;32mI (25114) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (25124) sys_monitor: BENCH: DNS queries: 24, avg latency: 296561 us, max: 966103 us[0m
+[0;32mI (25134) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 21[0m
+[0;32mI (25134) sys_monitor: Uptime: 24 seconds[0m
+[0;32mI (25144) sys_monitor: ===========================================[0m
+
+[0;32mI (27384) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -54 dBm[0m
+[0;32mI (27384) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (27384) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (27384) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (28144) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (28144) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (28144) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (28144) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (28154) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (28154) sys_monitor:   Task 'IDLE': CPU=86%, Stack HWM=1248 bytes[0m
+[0;32mI (28164) sys_monitor:   Task 'tcpip': CPU=1%, Stack HWM=2660 bytes[0m
+[0;32mI (28164) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (28174) sys_monitor: MEM: Free heap: 78976 bytes (35.0% used)[0m
+[0;32mI (28184) sys_monitor: MEM: Largest free block: 38912 bytes, Min free ever: 2496 bytes[0m
+[0;32mI (28184) sys_monitor: NET: TX: 4252 pkt, 3401600 bytes, 4660 B/s | RX: 4394 pkt, 3515200 bytes, 12686 B/s[0m
+[0;32mI (28194) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (28204) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (28204) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (28214) sys_monitor: BENCH: DNS queries: 24, avg latency: 296561 us, max: 966103 us[0m
+[0;32mI (28224) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 21[0m
+[0;32mI (28224) sys_monitor: BENCH: HTTP requests: 1, avg latency: 3517 us, max: 3517 us[0m
+[0;32mI (28234) sys_monitor: Uptime: 27 seconds[0m
+[0;32mI (28234) sys_monitor: ===========================================[0m
+
+[0;32mI (30394) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (30394) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (30394) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (30394) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (31244) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (31244) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (31244) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (31244) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (31254) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (31254) sys_monitor:   Task 'IDLE': CPU=87%, Stack HWM=1248 bytes[0m
+[0;32mI (31264) sys_monitor:   Task 'tcpip': CPU=1%, Stack HWM=2660 bytes[0m
+[0;32mI (31264) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (31274) sys_monitor: MEM: Free heap: 80504 bytes (33.0% used)[0m
+[0;32mI (31284) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 2496 bytes[0m
+[0;32mI (31284) sys_monitor: NET: TX: 4279 pkt, 3423200 bytes, 6967 B/s | RX: 4430 pkt, 3544000 bytes, 9290 B/s[0m
+[0;32mI (31294) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (31304) sys_monitor: WiFi: STA connected (RSSI: -54 dBm), AP clients: 1[0m
+[0;32mI (31304) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (31314) sys_monitor: BENCH: DNS queries: 24, avg latency: 296561 us, max: 966103 us[0m
+[0;32mI (31324) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 21[0m
+[0;32mI (31324) sys_monitor: BENCH: HTTP requests: 3, avg latency: 3906 us, max: 4799 us[0m
+[0;32mI (31334) sys_monitor: Uptime: 30 seconds[0m
+[0;32mI (31334) sys_monitor: ===========================================[0m
+
+[0;32mI (32964) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 65)[0m
+[0;33mW (32974) sys_monitor: Slow DNS query detected: 930 ms[0m
+[0;32mI (32974) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): optimizationguide-pa.googleapis.com (type 1)[0m
+[0;32mI (33084) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ichnaea-web.netflix.com (type 65)[0m
+[0;33mW (33124) sys_monitor: Slow DNS query detected: 131 ms[0m
+[0;32mI (33124) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ichnaea-web.netflix.com (type 1)[0m
+[0;32mI (33134) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): api.fast.com (type 65)[0m
+[0;32mI (33144) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): api.fast.com (type 1)[0m
+[0;32mI (33214) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 65)[0m
+[0;32mI (33224) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): content-autofill.googleapis.com (type 1)[0m
+[0;32mI (33404) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -55 dBm[0m
+[0;32mI (33404) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (33404) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (33404) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (33564) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c106-vie001-ix.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (33564) sys_monitor: Slow DNS query detected: 338 ms[0m
+[0;32mI (33574) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c106-vie001-ix.1.oca.nflxvideo.net (type 1)[0m
+[0;33mW (33694) sys_monitor: Slow DNS query detected: 129 ms[0m
+[0;32mI (33764) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 65)[0m
+[0;32mI (33774) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): readaloud.googleapis.com (type 1)[0m
+[0;32mI (34344) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (34344) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (34344) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (34344) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (34354) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (34354) sys_monitor:   Task 'IDLE': CPU=87%, Stack HWM=1248 bytes[0m
+[0;32mI (34364) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (34364) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (34374) sys_monitor: MEM: Free heap: 80504 bytes (33.0% used)[0m
+[0;32mI (34384) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 2496 bytes[0m
+[0;32mI (34384) sys_monitor: NET: TX: 4578 pkt, 3662400 bytes, 77161 B/s | RX: 4740 pkt, 3792000 bytes, 79999 B/s[0m
+[0;32mI (34394) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (34404) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (34404) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (34414) sys_monitor: BENCH: DNS queries: 36, avg latency: 245985 us, max: 966103 us[0m
+[0;32mI (34424) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 33[0m
+[0;32mI (34424) sys_monitor: BENCH: HTTP requests: 4, avg latency: 4026 us, max: 4799 us[0m
+[0;32mI (34434) sys_monitor: Uptime: 33 seconds[0m
+[0;32mI (34444) sys_monitor: ===========================================[0m
+
+[0;32mI (34474) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c079-vie001-ix.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (34694) sys_monitor: Slow DNS query detected: 914 ms[0m
+[0;32mI (34694) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c079-vie001-ix.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (35224) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c063-hel001-ix.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (35254) sys_monitor: Slow DNS query detected: 550 ms[0m
+[0;32mI (35264) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c063-hel001-ix.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (36414) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (36414) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (36414) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (36414) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (37444) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (37444) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (37444) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (37444) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (37454) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (37454) sys_monitor:   Task 'IDLE': CPU=87%, Stack HWM=1248 bytes[0m
+[0;32mI (37464) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1800 bytes[0m
+[0;32mI (37464) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (37474) sys_monitor: MEM: Free heap: 41444 bytes (65.0% used)[0m
+[0;32mI (37484) sys_monitor: MEM: Largest free block: 23552 bytes, Min free ever: 920 bytes[0m
+[0;32mI (37484) sys_monitor: NET: TX: 6044 pkt, 4835200 bytes, 378322 B/s | RX: 6222 pkt, 4977600 bytes, 382451 B/s[0m
+[0;32mI (37494) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (37504) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (37504) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (37514) sys_monitor: BENCH: DNS queries: 40, avg latency: 258693 us, max: 966103 us[0m
+[0;32mI (37524) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 37[0m
+[0;32mI (37524) sys_monitor: BENCH: HTTP requests: 6, avg latency: 4085 us, max: 4943 us[0m
+[0;32mI (37534) sys_monitor: Uptime: 36 seconds[0m
+[0;32mI (37544) sys_monitor: ===========================================[0m
+
+[0;32mI (39424) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (39424) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (39424) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (39424) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (40544) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (40544) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (40544) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (40544) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (40554) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (40554) sys_monitor:   Task 'IDLE': CPU=86%, Stack HWM=1248 bytes[0m
+[0;32mI (40564) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (40564) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (40574) sys_monitor: MEM: Free heap: 80504 bytes (33.0% used)[0m
+[0;32mI (40584) sys_monitor: MEM: Largest free block: 61440 bytes, Min free ever: 920 bytes[0m
+[0;32mI (40584) sys_monitor: NET: TX: 8033 pkt, 6426400 bytes, 513290 B/s | RX: 8225 pkt, 6580000 bytes, 516903 B/s[0m
+[0;32mI (40604) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (40604) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (40604) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (40614) sys_monitor: BENCH: DNS queries: 40, avg latency: 258693 us, max: 966103 us[0m
+[0;32mI (40624) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 37[0m
+[0;32mI (40624) sys_monitor: BENCH: HTTP requests: 7, avg latency: 3996 us, max: 4943 us[0m
+[0;32mI (40634) sys_monitor: Uptime: 40 seconds[0m
+[0;32mI (40634) sys_monitor: ===========================================[0m
+
+[0;32mI (42434) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (42434) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (42434) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (42434) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (43644) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (43644) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (43644) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (43644) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (43654) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (43654) sys_monitor:   Task 'IDLE': CPU=86%, Stack HWM=1248 bytes[0m
+[0;32mI (43664) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (43674) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (43674) sys_monitor: MEM: Free heap: 78360 bytes (35.0% used)[0m
+[0;32mI (43684) sys_monitor: MEM: Largest free block: 59392 bytes, Min free ever: 920 bytes[0m
+[0;32mI (43684) sys_monitor: NET: TX: 10197 pkt, 8157600 bytes, 558290 B/s | RX: 10404 pkt, 8323200 bytes, 562160 B/s[0m
+[0;32mI (43694) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (43704) sys_monitor: WiFi: STA connected (RSSI: -55 dBm), AP clients: 1[0m
+[0;32mI (43704) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (43714) sys_monitor: BENCH: DNS queries: 40, avg latency: 258693 us, max: 966103 us[0m
+[0;32mI (43724) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 37[0m
+[0;32mI (43734) sys_monitor: BENCH: HTTP requests: 9, avg latency: 4412 us, max: 8230 us[0m
+[0;32mI (43734) sys_monitor: Uptime: 43 seconds[0m
+[0;32mI (43744) sys_monitor: ===========================================[0m
+
+[0;33mW (44654) wifi:conn=0x4083a82c alloc softap rx ba index=3 ba index 8[0m
+[0;32mI (44654) wifi:<ba-add>extra, idx:3, ifx:1, tid:4, TAHI:0x1017275, TALO:0x88d9aeba, (ssn:0, win:64), CONF:0xc0004061[0m
+[0;32mI (44664) wifi:[ADDBA]TX addba request, tid:3, dialogtoken:7, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (44674) wifi:[ADDBA]RX addba response, status:0, tid:3/tb:0(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (44684) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c240-fra002-ix.1.oca.nflxvideo.net (type 65)[0m
+[0;33mW (44704) sys_monitor: Slow DNS query detected: 431 ms[0m
+[0;32mI (44704) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c240-fra002-ix.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (44714) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c144-arn001-ix.1.oca.nflxvideo.net (type 65)[0m
+[0;32mI (44724) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): ipv4-c144-arn001-ix.1.oca.nflxvideo.net (type 1)[0m
+[0;32mI (45444) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (45444) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (45444) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (45444) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (46744) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (46744) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (46744) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (46744) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (46754) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (46754) sys_monitor:   Task 'IDLE': CPU=86%, Stack HWM=1248 bytes[0m
+[0;32mI (46764) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (46764) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (46774) sys_monitor: MEM: Free heap: 80204 bytes (34.0% used)[0m
+[0;32mI (46784) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (46784) sys_monitor: NET: TX: 11199 pkt, 8959200 bytes, 258655 B/s | RX: 11416 pkt, 9132800 bytes, 261237 B/s[0m
+[0;32mI (46794) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (46804) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (46804) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (46814) sys_monitor: BENCH: DNS queries: 44, avg latency: 245800 us, max: 966103 us[0m
+[0;32mI (46824) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 41[0m
+[0;32mI (46824) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (46834) sys_monitor: Uptime: 46 seconds[0m
+[0;32mI (46844) sys_monitor: ===========================================[0m
+
+[0;32mI (48454) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (48454) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (48454) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (48454) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (48664) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;33mW (48674) sys_monitor: Slow DNS query detected: 942 ms[0m
+[0;32mI (49264) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): test-gateway.instagram.com (type 1)[0m
+[0;33mW (49264) sys_monitor: Slow DNS query detected: 596 ms[0m
+[0;32mI (49324) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): i.instagram.com (type 1)[0m
+[0;32mI (49504) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): edge-mqtt.facebook.com (type 1)[0m
+[0;33mW (49514) sys_monitor: Slow DNS query detected: 181 ms[0m
+[0;32mI (49744) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): instagram.fbgw66-1.fna.fbcdn.net (type 1)[0m
+[0;33mW (49754) sys_monitor: Slow DNS query detected: 242 ms[0m
+[0;32mI (49754) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): instagram.fbgw66-2.fna.fbcdn.net (type 1)[0m
+[0;32mI (49844) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (49844) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (49844) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (49844) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2392 bytes[0m
+[0;32mI (49854) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (49854) sys_monitor:   Task 'IDLE': CPU=0%, Stack HWM=1248 bytes[0m
+[0;32mI (49864) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1784 bytes[0m
+[0;32mI (49864) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (49874) sys_monitor: MEM: Free heap: 79892 bytes (34.0% used)[0m
+[0;32mI (49884) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (49884) sys_monitor: NET: TX: 11489 pkt, 9191200 bytes, 74832 B/s | RX: 11710 pkt, 9368000 bytes, 75864 B/s[0m
+[0;32mI (49894) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (49904) sys_monitor: WiFi: STA connected (RSSI: -54 dBm), AP clients: 1[0m
+[0;32mI (49904) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (49914) sys_monitor: BENCH: DNS queries: 50, avg latency: 257053 us, max: 966103 us[0m
+[0;32mI (49924) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 47[0m
+[0;32mI (49924) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (49934) sys_monitor: Uptime: 49 seconds[0m
+[0;32mI (49944) sys_monitor: ===========================================[0m
+
+[0;32mI (50064) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): graph.instagram.com (type 1)[0m
+[0;33mW (50074) sys_monitor: Slow DNS query detected: 305 ms[0m
+[0;32mI (51464) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -55 dBm[0m
+[0;32mI (51464) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (51464) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (51464) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (52574) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): instagram.fbgw66-3.fna.fbcdn.net (type 1)[0m
+[0;33mW (52584) sys_monitor: Slow DNS query detected: 516 ms[0m
+[0;32mI (52944) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (52944) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (52944) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (52944) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (52954) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (52954) sys_monitor:   Task 'IDLE': CPU=5%, Stack HWM=1248 bytes[0m
+[0;32mI (52964) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (52964) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (52974) sys_monitor: MEM: Free heap: 13252 bytes (89.0% used)[0m
+[0;32mI (52984) sys_monitor: MEM: Largest free block: 8192 bytes, Min free ever: 920 bytes[0m
+[0;32mI (52984) sys_monitor: NET: TX: 12425 pkt, 9940000 bytes, 241566 B/s | RX: 12660 pkt, 10128000 bytes, 245179 B/s[0m
+[0;32mI (52994) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (53004) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (53004) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (53014) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (53024) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (53024) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (53034) sys_monitor: Uptime: 52 seconds[0m
+[0;32mI (53044) sys_monitor: ===========================================[0m
+
+[0;32mI (54474) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (54474) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (54474) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (54474) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (56044) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (56044) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (56044) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (56044) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (56054) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (56054) sys_monitor:   Task 'IDLE': CPU=9%, Stack HWM=1248 bytes[0m
+[0;32mI (56064) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1784 bytes[0m
+[0;32mI (56064) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (56074) sys_monitor: MEM: Free heap: 39452 bytes (67.0% used)[0m
+[0;32mI (56084) sys_monitor: MEM: Largest free block: 15360 bytes, Min free ever: 920 bytes[0m
+[0;32mI (56084) sys_monitor: NET: TX: 13783 pkt, 11026400 bytes, 350441 B/s | RX: 14038 pkt, 11230400 bytes, 355602 B/s[0m
+[0;32mI (56094) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (56104) sys_monitor: WiFi: STA connected (RSSI: -54 dBm), AP clients: 1[0m
+[0;32mI (56104) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (56114) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (56124) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (56124) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (56134) sys_monitor: Uptime: 55 seconds[0m
+[0;32mI (56144) sys_monitor: ===========================================[0m
+
+[0;32mI (57484) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (57484) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (57484) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (57484) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (59144) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (59144) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (59144) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (59144) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (59154) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (59154) sys_monitor:   Task 'IDLE': CPU=13%, Stack HWM=1248 bytes[0m
+[0;32mI (59164) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (59164) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (59174) sys_monitor: MEM: Free heap: 63464 bytes (47.0% used)[0m
+[0;32mI (59184) sys_monitor: MEM: Largest free block: 43008 bytes, Min free ever: 920 bytes[0m
+[0;32mI (59184) sys_monitor: NET: TX: 15076 pkt, 12060800 bytes, 333657 B/s | RX: 15339 pkt, 12271200 bytes, 335722 B/s[0m
+[0;32mI (59194) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (59204) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (59204) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (59214) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (59224) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (59224) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (59234) sys_monitor: Uptime: 58 seconds[0m
+[0;32mI (59244) sys_monitor: ===========================================[0m
+
+[0;32mI (60494) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (60494) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (60494) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (60494) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (62244) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (62244) sys_monitor: CPU: Total usage: 10%[0m
+[0;32mI (62244) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (62244) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (62254) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (62254) sys_monitor:   Task 'IDLE': CPU=17%, Stack HWM=1248 bytes[0m
+[0;32mI (62264) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (62264) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (62274) sys_monitor: MEM: Free heap: 58064 bytes (52.0% used)[0m
+[0;32mI (62284) sys_monitor: MEM: Largest free block: 21504 bytes, Min free ever: 920 bytes[0m
+[0;32mI (62284) sys_monitor: NET: TX: 16647 pkt, 13317600 bytes, 405455 B/s | RX: 16918 pkt, 13534400 bytes, 407519 B/s[0m
+[0;32mI (62294) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (62304) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (62314) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (62314) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (62324) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (62324) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (62334) sys_monitor: Uptime: 61 seconds[0m
+[0;32mI (62344) sys_monitor: ===========================================[0m
+
+[0;32mI (63504) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -54 dBm[0m
+[0;32mI (63504) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (63504) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (63504) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (65344) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (65344) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (65344) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (65344) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (65354) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (65354) sys_monitor:   Task 'IDLE': CPU=21%, Stack HWM=1248 bytes[0m
+[0;32mI (65364) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1784 bytes[0m
+[0;32mI (65364) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (65374) sys_monitor: MEM: Free heap: 80204 bytes (34.0% used)[0m
+[0;32mI (65384) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (65384) sys_monitor: NET: TX: 17383 pkt, 13906400 bytes, 189935 B/s | RX: 17656 pkt, 14124800 bytes, 190451 B/s[0m
+[0;32mI (65394) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (65404) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (65404) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (65414) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (65424) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (65424) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (65434) sys_monitor: Uptime: 64 seconds[0m
+[0;32mI (65444) sys_monitor: ===========================================[0m
+
+[0;32mI (66514) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -55 dBm[0m
+[0;32mI (66514) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (66514) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (66514) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (68444) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (68444) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (68444) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (68444) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (68454) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (68454) sys_monitor:   Task 'IDLE': CPU=24%, Stack HWM=1248 bytes[0m
+[0;32mI (68464) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1784 bytes[0m
+[0;32mI (68464) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (68474) sys_monitor: MEM: Free heap: 80204 bytes (34.0% used)[0m
+[0;32mI (68484) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (68484) sys_monitor: NET: TX: 17414 pkt, 13931200 bytes, 8000 B/s | RX: 17701 pkt, 14160800 bytes, 11612 B/s[0m
+[0;32mI (68494) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (68504) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 1[0m
+[0;32mI (68504) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (68514) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (68524) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (68524) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (68534) sys_monitor: Uptime: 67 seconds[0m
+[0;32mI (68544) sys_monitor: ===========================================[0m
+
+[0;32mI (69524) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (69524) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (69524) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (69524) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (71544) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (71544) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (71544) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (71544) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (71554) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (71554) sys_monitor:   Task 'IDLE': CPU=27%, Stack HWM=1248 bytes[0m
+[0;32mI (71564) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (71564) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (71574) sys_monitor: MEM: Free heap: 80204 bytes (34.0% used)[0m
+[0;32mI (71584) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (71584) sys_monitor: NET: TX: 17427 pkt, 13941600 bytes, 3354 B/s | RX: 17727 pkt, 14181600 bytes, 6709 B/s[0m
+[0;32mI (71594) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (71604) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (71604) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (71614) sys_monitor: BENCH: DNS queries: 52, avg latency: 262974 us, max: 966103 us[0m
+[0;32mI (71624) sys_monitor: BENCH: DNS usage - Cache HITS: 3, MISSES: 49[0m
+[0;32mI (71624) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (71634) sys_monitor: Uptime: 71 seconds[0m
+[0;32mI (71634) sys_monitor: ===========================================[0m
+
+[0;32mI (71694) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (71704) dns_proxy: DNS Cache HIT for www.google.com[0m
+[0;33mW (71704) sys_monitor: Slow DNS query detected: 122 ms[0m
+[0;32mI (72534) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -51 dBm[0m
+[0;32mI (72534) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (72534) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (72534) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (74644) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (74644) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (74644) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (74644) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (74654) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (74654) sys_monitor:   Task 'IDLE': CPU=30%, Stack HWM=1248 bytes[0m
+[0;32mI (74664) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (74664) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (74674) sys_monitor: MEM: Free heap: 80204 bytes (34.0% used)[0m
+[0;32mI (74684) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (74684) sys_monitor: NET: TX: 17433 pkt, 13946400 bytes, 1548 B/s | RX: 17744 pkt, 14195200 bytes, 4387 B/s[0m
+[0;32mI (74694) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (74704) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 1[0m
+[0;32mI (74704) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (74714) sys_monitor: BENCH: DNS queries: 53, avg latency: 260317 us, max: 966103 us[0m
+[0;32mI (74724) sys_monitor: BENCH: DNS usage - Cache HITS: 4, MISSES: 49[0m
+[0;32mI (74724) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (74734) sys_monitor: Uptime: 74 seconds[0m
+[0;32mI (74734) sys_monitor: ===========================================[0m
+
+[0;32mI (75544) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (75544) wifi_repeater: AP clients connected: 1[0m
+[0;32mI (75544) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (75544) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (77114) wifi:new:<9,0>, old:<9,0>, ap:<9,0>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (77114) wifi:(trc)phytype:CBW20-SGI, snr:46, maxRate:144, highestRateIdx:0[0m
+[0;33mW (77114) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (77124) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (77134) wifi:ifidx:1, rssi:-49, nf:-95, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (77144) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (77154) wifi:station: be:be:88:62:37:07 join, AID=2, bgn, 20[0m
+[0;32mI (77184) wifi_repeater: Client be:be:88:62:37:07 joined, AID=2[0m
+[0;33mW (77594) wifi:conn=0x4083a82c alloc softap rx ba index=4 ba index 8[0m
+[0;32mI (77594) wifi:<ba-add>extra, idx:4, ifx:1, tid:6, TAHI:0x1010737, TALO:0x6288bebe, (ssn:0, win:64), CONF:0xc0006081[0m
+[0;32mI (77744) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (77744) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (77744) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (77744) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (77754) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (77754) sys_monitor:   Task 'IDLE': CPU=32%, Stack HWM=1248 bytes[0m
+[0;32mI (77764) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (77764) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (77774) sys_monitor: MEM: Free heap: 74404 bytes (38.0% used)[0m
+[0;32mI (77784) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (77784) sys_monitor: NET: TX: 17436 pkt, 13948800 bytes, 774 B/s | RX: 17761 pkt, 14208800 bytes, 4387 B/s[0m
+[0;32mI (77794) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (77804) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (77804) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (77814) sys_monitor: BENCH: DNS queries: 53, avg latency: 260317 us, max: 966103 us[0m
+[0;32mI (77824) sys_monitor: BENCH: DNS usage - Cache HITS: 4, MISSES: 49[0m
+[0;32mI (77824) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (77834) sys_monitor: Uptime: 77 seconds[0m
+[0;32mI (77834) sys_monitor: ===========================================[0m
+
+[0;32mI (78554) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (78554) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (78554) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (78554) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (78634) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.3[0m
+[0;32mI (78634) ap_clients: Client IP assigned: be:be:88:62:37:07 -> 192.168.4.3[0m
+[0;32mI (80284) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:8, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (80284) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;33mW (80724) wifi:conn=0x4083a82c alloc softap rx ba index=5 ba index 8[0m
+[0;32mI (80724) wifi:<ba-add>extra, idx:5, ifx:1, tid:0, TAHI:0x1010737, TALO:0x6288bebe, (ssn:2, win:64), CONF:0xc00000a1[0m
+[0;32mI (80724) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): b._dns-sd._udp.0.4.168.192.in-addr.arpa (type 12)[0m
+[0;32mI (80744) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): db._dns-sd._udp.0.4.168.192.in-addr.arpa (type 12)[0m
+[0;32mI (80754) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): lb._dns-sd._udp.0.4.168.192.in-addr.arpa (type 12)[0m
+[0;32mI (80764) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): _dns.resolver.arpa (type 64)[0m
+[0;32mI (80774) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): 3.4.168.192.in-addr.arpa (type 12)[0m
+[0;32mI (80844) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (80844) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (80844) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (80844) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (80854) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (80854) sys_monitor:   Task 'IDLE': CPU=35%, Stack HWM=1248 bytes[0m
+[0;32mI (80864) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): apresolve.spotify.com (type 65)[0m
+[0;32mI (80874) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (80874) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): apresolve.spotify.com (type 1)[0m
+[0;32mI (80884) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (80894) sys_monitor: MEM: Free heap: 72340 bytes (40.0% used)[0m
+[0;32mI (80894) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.apple.com (type 1)[0m
+[0;32mI (80904) wifi:[ADDBA]TX addba request, tid:3, dialogtoken:9, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (80914) sys_monitor: MEM: Largest free block: 53248 bytes, Min free ever: 920 bytes[0m
+[0;32mI (80924) sys_monitor: NET: TX: 17453 pkt, 13962400 bytes, 4387 B/s | RX: 17785 pkt, 14228000 bytes, 6193 B/s[0m
+[0;32mI (80934) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): apresolve.spotify.com (type 65)[0m
+[0;32mI (80944) dns_proxy: DNS Cache HIT for apresolve.spotify.com[0m
+[0;32mI (80944) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): apresolve.spotify.com (type 1)[0m
+[0;32mI (80954) dns_proxy: DNS Cache HIT for apresolve.spotify.com[0m
+[0;32mI (80964) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (80964) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (80974) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (80984) sys_monitor: BENCH: DNS queries: 63, avg latency: 223168 us, max: 966103 us[0m
+[0;32mI (80984) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): apple.com (type 1)[0m
+[0;32mI (80984) wifi:[ADDBA]RX addba response, status:0, tid:3/tb:0(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (81004) sys_monitor: BENCH: DNS usage - Cache HITS: 6, MISSES: 58[0m
+[0;32mI (81014) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (81014) sys_monitor: Uptime: 80 seconds[0m
+[0;32mI (81024) sys_monitor: ===========================================[0m
+[0;32mI (81024) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.spotify.com (type 1)[0m
+
+[0;32mI (81044) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.microsoft.com (type 1)[0m
+[0;32mI (81054) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): api.apple-cloudkit.com (type 1)[0m
+[0;32mI (81104) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): claude.ai (type 65)[0m
+[0;32mI (81114) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): claude.ai (type 1)[0m
+[0;32mI (81304) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.google.com (type 65)[0m
+[0;33mW (81314) sys_monitor: Slow DNS query detected: 185 ms[0m
+[0;32mI (81314) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.google.com (type 1)[0m
+[0;32mI (81344) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): 1-courier.push.apple.com (type 1)[0m
+[0;32mI (81364) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): api.anthropic.com (type 65)[0m
+[0;32mI (81374) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): api.anthropic.com (type 1)[0m
+[0;32mI (81384) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): 1-courier.sandbox.push.apple.com (type 1)[0m
+[0;32mI (81394) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): 12-courier.push.apple.com (type 65)[0m
+[0;32mI (81404) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): 12-courier.push.apple.com (type 1)[0m
+[0;32mI (81454) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): stream.quillbot.com (type 65)[0m
+[0;32mI (81474) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): stream.quillbot.com (type 1)[0m
+[0;32mI (81484) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): eu-central-courier-4.push-apple.com.akadns.net (type 65)[0m
+[0;32mI (81564) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (81564) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (81564) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (81564) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (82284) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gateway.icloud.com (type 1)[0m
+[0;33mW (82684) sys_monitor: Slow DNS query detected: 1184 ms[0m
+[0;32mI (83194) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-dealer.g2.spotify.com (type 65)[0m
+[0;33mW (83204) sys_monitor: Slow DNS query detected: 518 ms[0m
+[0;32mI (83204) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-dealer.g2.spotify.com (type 1)[0m
+[0;32mI (83214) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ap-gae2.spotify.com (type 1)[0m
+[0;32mI (83224) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-dealer.g2.spotify.com (type 65)[0m
+[0;32mI (83224) dns_proxy: DNS Cache HIT for gae2-dealer.g2.spotify.com[0m
+[0;32mI (83234) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-dealer.g2.spotify.com (type 1)[0m
+[0;32mI (83244) dns_proxy: DNS Cache HIT for gae2-dealer.g2.spotify.com[0m
+[0;32mI (83244) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): spclient.wg.spotify.com (type 65)[0m
+[0;32mI (83284) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): spclient.wg.spotify.com (type 1)[0m
+[0;32mI (83294) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-spclient.spotify.com (type 65)[0m
+[0;32mI (83304) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-spclient.spotify.com (type 1)[0m
+[0;32mI (83324) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-dealer-ssl.spotify.com (type 65)[0m
+[0;32mI (83514) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.youtube.com (type 65)[0m
+[0;33mW (83524) sys_monitor: Slow DNS query detected: 181 ms[0m
+[0;32mI (83524) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.youtube.com (type 1)[0m
+[0;32mI (84034) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (84034) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (84034) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (84034) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (84044) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (84044) sys_monitor:   Task 'IDLE': CPU=37%, Stack HWM=1248 bytes[0m
+[0;32mI (84054) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (84054) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (84064) sys_monitor: MEM: Free heap: 41936 bytes (65.0% used)[0m
+[0;32mI (84074) sys_monitor: MEM: Largest free block: 16384 bytes, Min free ever: 920 bytes[0m
+[0;32mI (84074) sys_monitor: NET: TX: 18405 pkt, 14724000 bytes, 238745 B/s | RX: 18755 pkt, 15004000 bytes, 243259 B/s[0m
+[0;32mI (84084) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (84094) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (84094) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (84104) sys_monitor: BENCH: DNS queries: 93, avg latency: 178923 us, max: 1184311 us[0m
+[0;32mI (84114) sys_monitor: BENCH: DNS usage - Cache HITS: 8, MISSES: 85[0m
+[0;32mI (84114) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (84124) sys_monitor: Uptime: 83 seconds[0m
+[0;32mI (84134) sys_monitor: ===========================================[0m
+
+[0;32mI (84524) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): api-partner.spotify.com (type 65)[0m
+[0;32mI (84574) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -54 dBm[0m
+[0;32mI (84574) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (84574) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (84574) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;33mW (84854) sys_monitor: Slow DNS query detected: 1307 ms[0m
+[0;32mI (84854) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): api-partner.spotify.com (type 1)[0m
+[0;33mW (85174) sys_monitor: Slow DNS query detected: 321 ms[0m
+[0;32mI (85174) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): spclient.wg.spotify.com (type 65)[0m
+[0;32mI (85174) dns_proxy: DNS Cache HIT for spclient.wg.spotify.com[0m
+[0;32mI (85184) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): spclient.wg.spotify.com (type 1)[0m
+[0;32mI (85194) dns_proxy: DNS Cache HIT for spclient.wg.spotify.com[0m
+[0;32mI (85194) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-spclient.spotify.com (type 65)[0m
+[0;32mI (85204) dns_proxy: DNS Cache HIT for gae2-spclient.spotify.com[0m
+[0;32mI (85214) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gae2-spclient.spotify.com (type 1)[0m
+[0;32mI (85224) dns_proxy: DNS Cache HIT for gae2-spclient.spotify.com[0m
+[0;32mI (85224) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): captive.apple.com (type 65)[0m
+[0;33mW (85434) sys_monitor: Slow DNS query detected: 204 ms[0m
+[0;32mI (85434) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): captive.apple.com (type 1)[0m
+[0;33mW (85784) sys_monitor: Slow DNS query detected: 357 ms[0m
+[0;32mI (85784) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): captive.g.aaplimg.com (type 65)[0m
+[0;33mW (86144) wifi:conn=0x4083a82c alloc softap rx ba index=6 ba index 8[0m
+[0;32mI (86144) wifi:<ba-add>extra, idx:6, ifx:1, tid:1, TAHI:0x1010737, TALO:0x6288bebe, (ssn:0, win:64), CONF:0xc00010c1[0m
+[0;33mW (86724) wifi:<ba-add>idx:2, ifx:0, tid:6, TAHI:0x100b28d, TALO:0x4e2129b2, (ssn:1, win:64, cur_ssn:1), CONF:0xc0006001[0m
+[0;33mW (86794) dns_proxy: No DNS response (timeout): errno=11[0m
+[0;32mI (86794) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): _dns.resolver.arpa (type 64)[0m
+[0;33mW (87054) sys_monitor: Slow DNS query detected: 263 ms[0m
+[0;32mI (87054) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): daily-cloudcode-pa.googleapis.com (type 1)[0m
+[0;32mI (87134) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (87134) sys_monitor: CPU: Total usage: 8%[0m
+[0;32mI (87134) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (87134) sys_monitor:   Task 'sys_monitor': CPU=2%, Stack HWM=2312 bytes[0m
+[0;32mI (87144) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (87144) sys_monitor:   Task 'IDLE': CPU=38%, Stack HWM=1248 bytes[0m
+[0;32mI (87154) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1784 bytes[0m
+[0;32mI (87154) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (87164) sys_monitor: MEM: Free heap: 12140 bytes (90.0% used)[0m
+[0;32mI (87174) sys_monitor: MEM: Largest free block: 1792 bytes, Min free ever: 920 bytes[0m
+[0;32mI (87174) sys_monitor: NET: TX: 18796 pkt, 15036800 bytes, 100901 B/s | RX: 19160 pkt, 15328000 bytes, 104514 B/s[0m
+[0;32mI (87184) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (87194) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 2[0m
+[0;32mI (87194) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (87204) sys_monitor: BENCH: DNS queries: 102, avg latency: 187712 us, max: 1307153 us[0m
+[0;32mI (87214) sys_monitor: BENCH: DNS usage - Cache HITS: 12, MISSES: 92[0m
+[0;32mI (87224) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (87224) sys_monitor: Uptime: 86 seconds[0m
+[0;32mI (87234) sys_monitor: ===========================================[0m
+
+[0;33mW (87364) sys_monitor: Slow DNS query detected: 314 ms[0m
+[0;32mI (87364) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gateway.fe2.apple-dns.net (type 65)[0m
+[0;32mI (87584) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (87584) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (87584) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (87584) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;33mW (87754) sys_monitor: Slow DNS query detected: 390 ms[0m
+[0;32mI (87764) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): imap.gmail.com (type 1)[0m
+[0;33mW (88074) sys_monitor: Slow DNS query detected: 311 ms[0m
+[0;32mI (88074) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): msgstore-002.www.notion.so (type 65)[0m
+[0;33mW (88474) sys_monitor: Slow DNS query detected: 400 ms[0m
+[0;32mI (88474) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): msgstore-002.www.notion.so (type 1)[0m
+[0;33mW (88884) sys_monitor: Slow DNS query detected: 411 ms[0m
+[0;32mI (88884) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.icloud.com (type 65)[0m
+[0;33mW (89194) sys_monitor: Slow DNS query detected: 315 ms[0m
+[0;32mI (89204) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.icloud.com (type 1)[0m
+[0;33mW (90204) dns_proxy: No DNS response (timeout): errno=11[0m
+[0;32mI (90204) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gateway.fe2.apple-dns.net (type 65)[0m
+[0;32mI (90204) dns_proxy: DNS Cache HIT for gateway.fe2.apple-dns.net[0m
+[0;32mI (90214) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ap-guc3.spotify.com (type 1)[0m
+[0;32mI (90234) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (90234) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (90234) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (90234) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (90244) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (90244) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): captive.g.aaplimg.com (type 65)[0m
+[0;32mI (90254) sys_monitor:   Task 'IDLE': CPU=40%, Stack HWM=1248 bytes[0m
+[0;32mI (90264) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (90264) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (90274) sys_monitor: MEM: Free heap: 8196 bytes (93.0% used)[0m
+[0;32mI (90274) sys_monitor: MEM: Largest free block: 1792 bytes, Min free ever: 920 bytes[0m
+[0;32mI (90284) sys_monitor: NET: TX: 19037 pkt, 15229600 bytes, 62194 B/s | RX: 19418 pkt, 15534400 bytes, 66581 B/s[0m
+[0;32mI (90294) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (90304) sys_monitor: WiFi: STA connected (RSSI: -55 dBm), AP clients: 2[0m
+[0;32mI (90304) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (90314) sys_monitor: BENCH: DNS queries: 110, avg latency: 193964 us, max: 1307153 us[0m
+[0;32mI (90324) sys_monitor: BENCH: DNS usage - Cache HITS: 13, MISSES: 100[0m
+[0;32mI (90324) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (90334) sys_monitor: Uptime: 89 seconds[0m
+[0;32mI (90334) sys_monitor: ===========================================[0m
+
+[0;33mW (90574) sys_monitor: Slow DNS query detected: 328 ms[0m
+[0;32mI (90574) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.icloud.com (type 65)[0m
+[0;32mI (90574) dns_proxy: DNS Cache HIT for mask.icloud.com[0m
+[0;32mI (90584) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.icloud.com (type 1)[0m
+[0;32mI (90594) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -55 dBm[0m
+[0;32mI (90594) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (90604) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (90604) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;33mW (90894) sys_monitor: Slow DNS query detected: 316 ms[0m
+[0;32mI (90894) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): play.googleapis.com (type 1)[0m
+[0;33mW (91904) dns_proxy: No DNS response (timeout): errno=11[0m
+[0;32mI (91904) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): captive.g.aaplimg.com (type 65)[0m
+[0;32mI (91904) dns_proxy: DNS Cache HIT for captive.g.aaplimg.com[0m
+[0;32mI (91904) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.apple-dns.net (type 65)[0m
+[0;33mW (92914) dns_proxy: No DNS response (timeout): errno=11[0m
+[0;32mI (92914) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.apple-dns.net (type 65)[0m
+[0;32mI (92934) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gspe1-ssl.ls.apple.com (type 65)[0m
+[0;32mI (92944) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): play.googleapis.com (type 1)[0m
+[0;32mI (92954) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): mask.apple-dns.net (type 65)[0m
+[0;32mI (92954) dns_proxy: DNS Cache HIT for mask.apple-dns.net[0m
+[0;32mI (92964) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.googleapis.com (type 1)[0m
+[0;32mI (92994) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.googleapis.com (type 28)[0m
+[0;32mI (93014) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gemini.google.com (type 65)[0m
+[0;32mI (93024) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gemini.google.com (type 1)[0m
+[0;32mI (93044) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ol-collector.quillbot.com (type 65)[0m
+[0;32mI (93054) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ol-collector.quillbot.com (type 1)[0m
+[0;32mI (93064) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): lcdn-locator.apple.com (type 65)[0m
+[0;32mI (93074) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): lcdn-locator.apple.com (type 1)[0m
+[0;32mI (93094) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): a1366.dscapi6.akamai.net (type 65)[0m
+[0;32mI (93114) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): lcdn-locator-usms11.apple.com.akadns.net (type 65)[0m
+[0;32mI (93344) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (93344) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (93344) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (93344) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (93354) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (93354) sys_monitor:   Task 'IDLE': CPU=42%, Stack HWM=1248 bytes[0m
+[0;32mI (93364) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (93364) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (93374) sys_monitor: MEM: Free heap: 72960 bytes (40.0% used)[0m
+[0;32mI (93384) sys_monitor: MEM: Largest free block: 23552 bytes, Min free ever: 920 bytes[0m
+[0;32mI (93384) sys_monitor: NET: TX: 19692 pkt, 15753600 bytes, 168473 B/s | RX: 20082 pkt, 16065600 bytes, 170788 B/s[0m
+[0;32mI (93394) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (93404) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (93404) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (93414) sys_monitor: BENCH: DNS queries: 128, avg latency: 173647 us, max: 1307153 us[0m
+[0;32mI (93424) sys_monitor: BENCH: DNS usage - Cache HITS: 16, MISSES: 116[0m
+[0;32mI (93434) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (93434) sys_monitor: Uptime: 92 seconds[0m
+[0;32mI (93444) sys_monitor: ===========================================[0m
+
+[0;32mI (93464) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): lh3.googleusercontent.com (type 1)[0m
+[0;33mW (93474) sys_monitor: Slow DNS query detected: 332 ms[0m
+[0;32mI (93474) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): lh3.googleusercontent.com (type 28)[0m
+[0;32mI (93614) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (93614) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (93614) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (93614) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (93614) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gs-loc.apple.com (type 65)[0m
+[0;33mW (93654) sys_monitor: Slow DNS query detected: 175 ms[0m
+[0;32mI (93654) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gs-loc.apple.com (type 1)[0m
+[0;32mI (93674) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gspe1-ssl.ls.apple.com (type 1)[0m
+[0;32mI (93684) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gs-loc.ls-apple.com.akadns.net (type 65)[0m
+[0;32mI (93724) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.gstatic.com (type 65)[0m
+[0;32mI (93744) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.gstatic.com (type 1)[0m
+[0;32mI (93754) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.google.com (type 65)[0m
+[0;32mI (93774) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.google.com (type 1)[0m
+[0;32mI (93784) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): googlehosted.l.googleusercontent.com (type 65)[0m
+[0;32mI (93794) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): waa-pa.clients6.google.com (type 65)[0m
+[0;32mI (93814) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): waa-pa.clients6.google.com (type 1)[0m
+[0;32mI (93814) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ogads-pa.clients6.google.com (type 65)[0m
+[0;32mI (93834) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ogads-pa.clients6.google.com (type 1)[0m
+[0;33mW (93844) dns_proxy: Failed to send DNS response: errno=12[0m
+[0;32mI (93844) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gemini.gstatic.com (type 65)[0m
+[0;32mI (93874) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): gemini.gstatic.com (type 1)[0m
+[0;32mI (93884) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.googletagmanager.com (type 65)[0m
+[0;32mI (93904) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.googletagmanager.com (type 1)[0m
+[0;32mI (95684) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): play.google.com (type 65)[0m
+[0;33mW (95684) sys_monitor: Slow DNS query detected: 769 ms[0m
+[0;32mI (95694) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): play.google.com (type 1)[0m
+[0;32mI (95824) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.google-analytics.com (type 65)[0m
+[0;33mW (95834) sys_monitor: Slow DNS query detected: 130 ms[0m
+[0;32mI (95834) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.google-analytics.com (type 1)[0m
+[0;32mI (95874) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www-alv.google-analytics.com (type 65)[0m
+[0;32mI (95904) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www-alv.google-analytics.com (type 1)[0m
+[0;32mI (96314) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): analytics.google.com (type 65)[0m
+[0;33mW (96324) sys_monitor: Slow DNS query detected: 385 ms[0m
+[0;32mI (96324) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): analytics.google.com (type 1)[0m
+[0;32mI (96344) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): analytics-alv.google.com (type 65)[0m
+[0;32mI (96444) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (96444) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (96444) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (96444) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (96454) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (96454) sys_monitor:   Task 'IDLE': CPU=43%, Stack HWM=1248 bytes[0m
+[0;32mI (96464) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (96464) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (96474) sys_monitor: MEM: Free heap: 73228 bytes (39.0% used)[0m
+[0;32mI (96484) sys_monitor: MEM: Largest free block: 23552 bytes, Min free ever: 920 bytes[0m
+[0;32mI (96484) sys_monitor: NET: TX: 20799 pkt, 16639200 bytes, 285703 B/s | RX: 21201 pkt, 16960800 bytes, 288800 B/s[0m
+[0;32mI (96494) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (96504) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (96504) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (96514) sys_monitor: BENCH: DNS queries: 156, avg latency: 156733 us, max: 1307153 us[0m
+[0;32mI (96524) sys_monitor: BENCH: DNS usage - Cache HITS: 16, MISSES: 144[0m
+[0;32mI (96524) sys_monitor: BENCH: HTTP requests: 10, avg latency: 4514 us, max: 8230 us[0m
+[0;32mI (96534) sys_monitor: Uptime: 95 seconds[0m
+[0;32mI (96544) sys_monitor: ===========================================[0m
+
+[0;32mI (96624) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (96624) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (96624) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (96624) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (96834) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): ogads-pa.clients6.google.com (type 1)[0m
+[0;32mI (96834) dns_proxy: DNS Cache HIT for ogads-pa.clients6.google.com[0m
+[0;33mW (96834) sys_monitor: Slow DNS query detected: 480 ms[0m
+[0;33mW (98044) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (98044) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;33mW (98234) httpd_uri: httpd_uri: URI '/apple-touch-icon-precomposed.png' not found[0m
+[0;33mW (98234) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;33mW (98244) httpd_uri: httpd_uri: URI '/apple-touch-icon-precomposed.png' not found[0m
+[0;33mW (98244) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;33mW (98254) httpd_uri: httpd_uri: URI '/apple-touch-icon.png' not found[0m
+[0;33mW (98264) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;33mW (98274) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (98274) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;33mW (98354) httpd_uri: httpd_uri: URI '/apple-touch-icon.png' not found[0m
+[0;33mW (98354) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;32mI (98374) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): sequoia.cdn-apple.com (type 65)[0m
+[0;33mW (98384) sys_monitor: Slow DNS query detected: 545 ms[0m
+[0;32mI (98384) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): sequoia.cdn-apple.com (type 1)[0m
+[0;32mI (98394) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): world-gen.g.aaplimg.com (type 65)[0m
+[0;33mW (98454) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (98454) httpd_txrx: httpd_resp_send_err: 404 Not Found - Not found[0m
+[0;32mI (98694) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): youtubei.googleapis.com (type 1)[0m
+[0;33mW (98704) sys_monitor: Slow DNS query detected: 292 ms[0m
+[0;32mI (99544) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (99544) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (99544) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (99544) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (99554) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (99554) sys_monitor:   Task 'IDLE': CPU=1%, Stack HWM=1248 bytes[0m
+[0;32mI (99564) sys_monitor:   Task 'bw_monitor': CPU=0%, Stack HWM=2124 bytes[0m
+[0;32mI (99564) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (99574) sys_monitor: MEM: Free heap: 72016 bytes (40.0% used)[0m
+[0;32mI (99584) sys_monitor: MEM: Largest free block: 29696 bytes, Min free ever: 920 bytes[0m
+[0;32mI (99584) sys_monitor: NET: TX: 21605 pkt, 17284000 bytes, 207999 B/s | RX: 22004 pkt, 17603200 bytes, 207225 B/s[0m
+[0;32mI (99594) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (99604) sys_monitor: WiFi: STA connected (RSSI: -53 dBm), AP clients: 2[0m
+[0;32mI (99604) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (99614) sys_monitor: BENCH: DNS queries: 161, avg latency: 160224 us, max: 1307153 us[0m
+[0;32mI (99624) sys_monitor: BENCH: DNS usage - Cache HITS: 17, MISSES: 148[0m
+[0;32mI (99624) sys_monitor: BENCH: HTTP requests: 11, avg latency: 4536 us, max: 8230 us[0m
+[0;32mI (99634) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -53 dBm[0m
+[0;32mI (99644) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (99644) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (99654) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (99664) sys_monitor: Uptime: 99 seconds[0m
+[0;32mI (99664) sys_monitor: ===========================================[0m
+
+[0;32mI (99774) dns_proxy: DNS query from ba:ae:d9:88:75:72 (192.168.4.2): www.google.com (type 1)[0m
+[0;32mI (102664) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (102664) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (102664) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (102664) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (102674) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (102684) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (102684) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (102684) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (102694) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (102704) sys_monitor:   Task 'IDLE': CPU=4%, Stack HWM=1248 bytes[0m
+[0;32mI (102704) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (102714) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (102724) sys_monitor: MEM: Free heap: 71368 bytes (41.0% used)[0m
+[0;32mI (102724) sys_monitor: MEM: Largest free block: 29696 bytes, Min free ever: 920 bytes[0m
+[0;32mI (102734) sys_monitor: NET: TX: 21910 pkt, 17528000 bytes, 77813 B/s | RX: 22331 pkt, 17864800 bytes, 83426 B/s[0m
+[0;32mI (102744) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (102744) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (102754) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (102764) sys_monitor: BENCH: DNS queries: 162, avg latency: 159762 us, max: 1307153 us[0m
+[0;32mI (102764) sys_monitor: BENCH: DNS usage - Cache HITS: 17, MISSES: 149[0m
+[0;32mI (102774) sys_monitor: BENCH: HTTP requests: 13, avg latency: 4369 us, max: 8230 us[0m
+[0;32mI (102784) sys_monitor: Uptime: 102 seconds[0m
+[0;32mI (102784) sys_monitor: ===========================================[0m
+
+[0;32mI (103924) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.notion.so (type 65)[0m
+[0;33mW (103934) sys_monitor: Slow DNS query detected: 157 ms[0m
+[0;32mI (103934) dns_proxy: DNS query from be:be:88:62:37:07 (192.168.4.3): www.notion.so (type 1)[0m
+[0;32mI (105674) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (105674) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (105674) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (105674) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (105794) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (105794) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (105794) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (105794) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (105804) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (105804) sys_monitor:   Task 'IDLE': CPU=7%, Stack HWM=1248 bytes[0m
+[0;32mI (105824) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (105824) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (105824) sys_monitor: MEM: Free heap: 71636 bytes (41.0% used)[0m
+[0;32mI (105834) sys_monitor: MEM: Largest free block: 29696 bytes, Min free ever: 920 bytes[0m
+[0;32mI (105844) sys_monitor: NET: TX: 22106 pkt, 17684800 bytes, 50348 B/s | RX: 22542 pkt, 18033600 bytes, 54201 B/s[0m
+[0;32mI (105854) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (105854) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (105864) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (105874) sys_monitor: BENCH: DNS queries: 164, avg latency: 158854 us, max: 1307153 us[0m
+[0;32mI (105874) sys_monitor: BENCH: DNS usage - Cache HITS: 17, MISSES: 151[0m
+[0;32mI (105884) sys_monitor: BENCH: HTTP requests: 15, avg latency: 4240 us, max: 8230 us[0m
+[0;32mI (105894) sys_monitor: Uptime: 105 seconds[0m
+[0;32mI (105894) sys_monitor: ===========================================[0m
+
+[0;32mI (108684) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (108684) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (108684) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (108684) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (108904) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (108904) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (108904) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (108904) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (108914) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (108914) sys_monitor:   Task 'IDLE': CPU=9%, Stack HWM=1248 bytes[0m
+[0;32mI (108924) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (108924) sys_monitor:   Task 'start_button_ta': CPU=0%, Stack HWM=1784 bytes[0m
+[0;32mI (108934) sys_monitor: MEM: Free heap: 71636 bytes (41.0% used)[0m
+[0;32mI (108944) sys_monitor: MEM: Largest free block: 29696 bytes, Min free ever: 920 bytes[0m
+[0;32mI (108944) sys_monitor: NET: TX: 22361 pkt, 17888800 bytes, 65593 B/s | RX: 22816 pkt, 18252800 bytes, 70480 B/s[0m
+[0;32mI (108954) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (108964) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (108974) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (108974) sys_monitor: BENCH: DNS queries: 164, avg latency: 158854 us, max: 1307153 us[0m
+[0;32mI (108984) sys_monitor: BENCH: DNS usage - Cache HITS: 17, MISSES: 151[0m
+[0;32mI (108994) sys_monitor: BENCH: HTTP requests: 16, avg latency: 4201 us, max: 8230 us[0m
+[0;32mI (108994) sys_monitor: Uptime: 108 seconds[0m
+[0;32mI (109004) sys_monitor: ===========================================[0m
+
+[0;32mI (111694) wifi_repeater: STA connected to AP SSID: Kite Roastery, Channel: 9, RSSI: -52 dBm[0m
+[0;32mI (111694) wifi_repeater: AP clients connected: 2[0m
+[0;32mI (111694) wifi_repeater: AP IP: 192.168.4.1/255.255.255.0, GW: 192.168.4.1[0m
+[0;32mI (111694) wifi_repeater: STA IP: 192.168.68.63/255.255.252.0, GW: 192.168.68.1[0m
+[0;32mI (112004) sys_monitor: ========== System Monitor Report ==========[0m
+[0;32mI (112004) sys_monitor: CPU: Total usage: 9%[0m
+[0;32mI (112004) sys_monitor: CPU: Active tasks: 13[0m
+[0;32mI (112004) sys_monitor:   Task 'sys_monitor': CPU=3%, Stack HWM=2312 bytes[0m
+[0;32mI (112014) sys_monitor:   Task 'main': CPU=0%, Stack HWM=1240 bytes[0m
+[0;32mI (112014) sys_monitor:   Task 'IDLE': CPU=11%, Stack HWM=1248 bytes[0m
+[0;32mI (112024) sys_monitor:   Task 'tcpip': CPU=2%, Stack HWM=2660 bytes[0m
+[0;32mI (112024) sys_monitor:   Task 'dns_proxy': CPU=0%, Stack HWM=3960 bytes[0m
+[0;32mI (112034) sys_monitor: MEM: Free heap: 71268 bytes (41.0% used)[0m
+[0;32mI (112044) sys_monitor: MEM: Largest free block: 29696 bytes, Min free ever: 920 bytes[0m
+[0;32mI (112044) sys_monitor: NET: TX: 22462 pkt, 17969600 bytes, 26064 B/s | RX: 22932 pkt, 18345600 bytes, 29936 B/s[0m
+[0;32mI (112054) sys_monitor: NET: Errors - TX: 0, RX: 0[0m
+[0;32mI (112064) sys_monitor: WiFi: STA connected (RSSI: -52 dBm), AP clients: 2[0m
+[0;32mI (112064) sys_monitor: WiFi: TX: 0 pkt (0 dropped), RX: 0 pkt (0 dropped)[0m
+[0;32mI (112074) sys_monitor: BENCH: DNS queries: 164, avg latency: 158854 us, max: 1307153 us[0m
+[0;32mI (112084) sys_monitor: BENCH: DNS usage - Cache HITS: 17, MISSES: 151[0m
+[0;32mI (112094) sys_monitor: BENCH: HTTP requests: 18, avg latency: 4129 us, max: 8230 us[0m
+[0;32mI (112094) sys_monitor: Uptime: 111 seconds[0m
+[0;32mI (112104) sys_monitor: ===========================================[0m
+
+[0;32mI (114064) web_server: Starting safe shutdown sequence...[0m
+[0;32mI (114064) wifi:state: run -> init (0x0)[0m
+[0;32mI (114074) wifi:teardown, set twt_inactive_time_secs:6, sp_count:0[0m
+[0;32mI (114074) wifi:pm stop, total sleep time: 0 us / 112324188 us[0m
+
+[0;32mI (114074) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (114074) wifi:<ba-del>idx:1, tid:3[0m
+[0;32mI (114074) wifi:<ba-del>idx:2, tid:6[0m
+[0;32mI (114084) wifi:new:<9,0>, old:<9,0>, ap:<9,0>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (114084) wifi:station: ba:ae:d9:88:75:72 leave, AID = 1, reason = 2, bss_flags is 8948819, bss:0x4084afb0[0m
+[0;32mI (114094) wifi:new:<9,0>, old:<9,0>, ap:<9,0>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (114104) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (114104) wifi:<ba-del>idx:3, tid:4[0m
+[0;32mI (114114) wifi:<ba-del>idx:2, tid:6[0m
+[0;32mI (114114) wifi:<ba-del>idx:1, tid:7[0m
+[0;32mI (114114) wifi:station: be:be:88:62:37:07 leave, AID = 2, reason = 2, bss_flags is 8948803, bss:0x4084b554[0m
+[0;32mI (114124) wifi:new:<9,0>, old:<9,0>, ap:<9,0>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (114134) wifi:<ba-del>idx:5, tid:0[0m
+[0;32mI (114134) wifi:<ba-del>idx:6, tid:1[0m
+[0;32mI (114144) wifi:<ba-del>idx:4, tid:6[0m
+[0;33mW (114144) wifi_repeater: STA disconnected (reason=8)[0m
+[0;32mI (114144) wifi_repeater: Stopped bandwidth monitoring task[0m
+[0;32mI (114154) wifi_repeater: Retrying to connect to router (attempt 1)...[0m
+[0;32mI (114154) wifi:new:<9,2>, old:<9,0>, ap:<9,2>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (114174) wifi:ieee80211_send_beacon mode switch cause ap destroyed[0m
+[0;32mI (114174) wifi_repeater: Client ba:ae:d9:88:75:72 left, AID=1[0m
+[0;32mI (114184) wifi_repeater: Client be:be:88:62:37:07 left, AID=2[0m
+[0;32mI (114254) wifi:flush txq[0m
+[0;32mI (114254) wifi:stop sw txq[0m
+[0;32mI (114254) wifi:lmac stop hw txq[0m
+[0;32mI (114354) wifi:Deinit lldesc rx mblock:20[0m
+[0;32mI (114464) web_server: Entering deep sleep...[0m

@@ -11,6 +11,8 @@ CONFIG_LWIP_STATS=y
 # ── NAT / NAPT ───────────────────────────────────────────────
 # IPv4 Network Address and Port Translation — core repeater feature.
 # Without this, AP clients can't route traffic through the STA uplink.
+# NAPT depends on IP_FORWARD; pin both explicitly.
+CONFIG_LWIP_IP_FORWARD=y
 CONFIG_LWIP_IPV4_NAPT=y
 
 # ── FreeRTOS CPU runtime statistics ─────────────────────────
@@ -91,11 +93,20 @@ CONFIG_ESP_WIFI_EAP_TLS1_3=n
 # Push-button/PIN setup — not used.
 CONFIG_ESP_WIFI_WPS_STRICT=n
 
-# ── WPA3 SAE ────────────────────────────────────────────────
-# We force WPA2-PSK (WIFI_AUTH_WPA2_PSK) and set pmf required=false.
-# WPA3 SAE support in wpa_supplicant adds code we don't need.
-CONFIG_ESP_WIFI_ENABLE_WPA3_SAE=n
+# ── WPA3 SAE (WPA2/WPA3 transition mode) ────────────────────
+# Enable SAE so the repeater can use WPA3-Personal on both the
+# STA uplink and the SoftAP. The AP runs in WPA2/WPA3 transition
+# mode (WIFI_AUTH_WPA2_WPA3_PSK) so WPA2 clients still connect.
+CONFIG_ESP_WIFI_ENABLE_WPA3_SAE=y
+CONFIG_ESP_WIFI_SOFTAP_SAE_SUPPORT=y
 CONFIG_ESP_WIFI_ENABLE_WPA3_OWE_STA=n
+
+# ── mbedTLS ECC — required by SAE group 19 (NIST P-256) ─────
+# These are already on by default, but pin them explicitly so
+# future sdkconfig changes don't accidentally break SAE.
+CONFIG_MBEDTLS_ECP_C=y
+CONFIG_MBEDTLS_ECDH_C=y
+CONFIG_MBEDTLS_ECP_DP_SECP256R1_ENABLED=y
 
 # ── mbedTLS — trim to bare minimum ──────────────────────────
 # We only serve plain HTTP (no TLS). The full mbedTLS stack with

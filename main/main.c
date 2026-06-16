@@ -395,13 +395,14 @@ static void wifi_init_repeater(void)
         .sta = {
             .ssid = "",
             .password = "",
-            // Accept WPA or WPA2 — some routers advertise mixed mode. Using
-            // WIFI_AUTH_WPA2_PSK as threshold would reject WPA-only beacons.
-            .threshold.authmode = WIFI_AUTH_WPA_WPA2_PSK,
+            // Minimum WPA2 — drops insecure WPA1/TKIP routers but still
+            // auto-negotiates WPA3/SAE when the upstream router offers it.
+            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
             .pmf_cfg = {
                 .capable = true,
                 .required = false, // keep PMF optional to avoid association refusals
             },
+            .sae_pwe_h2e = WPA3_SAE_PWE_BOTH, // H2E + hunt-and-peck for WPA3 uplinks
         },
     };
     
@@ -410,6 +411,8 @@ static void wifi_init_repeater(void)
     strncpy((char *)sta_config.sta.password, wifi_cfg.sta_password, sizeof(sta_config.sta.password));
 
     // ===== Configure AP (for your phone / laptop) =====
+    // WPA2/WPA3 transition mode: WPA3 clients use SAE, WPA2 clients still
+    // join with PSK. PMF capable-but-not-required for max client compat.
     wifi_config_t ap_config = {
         .ap = {
             .ssid = "",
@@ -417,7 +420,9 @@ static void wifi_init_repeater(void)
             .channel = 1,
             .password = "",
             .max_connection = 0,
-            .authmode = WIFI_AUTH_WPA_WPA2_PSK,
+            .authmode    = WIFI_AUTH_WPA2_WPA3_PSK,
+            .pmf_cfg     = { .capable = true, .required = false },
+            .sae_pwe_h2e = WPA3_SAE_PWE_BOTH,
         },
     };
     
